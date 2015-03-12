@@ -92,11 +92,11 @@ if(menuselect2 &gt; 3){
             <kind>1</kind>
             <string>if( menuselect2 == 1 &amp;&amp; confirm2 = false){
     draw_set_color(c_gray); 
-    draw_sprite_stretched(sprite1,-1,650,400,150,150);
+    draw_sprite_stretched(sp_flail,-1,650,400,150,150);
 }
 else if (menuselect2 == 1 &amp;&amp; confirm2 = true){
     draw_set_color(c_blue);
-    draw_sprite_stretched(sprite1,-1,650,400,150,150);
+    draw_sprite_stretched(sp_flail,-1,650,400,150,150);
 }
 else{
     draw_set_color(c_white);
@@ -105,11 +105,11 @@ draw_text(600,400,"FLAIL");
 
 if( menuselect2 == 2 &amp;&amp; confirm2 = false){
     draw_set_color(c_gray); 
-    draw_sprite_ext(sprite6,-1,725,475,2,2,-90,c_white,1);
+    draw_sprite_ext(sp_sword,-1,725,475,2,2,-90,c_white,1);
 }
 else if (menuselect2 == 2 &amp;&amp; confirm2 = true){
     draw_set_color(c_blue);
-    draw_sprite_ext(sprite6,-1,725,475,2,2,-90,c_white,1);
+    draw_sprite_ext(sp_sword,-1,725,475,2,2,-90,c_white,1);
 }
 else{
     draw_set_color(c_white);
@@ -118,11 +118,11 @@ draw_text(600,440,"SWORD");
 
 if( menuselect2 == 3 &amp;&amp; confirm2 = false){
     draw_set_color(c_gray); 
-    draw_sprite_ext(sprite7,-1,725,475,4,4,0,c_white,1);
+    draw_sprite_ext(sp_bow,-1,725,475,4,4,0,c_white,1);
 }
 else if (menuselect2 == 3 &amp;&amp; confirm2 = true){
     draw_set_color(c_blue);
-    draw_sprite_ext(sprite7,-1,725,475,4,4,0,c_white,1);
+    draw_sprite_ext(sp_bow,-1,725,475,4,4,0,c_white,1);
 }
 else{
     draw_set_color(c_white);

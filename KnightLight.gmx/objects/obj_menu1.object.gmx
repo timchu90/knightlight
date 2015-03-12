@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>globalvar menuselect, confirm;
+            <string>globalvar menuselect, confirm1;
 menuselect = 1;
-confirm = false;
+confirm1 = false;
 </string>
           </argument>
         </arguments>
@@ -50,7 +50,7 @@ confirm = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(confirm = false){
+            <string>if(confirm1 = false){
     if(gamepad_button_check_pressed(0,gp_padu)){
         menuselect = menuselect - 1;
     }
@@ -58,7 +58,7 @@ confirm = false;
         menuselect = menuselect + 1;
     }
     if(gamepad_button_check_pressed(0,gp_face1)){
-    confirm = true;
+    confirm1 = true;
 }
 }
 
@@ -67,10 +67,6 @@ if(menuselect &lt; 1){
 }
 if(menuselect &gt; 3){
     menuselect = 1;
-}
-
-if(confirm &amp;&amp; confirm2){
-    room_goto_next();
 }
 </string>
           </argument>
@@ -94,46 +90,46 @@ if(confirm &amp;&amp; confirm2){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if( menuselect == 1 &amp;&amp; confirm = false){
+            <string>if( menuselect == 1 &amp;&amp; confirm1 = false){
     draw_set_color(c_gray); 
-    draw_sprite_stretched(sprite1,-1,250,400,150,150);
+    draw_sprite_stretched(sp_flail,-1,250,400,150,150);
 }
-else if (menuselect == 1 &amp;&amp; confirm = true){
+else if (menuselect == 1 &amp;&amp; confirm1 = true){
     draw_set_color(c_red);
-    draw_sprite_stretched(sprite1,-1,250,400,150,150);
+    draw_sprite_stretched(sp_flail,-1,250,400,150,150);
 }
 else{
     draw_set_color(c_white);
 }
 draw_text(200,400,"FLAIL");
 
-if( menuselect == 2 &amp;&amp; confirm = false){
+if( menuselect == 2 &amp;&amp; confirm1 = false){
     draw_set_color(c_gray); 
-    draw_sprite_ext(sprite6,-1,325,475,2,2,-90,c_white,1);
+    draw_sprite_ext(sp_sword,-1,325,475,2,2,-90,c_white,1);
 }
-else if (menuselect == 2 &amp;&amp; confirm = true){
+else if (menuselect == 2 &amp;&amp; confirm1 = true){
     draw_set_color(c_red);
-    draw_sprite_ext(sprite6,-1,325,475,2,2,-90,c_white,1);
+    draw_sprite_ext(sp_sword,-1,325,475,2,2,-90,c_white,1);
 }
 else{
     draw_set_color(c_white);
 }
 draw_text(200,440,"SWORD");
 
-if( menuselect == 3 &amp;&amp; confirm = false){
+if( menuselect == 3 &amp;&amp; confirm1 = false){
     draw_set_color(c_gray); 
-    draw_sprite_ext(sprite7,-1,325,475,4,4,0,c_white,1);
+    draw_sprite_ext(sp_bow,-1,325,475,4,4,0,c_white,1);
 }
-else if (menuselect == 3 &amp;&amp; confirm = true){
+else if (menuselect == 3 &amp;&amp; confirm1 = true){
     draw_set_color(c_red);
-    draw_sprite_ext(sprite7,-1,325,475,4,4,0,c_white,1);
+    draw_sprite_ext(sp_bow,-1,325,475,4,4,0,c_white,1);
 }
 else{
     draw_set_color(c_white);
 }
 draw_text(200,480,"BOW");
 
-draw_sprite_ext(sprite9,-1,512,284,1,1,0,c_white,1);
+
 </string>
           </argument>
         </arguments>
