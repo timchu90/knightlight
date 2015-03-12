@@ -1,5 +1,5 @@
 //update all lights
-with(obj_player){
+with(obj_player1){
     if(p1_flashon == true){
         light_update();
     }
@@ -11,7 +11,7 @@ with(obj_player2){
 with(obj_light){
     light_update();
 }
-with(obj_arrow){
+with(obj_arrow1){
     light_update();
 }
 with(obj_arrow2){
@@ -48,7 +48,7 @@ draw_set_alpha(1);
 draw_set_blend_mode(bm_add);
 
 //draw the lights onto this surface
-with(obj_player){
+with(obj_player1){
     if(p1_flashon == true){
         light_draw();
     }
@@ -60,7 +60,7 @@ with(obj_player2){
 with(obj_light){
     light_draw();
 }
-with(obj_arrow){
+with(obj_arrow1){
     light_draw();
 }
 with(obj_arrow2){

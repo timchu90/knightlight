@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>light_init(100,c_yellow,0.4);
+            <string>//environmental light object
+light_init(100,c_yellow,0.8);
 </string>
           </argument>
         </arguments>

@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>CreatePendulum(obj_link_1_3,roomgrav,roomfric,roommass);
-//caster_init();
+
 </string>
           </argument>
         </arguments>
@@ -49,18 +49,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*
-if (distance_to_point(obj_reticle.x,obj_reticle.y) &lt; 10)
-{
-x = obj_reticle.x ;
-y = obj_reticle.y ;
-;
-}
-else{
-move_towards_point(obj_reticle.x,obj_reticle.y,distance_to_point(obj_reticle.x,obj_reticle.y)/9);
-}
-*/
-MovePendulum();
+            <string>MovePendulum();
 ApplyForce(point_direction(x,y,obj_reticle.x,obj_reticle.y)/100, point_direction(x,y,obj_reticle.x,obj_reticle.y));
 
 </string>

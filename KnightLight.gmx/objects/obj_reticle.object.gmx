@@ -26,8 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>if(point_distance(obj_reticle.x,obj_reticle.y,obj_player.x,obj_player.y) &gt; 140){
-        //obj_reticle.x = x+lengthdir_x(175,point_direction(x,y,obj_reticle.x,obj_reticle.y));
-        //obj_reticle.y = y+lengthdir_x(175,point_direction(x,y,obj_reticle.x,obj_reticle.y));
         move_towards_point(obj_player.x,obj_player.y,2);
 }
 else{

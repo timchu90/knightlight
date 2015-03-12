@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>CreatePendulum(obj_player,roomgrav,roomfric,roommass);
+            <string>CreatePendulum(obj_player1,roomgrav,roomfric,roommass);
 </string>
           </argument>
         </arguments>
@@ -48,21 +48,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*
-targetx = obj_player.x+lengthdir_x(point_distance(obj_player.x,obj_player.y,obj_reticle.x,obj_reticle.y)/5,obj_player.image_angle);
-targety = obj_player.y+lengthdir_y(point_distance(obj_player.x,obj_player.y,obj_reticle.x,obj_reticle.y)/5,obj_player.image_angle);
-
-if (distance_to_point(targetx,targety) &lt; 5)
-{
-x = targetx ;
-y = targety ;
-}
-else{
-move_towards_point(targetx,targety,distance_to_point(targetx,targety)/5);
-}
-*/
-MovePendulum();
-ApplyForce(point_direction(x,y,obj_reticle.x,obj_reticle.y)/100, point_direction(x,y,obj_reticle.x,obj_reticle.y));
+            <string>MovePendulum();
+ApplyForce(point_direction(x,y,obj_reticle1.x,obj_reticle1.y)/100, point_direction(x,y,obj_reticle1.x,obj_reticle1.y));
 
 </string>
           </argument>

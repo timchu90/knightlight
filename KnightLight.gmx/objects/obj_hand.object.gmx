@@ -49,7 +49,6 @@
           <argument>
             <kind>1</kind>
             <string>MovePendulum();
-//image_angle = point_direction(x,y,obj_reticle.x,obj_reticle.y);
 ApplyForce(point_direction(x,y,obj_reticle.x,obj_reticle.y)/50, 
     point_direction(x,y,obj_reticle.x,obj_reticle.y));
 
