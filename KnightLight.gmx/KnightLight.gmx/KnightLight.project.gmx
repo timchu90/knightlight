@@ -6,16 +6,15 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sprite0</sprite>
-    <sprite>sprites\sprite1</sprite>
-    <sprite>sprites\sprite2</sprite>
-    <sprite>sprites\sprite3</sprite>
-    <sprite>sprites\sprite4</sprite>
-    <sprite>sprites\sprite5</sprite>
-    <sprite>sprites\sprite6</sprite>
-    <sprite>sprites\sprite7</sprite>
-    <sprite>sprites\sprite8</sprite>
-    <sprite>sprites\sprite9</sprite>
+    <sprite>sprites\sp_redknight</sprite>
+    <sprite>sprites\sp_flail</sprite>
+    <sprite>sprites\sp_link</sprite>
+    <sprite>sprites\sp_blueknight</sprite>
+    <sprite>sprites\sp_wall</sprite>
+    <sprite>sprites\sp_sword</sprite>
+    <sprite>sprites\sp_bow</sprite>
+    <sprite>sprites\sp_arrow</sprite>
+    <sprite>sprites\sp_logo</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -39,10 +38,11 @@
     <object>objects\obj_lightmap</object>
     <object>objects\obj_light</object>
     <object>objects\obj_wall</object>
+    <object>objects\obj_menubase</object>
     <objects name="player1">
       <object>objects\obj_menu1</object>
-      <object>objects\obj_reticle1</object>
       <object>objects\obj_player1</object>
+      <object>objects\obj_reticle1</object>
       <object>objects\obj_link_1_1</object>
       <object>objects\obj_link_1_2</object>
       <object>objects\obj_link_1_3</object>

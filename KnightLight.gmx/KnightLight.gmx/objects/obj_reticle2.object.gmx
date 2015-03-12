@@ -8,29 +8,6 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>CreatePendulum(obj_player,0,0.2,0.5);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -48,10 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>MovePendulum();
-ApplyForce(point_direction(x,y,obj_reticle.x,obj_reticle.y)/50, 
-    point_direction(x,y,obj_reticle.x,obj_reticle.y));
-
+            <string>if(point_distance(obj_reticle2.x,obj_reticle2.y,obj_player2.x,obj_player2.y) &gt; 140){
+    move_towards_point(obj_player2.x,obj_player2.y,2);
+}
+else{
+    speed = 0;
+}
 </string>
           </argument>
         </arguments>
