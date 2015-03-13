@@ -11,8 +11,8 @@ if(menuconfirm[player] = false){
         menuselect[player] = menuselect[player] + 1;
     }
     if(gamepad_button_check_pressed(controller,gp_face1)){
-    menuconfirm[player] = true;
-}
+        menuconfirm[player] = true;
+    }
 }
 
 if(menuselect[player] < 1){

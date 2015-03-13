@@ -15,6 +15,7 @@
     <sprite>sprites\sp_bow</sprite>
     <sprite>sprites\sp_arrow</sprite>
     <sprite>sprites\sp_logo</sprite>
+    <sprite>sprites\sp_greenknight</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_dungeon_tile</background>
@@ -68,6 +69,32 @@
       <object>objects\obj_sword2</object>
       <object>objects\obj_bow2</object>
       <object>objects\obj_arrow2</object>
+    </objects>
+    <objects name="player3">
+      <object>objects\obj_menu3</object>
+      <object>objects\obj_player3</object>
+      <object>objects\obj_reticle3</object>
+      <object>objects\obj_link_3_1</object>
+      <object>objects\obj_link_3_2</object>
+      <object>objects\obj_link_3_3</object>
+      <object>objects\obj_flail3</object>
+      <object>objects\obj_hand3</object>
+      <object>objects\obj_sword3</object>
+      <object>objects\obj_bow3</object>
+      <object>objects\obj_arrow3</object>
+    </objects>
+    <objects name="player4">
+      <object>objects\obj_menu4</object>
+      <object>objects\obj_player4</object>
+      <object>objects\obj_reticle4</object>
+      <object>objects\obj_link_4_1</object>
+      <object>objects\obj_link_4_2</object>
+      <object>objects\obj_link_4_3</object>
+      <object>objects\obj_flail4</object>
+      <object>objects\obj_hand4</object>
+      <object>objects\obj_sword4</object>
+      <object>objects\obj_bow4</object>
+      <object>objects\obj_arrow4</object>
     </objects>
   </objects>
   <rooms name="rooms">
