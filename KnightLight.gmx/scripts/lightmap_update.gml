@@ -1,30 +1,23 @@
 //update all lights
-with(obj_player){
-    if(p1_flashon == true){
+with(obj_player1){
+    if(flashon[1] == true){
         light_update();
     }
 }
 with(obj_player2){
-    if(p2_flashon == true)
-    light_update();
+    if(flashon[2] == true){
+        light_update();
+    }
 }
 with(obj_light){
     light_update();
 }
-with(obj_arrow){
+with(obj_arrow1){
     light_update();
 }
 with(obj_arrow2){
     light_update();
 }
-/*
-with(obj_bullet1){
-    light_update();
-}
-with(obj_bullet2){
-    light_update();
-}*/
-
 
 //set the surface target
 surface_set_target(lightmap);
@@ -48,32 +41,25 @@ draw_set_alpha(1);
 draw_set_blend_mode(bm_add);
 
 //draw the lights onto this surface
-with(obj_player){
-    if(p1_flashon == true){
+with(obj_player1){
+    if(flashon[1] == true){
         light_draw();
     }
 }
 with(obj_player2){
-    if(p2_flashon == true)
-    light_draw();
+    if(flashon[2] == true){
+        light_draw();
+    }
 }
 with(obj_light){
     light_draw();
 }
-with(obj_arrow){
+with(obj_arrow1){
     light_draw();
 }
 with(obj_arrow2){
     light_draw();
 }
-
-/*
-with(obj_bullet1){
-    light_draw();
-}
-with(obj_bullet2){
-    light_draw();
-}*/
 
 //reset blend mode
 draw_set_blend_mode(bm_normal);

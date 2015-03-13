@@ -27,12 +27,11 @@
             <kind>1</kind>
             <string>var p1,p2;
 var max_hp = 200;
-p1 = (player1_hp / max_hp) * 100;
-p2 = (player2_hp / max_hp) * 100;
+p1 = (playerhp[1] / max_hp) * 100;
+p2 = (playerhp[2] / max_hp) * 100;
 draw_healthbar(50, 698, 250, 718, p1, c_white, c_red, c_red, 0, true, false);
 draw_healthbar(774, 50, 974, 70, p2, c_white, c_blue, c_blue, 1, true, false);
-//draw_text(700,50,string(obj_flail2.speed));
-//draw_text(300,700,string(obj_flail.speed));
+
 </string>
           </argument>
         </arguments>

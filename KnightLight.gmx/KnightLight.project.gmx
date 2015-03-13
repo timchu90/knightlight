@@ -6,19 +6,18 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sprite0</sprite>
-    <sprite>sprites\sprite1</sprite>
-    <sprite>sprites\sprite2</sprite>
-    <sprite>sprites\sprite3</sprite>
-    <sprite>sprites\sprite4</sprite>
-    <sprite>sprites\sprite5</sprite>
-    <sprite>sprites\sprite6</sprite>
-    <sprite>sprites\sprite7</sprite>
-    <sprite>sprites\sprite8</sprite>
-    <sprite>sprites\sprite9</sprite>
+    <sprite>sprites\sp_redknight</sprite>
+    <sprite>sprites\sp_flail</sprite>
+    <sprite>sprites\sp_link</sprite>
+    <sprite>sprites\sp_blueknight</sprite>
+    <sprite>sprites\sp_wall</sprite>
+    <sprite>sprites\sp_sword</sprite>
+    <sprite>sprites\sp_bow</sprite>
+    <sprite>sprites\sp_arrow</sprite>
+    <sprite>sprites\sp_logo</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\background0</background>
+    <background>background\bg_dungeon_tile</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -33,40 +32,47 @@
     <script>scripts\lightmap_draw.gml</script>
     <script>scripts\lightmap_init.gml</script>
     <script>scripts\lightmap_update.gml</script>
+    <script>scripts\MovePlayer.gml</script>
+    <script>scripts\NavigateMenu.gml</script>
+    <script>scripts\DrawMenu.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_player</object>
-    <object>objects\obj_flail</object>
-    <object>objects\obj_reticle</object>
-    <object>objects\obj_player2</object>
-    <object>objects\obj_flail2</object>
-    <object>objects\obj_reticle2</object>
     <object>objects\obj_healthbars</object>
-    <object>objects\obj_link_1_1</object>
-    <object>objects\obj_link_2_1</object>
-    <object>objects\obj_link_1_2</object>
-    <object>objects\obj_link_2_2</object>
-    <object>objects\obj_link_1_3</object>
-    <object>objects\obj_link_2_3</object>
-    <object>objects\obj_link_1_4</object>
-    <object>objects\obj_link_2_4</object>
-    <object>objects\obj_wall</object>
     <object>objects\obj_lightmap</object>
     <object>objects\obj_light</object>
-    <object>objects\obj_menu1</object>
-    <object>objects\obj_menu2</object>
-    <object>objects\obj_sword</object>
-    <object>objects\obj_sword2</object>
-    <object>objects\obj_hand</object>
-    <object>objects\obj_hand2</object>
-    <object>objects\obj_bow</object>
-    <object>objects\obj_bow2</object>
-    <object>objects\obj_arrow</object>
-    <object>objects\obj_arrow2</object>
+    <object>objects\obj_wall</object>
+    <object>objects\obj_menubase</object>
+    <object>objects\obj_roomstate</object>
+    <objects name="player1">
+      <object>objects\obj_menu1</object>
+      <object>objects\obj_player1</object>
+      <object>objects\obj_reticle1</object>
+      <object>objects\obj_link_1_1</object>
+      <object>objects\obj_link_1_2</object>
+      <object>objects\obj_link_1_3</object>
+      <object>objects\obj_flail1</object>
+      <object>objects\obj_hand1</object>
+      <object>objects\obj_sword1</object>
+      <object>objects\obj_bow1</object>
+      <object>objects\obj_arrow1</object>
+    </objects>
+    <objects name="player2">
+      <object>objects\obj_menu2</object>
+      <object>objects\obj_player2</object>
+      <object>objects\obj_reticle2</object>
+      <object>objects\obj_link_2_1</object>
+      <object>objects\obj_link_2_2</object>
+      <object>objects\obj_link_2_3</object>
+      <object>objects\obj_flail2</object>
+      <object>objects\obj_hand2</object>
+      <object>objects\obj_sword2</object>
+      <object>objects\obj_bow2</object>
+      <object>objects\obj_arrow2</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
-    <room>rooms\room0</room>
+    <room>rooms\rm_dungeon</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

@@ -15,7 +15,4 @@ draw_vertex(x+cast_x[0],y+cast_y[0]);
 //end drawing primitives.
 draw_primitive_end();
 
-//loop through all the casting points and draw a little cirlce allround them.
-//for(i = 0; i < cast_points; i += 1){
-//    draw_circle(x+cast_x[i],y+cast_y[i],4,true);
-//}
+
