@@ -25,24 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>globalvar player1_hp, roomfric, roomgrav, roommass;
-globalvar p1_flashon, p1_can_shoot;
-p1_flashon = true;
-p1_can_shoot = true;
-if(menuselect == 1){
+            <string>if(menuselect[1] == 1){
     light_init(200,c_white,1);
 }
-if(menuselect == 2){
+if(menuselect[1] == 2){
     light_init(150,c_white,1);
 }
-if(menuselect == 3){
+if(menuselect[1] == 3){
     light_init(120,c_white,1);
 }
-player1_hp = 200;
 
-roomfric = 0.08;
-roomgrav = -0.4;
-roommass = 0.5;
+
 </string>
           </argument>
         </arguments>
@@ -111,47 +104,39 @@ roommass = 0.5;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>gamepad_set_axis_deadzone(0,.15);
-direction = point_direction(0,0, 
-    gamepad_axis_value(0, gp_axislh), gamepad_axis_value(0, gp_axislv));
+            <string>//contains code for moving player and turning on/off light
+MovePlayer(1,obj_reticle1);
 
-if(p1_can_shoot == true){
-    hspeed = gamepad_axis_value(0, gp_axislh) * 5;
-    vspeed = gamepad_axis_value(0, gp_axislv) * 5;
-}
-else{
-    hspeed = gamepad_axis_value(0, gp_axislh) * 3;
-    vspeed = gamepad_axis_value(0, gp_axislv) * 3;
-}
-image_angle = point_direction(0,0, 
-    gamepad_axis_value(0, gp_axisrh), gamepad_axis_value(0, gp_axisrv))+90;
-
-if((gamepad_axis_value(0,gp_axisrh) &lt; 0.5 
-    and gamepad_axis_value(0,gp_axisrv) &lt; 0.5) 
-    and (gamepad_axis_value(0,gp_axisrh) &gt; -0.5 
-    and gamepad_axis_value(0,gp_axisrv) &gt; -0.5)){
-    
-    image_angle = point_direction(0,0, 
-        gamepad_axis_value(0, gp_axislh), gamepad_axis_value(0, gp_axislv))+90;
-
-}
-else{
-    obj_reticle1.x = x+lengthdir_x(175,image_angle-90);
-    obj_reticle1.y = y+lengthdir_y(175,image_angle-90);
-    image_angle = point_direction(0,0, 
-        gamepad_axis_value(0, gp_axisrh), gamepad_axis_value(0, gp_axisrv))+90;
-}
-
-if(gamepad_button_check_pressed(0,gp_shoulderl)){
-    p1_flashon = !p1_flashon;
-}
-
-if(player1_hp &lt;= 0){
+if(playerhp[1] &lt;= 0){
     show_message("PLAYER 2 WON");
     room_restart();
 }
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_arrow2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>obj_arrow2</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_destroy();
+playerhp[1] = playerhp[1] - arrowdmg;
 </string>
           </argument>
         </arguments>
@@ -174,11 +159,65 @@ if(player1_hp &lt;= 0){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>player1_hp = player1_hp - obj_sword2.speed;
+            <string>playerhp[1] = playerhp[1] - obj_sword2.speed;
 gamepad_set_vibration(0,0.5,0.5);
 alarm[0] = room_speed/2;
 gamepad_set_vibration(1,0.5,0.5);
 alarm[1] = room_speed/4;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_flail2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>playerhp[1] = playerhp[1] - obj_flail2.speed;
+gamepad_set_vibration(1,0.5,0.5);
+gamepad_set_vibration(0,0.5,0.5);
+alarm[1] = room_speed/4;
+alarm[0] = room_speed/2;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_flail1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>playerhp[1] = playerhp[1] - (obj_flail1.speed/4);
+gamepad_set_vibration(0,0.5,0.5);
+alarm[1] = room_speed/2;
+
+
 </string>
           </argument>
         </arguments>
@@ -215,62 +254,7 @@ if(abs(vspeed) &gt;= abs(hspeed)&amp;&amp;not place_meeting(x,y + vspeed,obj_wal
     y+=vspeed;
     exit
 }
-
 speed = 0;
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_flail2">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>player1_hp = player1_hp - obj_flail2.speed;
-gamepad_set_vibration(1,0.5,0.5);
-gamepad_set_vibration(0,0.5,0.5);
-alarm[1] = room_speed/4;
-alarm[0] = room_speed/2;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_flail1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>player1_hp = player1_hp - (obj_flail1.speed/4);
-gamepad_set_vibration(0,0.5,0.5);
-alarm[1] = room_speed/2;
-
 
 </string>
           </argument>

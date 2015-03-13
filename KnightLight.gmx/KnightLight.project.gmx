@@ -32,6 +32,9 @@
     <script>scripts\lightmap_draw.gml</script>
     <script>scripts\lightmap_init.gml</script>
     <script>scripts\lightmap_update.gml</script>
+    <script>scripts\MovePlayer.gml</script>
+    <script>scripts\NavigateMenu.gml</script>
+    <script>scripts\DrawMenu.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_healthbars</object>
@@ -39,6 +42,7 @@
     <object>objects\obj_light</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_menubase</object>
+    <object>objects\obj_roomstate</object>
     <objects name="player1">
       <object>objects\obj_menu1</object>
       <object>objects\obj_player1</object>

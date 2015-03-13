@@ -20,33 +20,33 @@ instance_create(945,105,obj_reticle2);
 //CREATE WEAPONS
 
 //FLAIL
-if(menuselect == 1){
+if(menuselect[1] == 1){
     instance_create(140,665,obj_link_1_1);
     instance_create(175,665,obj_link_1_2);
     instance_create(210,665,obj_link_1_3);
     instance_create(245,665,obj_flail1);
 }
-if(menuselect2 == 1){
+if(menuselect[2] == 1){
     instance_create(805,105,obj_link_2_1);
     instance_create(840,105,obj_link_2_2);
     instance_create(875,105,obj_link_2_3);
     instance_create(910,105,obj_flail2);
 }
 //SWORD
-if(menuselect == 2){
+if(menuselect[1] == 2){
     instance_create(120,665,obj_hand1);
     instance_create(153,665,obj_sword1);
 }
-if(menuselect2 == 2){
+if(menuselect[2] == 2){
     instance_create(785,105,obj_hand2);
     instance_create(818,105,obj_sword2);
 }
 
 //BOW
-if(menuselect == 3){
+if(menuselect[1] == 3){
     instance_create(130,665,obj_bow1);
 }
-if(menuselect2 == 3){
+if(menuselect[2] == 3){
     instance_create(795,105,obj_bow2);
 }
 
@@ -113,6 +113,7 @@ obj_player2.alarm[1] = room_speed/5;</code>
     <instance objName="obj_light" x="694" y="451" name="inst_0E6AB04B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_light" x="337" y="452" name="inst_FF582841" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_light" x="349" y="301" name="inst_987FA3D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_roomstate" x="105" y="35" name="inst_54B141CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
