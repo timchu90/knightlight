@@ -25,13 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(menuselect[2] == 1){
+            <string>if(menuselect[3] == 1){
     light_init(200,c_white,1);
 }
-if(menuselect[2] == 2){
+if(menuselect[3] == 2){
     light_init(150,c_white,1);
 }
-if(menuselect[2] == 3){
+if(menuselect[3] == 3){
     light_init(120,c_white,1);
 }
 
@@ -104,11 +104,10 @@ if(menuselect[2] == 3){
           <argument>
             <kind>1</kind>
             <string>//contains code for moving player and turning on/off light
-MovePlayer(2,obj_reticle2); 
+MovePlayer(3,obj_reticle3); 
 
-if(playerhp[2] &lt;= 0){
-    show_message("PLAYER 1 WON");
-    room_restart();
+if(playerhp[3] &lt;= 0){
+    instance_destroy();
 }
 </string>
           </argument>
@@ -237,7 +236,7 @@ alarm[1] = room_speed/4;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>gamepad_set_vibration(1,0.1,0.1);
+            <string>gamepad_set_vibration(2,0.1,0.1);
 alarm[0] = room_speed/8;
 x=xprevious;
 y=yprevious;
