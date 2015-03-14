@@ -10,22 +10,38 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>//CREATE PLAYERS
+  <code>//CREATE PLAYERS AND RESET ALARMS
 if(menustart[1] == true){
     instance_create(105,665,obj_player1);
     instance_create(280,665,obj_reticle1);
+    obj_player1.alarm[0] = room_speed/5;
+    obj_player1.alarm[1] = room_speed/5;
+    obj_player1.alarm[2] = room_speed/5;
+    obj_player1.alarm[3] = room_speed/5;
 }
 if(menustart[2] == true){
     instance_create(770,105,obj_player2);
-    instance_create(945,105,obj_reticle2);
+    instance_create(945,105,obj_reticle2);    
+    obj_player2.alarm[0] = room_speed/5;
+    obj_player2.alarm[1] = room_speed/5;
+    obj_player2.alarm[2] = room_speed/5;
+    obj_player2.alarm[3] = room_speed/5;
 }
 if(menustart[3] == true){
     instance_create(105,105,obj_player3);
     instance_create(280,105,obj_reticle3);
+    obj_player3.alarm[0] = room_speed/5;
+    obj_player3.alarm[1] = room_speed/5;
+    obj_player3.alarm[2] = room_speed/5;
+    obj_player3.alarm[3] = room_speed/5;
 }
 if(menustart[4] == true){
-    instance_create(770,665,obj_player2);
-    instance_create(945,665,obj_reticle2);
+    instance_create(770,665,obj_player4);
+    instance_create(945,665,obj_reticle4);
+    obj_player4.alarm[0] = room_speed/5;
+    obj_player4.alarm[1] = room_speed/5;
+    obj_player4.alarm[2] = room_speed/5;
+    obj_player4.alarm[3] = room_speed/5;
 }
 
 //CREATE WEAPONS
@@ -81,17 +97,19 @@ if(menuselect[2] == 3&amp;&amp; menustart[2] == true){
     instance_create(795,105,obj_bow2);
 }
 if(menuselect[3] == 3&amp;&amp; menustart[3] == true){
-    instance_create(130,105,obj_bow1);
+    instance_create(130,105,obj_bow3);
 }
 if(menuselect[4] == 3&amp;&amp; menustart[4] == true){
-    instance_create(795,665,obj_bow2);
+    instance_create(795,665,obj_bow4);
 }
 
-//RESET ALARMS
-obj_player1.alarm[0] = room_speed/5;
-obj_player1.alarm[1] = room_speed/5;
-obj_player2.alarm[0] = room_speed/5;
-obj_player2.alarm[1] = room_speed/5;</code>
+//COUNT NUMBER OF PLAYERS
+numberofplayers = 0;
+for(var i = 1; i&lt;=4; i++){
+    if(menustart[i] == true){
+        numberofplayers++;
+    }
+}</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

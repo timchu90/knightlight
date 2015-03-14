@@ -86,10 +86,10 @@ if(gamepad_button_check_pressed(1,gp_start)){
     menustart[2] = !menustart[2];
 }
 if(gamepad_button_check_pressed(2,gp_start)){
-    menustart[1] = !menustart[1];
+    menustart[3] = !menustart[3];
 }
 if(gamepad_button_check_pressed(3,gp_start)){
-    menustart[1] = !menustart[1];
+    menustart[4] = !menustart[4];
 }
 
 if(allconfirm == true and playercount &gt; 1){

@@ -9,6 +9,16 @@ with(obj_player2){
         light_update();
     }
 }
+with(obj_player3){
+    if(flashon[3] == true){
+        light_update();
+    }
+}
+with(obj_player4){
+    if(flashon[4] == true){
+        light_update();
+    }
+}
 with(obj_light){
     light_update();
 }
@@ -16,6 +26,12 @@ with(obj_arrow1){
     light_update();
 }
 with(obj_arrow2){
+    light_update();
+}
+with(obj_arrow3){
+    light_update();
+}
+with(obj_arrow4){
     light_update();
 }
 
@@ -51,6 +67,16 @@ with(obj_player2){
         light_draw();
     }
 }
+with(obj_player3){
+    if(flashon[3] == true){
+        light_draw();
+    }
+}
+with(obj_player4){
+    if(flashon[4] == true){
+        light_draw();
+    }
+}
 with(obj_light){
     light_draw();
 }
@@ -60,7 +86,12 @@ with(obj_arrow1){
 with(obj_arrow2){
     light_draw();
 }
-
+with(obj_arrow3){
+    light_draw();
+}
+with(obj_arrow4){
+    light_draw();
+}
 //reset blend mode
 draw_set_blend_mode(bm_normal);
 

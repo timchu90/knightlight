@@ -25,13 +25,24 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var p1,p2;
+            <string>var p1,p2,p3,p4;
 var max_hp = 200;
-p1 = (playerhp[1] / max_hp) * 100;
-p2 = (playerhp[2] / max_hp) * 100;
-draw_healthbar(50, 698, 250, 718, p1, c_white, c_red, c_red, 0, true, false);
-draw_healthbar(774, 50, 974, 70, p2, c_white, c_blue, c_blue, 1, true, false);
-
+if(menustart[1] == true){
+    p1 = (playerhp[1] / max_hp) * 100;
+    draw_healthbar(50, 698, 250, 718, p1, c_white, c_red, c_red, 0, true, false);
+}
+if(menustart[2] == true){
+    p2 = (playerhp[2] / max_hp) * 100;
+    draw_healthbar(774, 50, 974, 70, p2, c_white, c_blue, c_blue, 1, true, false);
+}
+if(menustart[3] == true){
+    p3 = (playerhp[3] / max_hp) * 100;
+    draw_healthbar(50, 50, 250, 70, p3, c_white, c_green, c_green, 0, true, false);
+}
+if(menustart[4] == true){
+    p4 = (playerhp[4] / max_hp) * 100;
+    draw_healthbar(774, 698, 974, 718, p4, c_white, c_yellow, c_yellow, 1, true, false);
+}
 </string>
           </argument>
         </arguments>
