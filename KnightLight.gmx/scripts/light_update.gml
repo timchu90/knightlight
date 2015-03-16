@@ -9,7 +9,9 @@ draw_set_alpha(alpha);
 
 //draw a circle with the provided colors in the center of the surface.
 //since the surface is (radius*2,radius*2) big, the center is (radius,radius)
-draw_circle_color(radius,radius,radius,color,c_black,false);
+
+draw_sprite_ext(sp_lightmask,-1,radius,radius,radius*2/350,radius*2/350,0,color,1);
+//draw_circle_color(radius,radius,radius,color,c_black,false);
 
 //reseting the alpha value
 draw_set_alpha(1);
