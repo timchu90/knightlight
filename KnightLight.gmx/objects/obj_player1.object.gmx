@@ -153,6 +153,7 @@ if(menuselect[1] == 3){
             <string>//contains code for moving player and turning on/off light
 MovePlayer(1,obj_reticle1);
 
+
 if(playerhp[1] &lt;= 0){
     deathcount++;
     if(menuselect[1] == 1){
