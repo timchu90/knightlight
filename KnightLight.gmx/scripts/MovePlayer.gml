@@ -21,33 +21,16 @@ if((gamepad_axis_value(controller,gp_axisrh) < 0.5
     and gamepad_axis_value(controller,gp_axisrv) < 0.5) 
     and (gamepad_axis_value(controller,gp_axisrh) > -0.5 
     and gamepad_axis_value(controller,gp_axisrv) > -0.5)){
-    
-    image_index = (point_direction(0,0, 
-        gamepad_axis_value(controller, gp_axislh), 
-        gamepad_axis_value(controller, gp_axislv))+90)/90;
-
-    /*
     image_angle = point_direction(0,0, 
         gamepad_axis_value(controller, gp_axislh), 
         gamepad_axis_value(controller, gp_axislv))+90;
-    */
 }
 else{
-    reticle.x = x+lengthdir_x(175,point_direction(0,0, 
-        gamepad_axis_value(controller, gp_axisrh), 
-        gamepad_axis_value(controller, gp_axisrv))+90-90);
-    reticle.y = y+lengthdir_y(175,point_direction(0,0, 
-        gamepad_axis_value(controller, gp_axisrh), 
-        gamepad_axis_value(controller, gp_axisrv))+90-90);
-        
-        image_index = (point_direction(0,0, 
-        gamepad_axis_value(controller, gp_axisrh), 
-        gamepad_axis_value(controller, gp_axisrv))+135)/90;
-        /*
+    reticle.x = x+lengthdir_x(175,image_angle-90);
+    reticle.y = y+lengthdir_y(175,image_angle-90);
     image_angle = point_direction(0,0, 
         gamepad_axis_value(controller, gp_axisrh), 
         gamepad_axis_value(controller, gp_axisrv))+90;
-        */
 }
 
 if(gamepad_button_check_pressed(controller,gp_shoulderl)){
