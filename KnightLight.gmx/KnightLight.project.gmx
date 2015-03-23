@@ -18,6 +18,7 @@
     <sprite>sprites\sp_greenknight</sprite>
     <sprite>sprites\sp_yellowknight</sprite>
     <sprite>sprites\sp_lightmask</sprite>
+    <sprite>sprites\sp_torch</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_dungeon_tile</background>
