@@ -14,4 +14,3 @@ draw_vertex(x+cast_x[0],y+cast_y[0]);
 
 //end drawing primitives.
 draw_primitive_end();
-
