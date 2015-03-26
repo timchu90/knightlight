@@ -1,16 +1,25 @@
 //draw onto the lightsurface created in light_init()
+
 surface_set_target(lightsurface);
+
+fade_in = argument0;
+if(fade_in == true && fadealpha <= alpha){
+    fadealpha = fadealpha + 0.07;
+}
+if(fade_in == false && fadealpha > 0){
+    fadealpha = fadealpha - 0.07;
+}
 
 //clear the surface
 draw_clear(c_black);
 
 //set the alpha value
-draw_set_alpha(alpha);
+draw_set_alpha(fadealpha);
 
 //draw a circle with the provided colors in the center of the surface.
 //since the surface is (radius*2,radius*2) big, the center is (radius,radius)
 
-draw_sprite_ext(sp_lightmask,-1,radius,radius,radius*2/350,radius*2/350,0,color,1);
+draw_sprite_ext(sp_lightmask,-1,radius,radius,radius*2/350,radius*2/350,0,color,fadealpha);
 //draw_circle_color(radius,radius,radius,color,c_black,false);
 
 //reseting the alpha value
