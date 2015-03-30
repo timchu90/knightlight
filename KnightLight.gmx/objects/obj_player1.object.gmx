@@ -41,6 +41,33 @@ if(menuselect[1] == 3){
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Post-Knockback Halt
+
+// Stop after being knocked back.
+speed = 0;
+friction = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="3">
       <action>
         <libid>1</libid>
@@ -151,7 +178,7 @@ if(menuselect[1] == 3){
           <argument>
             <kind>1</kind>
             <string>//contains code for moving player and turning on/off light
-MovePlayer(1,obj_reticle1);
+if (alarm[4] == -1) MovePlayer(1,obj_reticle1);
 
 if(playerhp[1] &lt;= 0){
     deathcount++;
@@ -220,6 +247,9 @@ if(playerhp[1] &lt;= 0){
 playerhp[1] = playerhp[1] - arrowdmg;
 gamepad_set_vibration(0,0.5,0.5);
 obj_player1.alarm[0] = room_speed/2;
+
+// Apply knockback
+Knockback(self, other, basekb);
 </string>
           </argument>
         </arguments>
@@ -247,6 +277,9 @@ gamepad_set_vibration(3,0.5,0.5);
 alarm[3] = room_speed/4;
 gamepad_set_vibration(0,0.5,0.5);
 alarm[0] = room_speed/2;
+
+// Apply knockback
+Knockback(self, other, basekb);
 </string>
           </argument>
         </arguments>
@@ -276,6 +309,9 @@ alarm[0] = room_speed/4;
 //vibrate enemy
 gamepad_set_vibration(3,0.5,0.5);
 alarm[3] = room_speed/2;
+
+// Apply knockback
+Knockback(self, other, basekb);
 </string>
           </argument>
         </arguments>
@@ -302,6 +338,9 @@ alarm[3] = room_speed/2;
 playerhp[1] = playerhp[1] - arrowdmg;
 gamepad_set_vibration(0,0.5,0.5);
 obj_player1.alarm[0] = room_speed/2;
+
+// Apply knockback
+Knockback(self, other, basekb);
 </string>
           </argument>
         </arguments>
@@ -329,6 +368,9 @@ gamepad_set_vibration(0,0.5,0.5);
 alarm[0] = room_speed/2;
 gamepad_set_vibration(2,0.5,0.5);
 alarm[2] = room_speed/4;
+
+// Apply knockback
+Knockback(self, other, basekb);
 </string>
           </argument>
         </arguments>
@@ -356,6 +398,9 @@ gamepad_set_vibration(2,0.5,0.5);
 gamepad_set_vibration(0,0.5,0.5);
 alarm[0] = room_speed/2;
 alarm[2] = room_speed/4;
+
+// Apply knockback
+Knockback(self, other, basekb);
 </string>
           </argument>
         </arguments>
@@ -382,6 +427,9 @@ alarm[2] = room_speed/4;
 playerhp[1] = playerhp[1] - arrowdmg;
 gamepad_set_vibration(0,0.5,0.5);
 obj_player1.alarm[0] = room_speed/2;
+
+// Apply knockback
+Knockback(self, other, basekb);
 </string>
           </argument>
         </arguments>
@@ -409,6 +457,9 @@ gamepad_set_vibration(0,0.5,0.5);
 alarm[0] = room_speed/2;
 gamepad_set_vibration(1,0.5,0.5);
 alarm[1] = room_speed/4;
+
+// Apply knockback
+Knockback(self, other, basekb);
 </string>
           </argument>
         </arguments>
@@ -436,6 +487,9 @@ gamepad_set_vibration(1,0.5,0.5);
 gamepad_set_vibration(0,0.5,0.5);
 alarm[0] = room_speed/2;
 alarm[1] = room_speed/4;
+
+// Apply knockback
+Knockback(self, other, basekb);
 </string>
           </argument>
         </arguments>

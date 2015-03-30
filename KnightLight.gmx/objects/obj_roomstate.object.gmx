@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>//object holding variables for easy game tweaking
 globalvar roomfric, roomgrav, roommass;
-globalvar basemove, reloadmove;
+globalvar basemove, reloadmove, basekb;
 globalvar arrowdmg, arrowspd;
 globalvar canshoot, flashon;
 globalvar playerhp;
@@ -64,6 +64,9 @@ reloadmove = 3;
 //bow related variables
 arrowdmg = 40;
 arrowspd = 20;
+
+//base knockback speed
+basekb = 10;
 </string>
           </argument>
         </arguments>
