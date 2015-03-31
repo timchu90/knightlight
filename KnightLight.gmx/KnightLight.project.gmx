@@ -23,6 +23,7 @@
     <sprite>sprites\sp_blueghost</sprite>
     <sprite>sprites\sp_greenghost</sprite>
     <sprite>sprites\sp_yellowghost</sprite>
+    <sprite>sprites\sp_spark</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_dungeon_tile</background>
@@ -51,6 +52,7 @@
     <object>objects\obj_wall</object>
     <object>objects\obj_menubase</object>
     <object>objects\obj_roomstate</object>
+    <object>objects\obj_spark</object>
     <objects name="player1">
       <object>objects\obj_menu1</object>
       <object>objects\obj_player1</object>
