@@ -8,6 +8,5 @@ kb = argument2;
 victim.direction = point_direction(source.x, source.y, victim.x, victim.y);
 victim.speed = kb;
 victim.friction = 0.5;
-victim.alarm[4] = room_speed/3;
-
+victim.alarm[4] = room_speed/4;
 
