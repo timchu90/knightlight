@@ -273,7 +273,7 @@ gamepad_set_vibration(3,0.5,0.5);
 obj_player4.alarm[3] = room_speed/2;
 
 // Apply knockback
-Knockback(self, other, basekb);
+Knockback(other, self, basekb);
 </string>
           </argument>
         </arguments>
@@ -362,7 +362,7 @@ gamepad_set_vibration(3,0.5,0.5);
 obj_player4.alarm[3] = room_speed/2;
 
 // Apply knockback
-Knockback(self, other, basekb);
+Knockback(other, self, basekb);
 </string>
           </argument>
         </arguments>
@@ -450,7 +450,7 @@ gamepad_set_vibration(3,0.5,0.5);
 obj_player4.alarm[3] = room_speed/2;
 
 // Apply knockback
-Knockback(self, other, basekb);
+Knockback(other, self, basekb);
 
 instance_destroy();
 </string>
