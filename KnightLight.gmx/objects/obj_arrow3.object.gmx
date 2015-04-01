@@ -30,6 +30,7 @@ direction = arrow_dir;
 image_angle = direction;
 light_init(100,make_color_rgb(255,169,10),1);
 speed = arrowspd;
+audio_play_sound(Bow_Shot, 10, false);
 </string>
           </argument>
         </arguments>

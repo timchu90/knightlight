@@ -250,6 +250,9 @@ obj_player1.alarm[0] = room_speed/2;
 
 // Apply knockback
 Knockback(other, self, basekb);
+
+audio_play_sound(Bow_Hit, 10, false);
+
 </string>
           </argument>
         </arguments>
@@ -280,6 +283,11 @@ alarm[0] = room_speed/2;
 
 // Apply knockback
 Knockback(self, other, basekb);
+
+if (!audio_is_playing(Sword_Hit)) {
+    audio_play_sound(Sword_Hit, 10, false);
+}
+
 </string>
           </argument>
         </arguments>
@@ -312,6 +320,11 @@ alarm[3] = room_speed/2;
 
 // Apply knockback
 Knockback(self, other, basekb);
+
+if (!audio_is_playing(Flail_Hit)) {
+    audio_play_sound(Flail_Hit, 10, false);
+}
+
 </string>
           </argument>
         </arguments>
@@ -341,6 +354,9 @@ obj_player1.alarm[0] = room_speed/2;
 
 // Apply knockback
 Knockback(other, self, basekb);
+
+audio_play_sound(Bow_Hit, 10, false);
+
 </string>
           </argument>
         </arguments>
@@ -371,6 +387,11 @@ alarm[2] = room_speed/4;
 
 // Apply knockback
 Knockback(self, other, basekb);
+
+if (!audio_is_playing(Sword_Hit)) {
+    audio_play_sound(Sword_Hit, 10, false);
+}
+
 </string>
           </argument>
         </arguments>
@@ -401,6 +422,11 @@ alarm[2] = room_speed/4;
 
 // Apply knockback
 Knockback(self, other, basekb);
+
+if (!audio_is_playing(Flail_Hit)) {
+    audio_play_sound(Flail_Hit, 10, false);
+}
+
 </string>
           </argument>
         </arguments>
@@ -430,6 +456,9 @@ obj_player1.alarm[0] = room_speed/2;
 
 // Apply knockback
 Knockback(other, self, basekb);
+
+audio_play_sound(Bow_Hit, 10, false);
+
 </string>
           </argument>
         </arguments>
@@ -460,6 +489,11 @@ alarm[1] = room_speed/4;
 
 // Apply knockback
 Knockback(self, other, basekb);
+
+if (!audio_is_playing(Sword_Hit)) {
+    audio_play_sound(Sword_Hit, 10, false);
+}
+
 </string>
           </argument>
         </arguments>
@@ -490,6 +524,11 @@ alarm[1] = room_speed/4;
 
 // Apply knockback
 Knockback(self, other, basekb);
+
+if (!audio_is_playing(Flail_Hit)) {
+    audio_play_sound(Flail_Hit, 10, false);
+}
+
 </string>
           </argument>
         </arguments>
@@ -515,8 +554,9 @@ Knockback(self, other, basekb);
             <string>playerhp[1] = playerhp[1] - (obj_flail1.speed/4);
 gamepad_set_vibration(0,0.5,0.5);
 alarm[0] = room_speed/2;
-
-
+if (!audio_is_playing(Flail_Hit)) {
+    audio_play_sound(Flail_Hit, 10, false);
+}
 </string>
           </argument>
         </arguments>

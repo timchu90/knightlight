@@ -65,8 +65,15 @@ reloadmove = 3;
 arrowdmg = 40;
 arrowspd = 20;
 
+
 //base knockback speed
 basekb = 10;
+
+// BGM
+if(!audio_is_playing(Loop_1)){
+    audio_play_sound(Loop_1,10,true);
+}
+
 </string>
           </argument>
         </arguments>
