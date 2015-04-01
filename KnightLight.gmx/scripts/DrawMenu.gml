@@ -48,4 +48,3 @@ else{
     }
     draw_text(x,y+80,"BOW");
 }
-

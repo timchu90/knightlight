@@ -220,6 +220,7 @@ if(playerhp[2] &lt;= 0){
 playerhp[2] = playerhp[2] - arrowdmg;
 gamepad_set_vibration(1,0.5,0.5);
 obj_player2.alarm[1] = room_speed/2;
+audio_play_sound(Bow_Hit, 10, false);
 </string>
           </argument>
         </arguments>
@@ -247,6 +248,9 @@ gamepad_set_vibration(3,0.5,0.5);
 alarm[3] = room_speed/4;
 gamepad_set_vibration(1,0.5,0.5);
 alarm[1] = room_speed/2;
+if (!audio_is_playing(Sword_Hit)) {
+    audio_play_sound(Sword_Hit, 10, false);
+}
 </string>
           </argument>
         </arguments>
@@ -276,6 +280,9 @@ alarm[1] = room_speed/4;
 //vibrate enemy
 gamepad_set_vibration(3,0.5,0.5);
 alarm[3] = room_speed/2;
+if (!audio_is_playing(Flail_Hit)) {
+    audio_play_sound(Flail_Hit, 10, false);
+}
 </string>
           </argument>
         </arguments>
@@ -302,6 +309,7 @@ alarm[3] = room_speed/2;
 playerhp[2] = playerhp[2] - arrowdmg;
 gamepad_set_vibration(1,0.5,0.5);
 obj_player2.alarm[1] = room_speed/2;
+audio_play_sound(Bow_Hit, 10, false);
 </string>
           </argument>
         </arguments>
@@ -329,6 +337,9 @@ gamepad_set_vibration(1,0.5,0.5);
 alarm[1] = room_speed/2;
 gamepad_set_vibration(2,0.5,0.5);
 alarm[2] = room_speed/4;
+if (!audio_is_playing(Sword_Hit)) {
+    audio_play_sound(Sword_Hit, 10, false);
+}
 </string>
           </argument>
         </arguments>
@@ -356,6 +367,9 @@ gamepad_set_vibration(2,0.5,0.5);
 gamepad_set_vibration(1,0.5,0.5);
 alarm[1] = room_speed/2;
 alarm[2] = room_speed/4;
+if (!audio_is_playing(Flail_Hit)) {
+    audio_play_sound(Flail_Hit, 10, false);
+}
 </string>
           </argument>
         </arguments>
@@ -381,6 +395,9 @@ alarm[2] = room_speed/4;
             <string>playerhp[2] = playerhp[2]-(obj_flail2.speed/4);
 gamepad_set_vibration(1,0.5,0.5);
 alarm[1] = room_speed/2;
+if (!audio_is_playing(Flail_Hit)) {
+    audio_play_sound(Flail_Hit, 10, false);
+}
 
 </string>
           </argument>
@@ -408,6 +425,7 @@ alarm[1] = room_speed/2;
 playerhp[2] = playerhp[2] - arrowdmg;
 gamepad_set_vibration(1,0.5,0.5);
 obj_player2.alarm[1] = room_speed/2;
+audio_play_sound(Bow_Hit, 10, false);
 </string>
           </argument>
         </arguments>
@@ -435,6 +453,9 @@ gamepad_set_vibration(1,0.5,0.5);
 alarm[0] = room_speed/4;
 gamepad_set_vibration(0,0.5,0.5);
 alarm[1] = room_speed/2;
+if (!audio_is_playing(Sword_Hit)) {
+    audio_play_sound(Sword_Hit, 10, false);
+}
 </string>
           </argument>
         </arguments>
@@ -462,6 +483,9 @@ gamepad_set_vibration(1,0.5,0.5);
 alarm[0] = room_speed/4;
 gamepad_set_vibration(0,0.5,0.5);
 alarm[1] = room_speed/2;
+if (!audio_is_playing(Flail_Hit)) {
+    audio_play_sound(Flail_Hit, 10, false);
+}
 
 </string>
           </argument>

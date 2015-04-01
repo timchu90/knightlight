@@ -64,6 +64,9 @@ reloadmove = 3;
 //bow related variables
 arrowdmg = 40;
 arrowspd = 20;
+
+// BGM
+audio_play_sound(Loop_1,10,true);
 </string>
           </argument>
         </arguments>
