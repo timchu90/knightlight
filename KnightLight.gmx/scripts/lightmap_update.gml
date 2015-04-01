@@ -46,6 +46,19 @@ with(obj_spark){
     light_update(true);
 }
 
+with(obj_ghost1){
+    light_update(true);
+}
+with(obj_ghost2){
+    light_update(true);
+}
+with(obj_ghost3){
+    light_update(true);
+}
+with(obj_ghost4){
+    light_update(true);
+}
+
 //set the surface target
 surface_set_target(lightmap);
 
@@ -96,6 +109,19 @@ with(obj_arrow4){
     light_draw();
 }
 with(obj_spark){
+    light_draw();
+}
+
+with(obj_ghost1){
+    light_draw();
+}
+with(obj_ghost2){
+    light_draw();
+}
+with(obj_ghost3){
+    light_draw();
+}
+with(obj_ghost4){
     light_draw();
 }
 //reset blend mode

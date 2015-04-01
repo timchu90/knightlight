@@ -217,6 +217,7 @@ if(playerhp[1] &lt;= 0){
     gamepad_set_vibration(2,0,0);
     gamepad_set_vibration(3,0,0);
 
+    instance_create(x,y,obj_ghost1);
     instance_destroy();
 }
 

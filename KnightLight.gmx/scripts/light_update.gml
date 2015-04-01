@@ -3,6 +3,7 @@
 surface_set_target(lightsurface);
 
 fade_in = argument0;
+
 if(fade_in == true && fadealpha <= alpha){
     fadealpha = fadealpha + 0.07;
 }
