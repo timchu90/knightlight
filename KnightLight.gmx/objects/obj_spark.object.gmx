@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>light_init(30,c_yellow,1);
-image_speed = 1;
-alarm[0] = room_speed/4;
+            <string>light_init(150,c_yellow,1);
+image_speed = 0.5;
+alarm[0] = room_speed/6;
 </string>
           </argument>
         </arguments>
