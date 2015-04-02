@@ -82,7 +82,7 @@ ApplyForce(point_direction(x,y,obj_reticle3.x,obj_reticle3.y)/50,
 if(gamepad_button_check_pressed(2,gp_shoulderr) and canshoot[3] = true){
     instance_create(x,y,obj_arrow3);
     canshoot[3] = false;
-    alarm[0] = room_speed 0.7;
+    alarm[0] = room_speed * 0.7;
 }
 </string>
           </argument>
