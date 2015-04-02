@@ -28,7 +28,9 @@
             <string>globalvar menustart;
 globalvar menuselect;
 globalvar menuconfirm;
+globalvar numberOfRounds;
 
+numberOfRounds = 0;
 menustart[1] = false;
 menustart[2] = false;
 menustart[3] = false;

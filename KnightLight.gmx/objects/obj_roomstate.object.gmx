@@ -101,9 +101,13 @@ if(deathcount == (numberofplayers - 1)){
     for(var i =1;i&lt;=4;i++){
         if(menustart[i] == true and playerhp[i] &gt; 0){
             show_message("PLAYER " +string(i)+" WINS!");
-            room_restart();
-    } 
-}
+            numberOfRounds++;
+            if (numberOfRounds == 3)
+                room_goto(room_first);
+            else
+                room_restart();
+        }
+    }
 }
 </string>
           </argument>
