@@ -116,6 +116,7 @@
       <object>objects\obj_arrow4</object>
       <object>objects\obj_ghost4</object>
     </objects>
+    <object>objects\eff_screenshake</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>

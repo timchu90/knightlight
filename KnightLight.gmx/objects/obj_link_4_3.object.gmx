@@ -19,13 +19,13 @@
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>obj_link_4_3</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>CreatePendulum(obj_link_4_2,roomgrav,roomfric,roommass);
+            <string>CreatePendulum(obj_link_4_2,roomgrav,flailfric,flailmass);
 </string>
           </argument>
         </arguments>

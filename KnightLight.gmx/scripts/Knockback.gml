@@ -9,5 +9,8 @@ victim.speed = kb;
 victim.friction = 0.5;
 victim.alarm[4] = room_speed/4;
 
+
 instance_create(victim.x,victim.y,obj_spark)
+instance_create(x,y,eff_screenshake);
+victim.image_index = 1;
 

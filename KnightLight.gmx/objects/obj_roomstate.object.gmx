@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//object holding variables for easy game tweaking
-globalvar roomfric, roomgrav, roommass;
+globalvar roomgrav, flailfric, flailmass,swordfric,swordmass,bowfric,bowmass;
 globalvar basemove, reloadmove, basekb;
 globalvar arrowdmg, arrowspd;
 globalvar canshoot, flashon;
@@ -53,9 +53,16 @@ playerhp[4] = 200;
 deathcount = 0;
 
 //physics variables for weapons
-roomfric = 0.05;
 roomgrav = -0.4;//corrects for inherent gravity
-roommass = 0.5;
+
+flailfric = 0.05;
+flailmass = 0.4;
+
+swordfric = 0.1;
+swordmass = 0.5;
+
+bowfric = 0.1;
+bowmass = 0.5;
 
 //base movement speed and move speed during relaod
 basemove = 5;
@@ -109,6 +116,7 @@ if(deathcount == (numberofplayers - 1)){
         }
     }
 }
+
 </string>
           </argument>
         </arguments>

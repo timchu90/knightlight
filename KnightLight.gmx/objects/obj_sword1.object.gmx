@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>CreatePendulum(obj_hand1,roomgrav,roomfric,roommass);
+            <string>CreatePendulum(obj_hand1,roomgrav,swordfric,swordmass);
 </string>
           </argument>
         </arguments>

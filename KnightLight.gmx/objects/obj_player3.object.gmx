@@ -34,6 +34,8 @@ if(menuselect[3] == 2){
 if(menuselect[3] == 3){
     light_init(120,c_white,1);
 }
+image_speed = 0;
+image_index = 0;
 
 </string>
           </argument>
@@ -62,6 +64,7 @@ if(menuselect[3] == 3){
 // Stop after being knocked back.
 speed = 0;
 friction = 0;
+image_index = 0;
 </string>
           </argument>
         </arguments>
