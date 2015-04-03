@@ -206,9 +206,11 @@ image_index = 0;
           <argument>
             <kind>1</kind>
             <string>//contains code for moving player and turning on/off light
-if (alarm[4] == -1) MovePlayer(4,obj_reticle4);
+if(playerhp[4] &gt; 0){
+    if (alarm[4] == -1) MovePlayer(4,obj_reticle4);
+}
 
-if(playerhp[4] &lt;= 0){
+if(playerhp[4] &lt;= 0 &amp;&amp; deathbool == false){
     deathbool = true;
     deathcount++;
     if(menuselect[4] == 1){
