@@ -30,6 +30,7 @@
     <sprite>sprites\sp_greenghost</sprite>
     <sprite>sprites\sp_yellowghost</sprite>
     <sprite>sprites\sp_spark</sprite>
+    <sprite>sprites\sp_death</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_dungeon_tile</background>
@@ -117,6 +118,7 @@
       <object>objects\obj_ghost4</object>
     </objects>
     <object>objects\eff_screenshake</object>
+    <object>objects\obj_death</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>

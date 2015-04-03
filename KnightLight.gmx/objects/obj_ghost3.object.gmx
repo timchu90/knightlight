@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>light_init(150,c_white,0.8);
+            <string>light_init(150,c_white,1);
 </string>
           </argument>
         </arguments>
