@@ -61,6 +61,10 @@ deathbool = false;
             <kind>1</kind>
             <string>    instance_create(x,y,obj_death);
     instance_create(x,y,obj_ghost3);
+    gamepad_set_vibration(0,0,0);
+    gamepad_set_vibration(1,0,0);
+    gamepad_set_vibration(2,0,0);
+    gamepad_set_vibration(3,0,0);
     instance_destroy();
 </string>
           </argument>
@@ -242,11 +246,6 @@ if(playerhp[3] &lt;= 0 &amp;&amp; deathbool == false){
     with(obj_reticle3){
         instance_destroy();
     }
-    
-    gamepad_set_vibration(0,0,0);
-    gamepad_set_vibration(1,0,0);
-    gamepad_set_vibration(2,0,0);
-    gamepad_set_vibration(3,0,0);
 
     speed = 0;
     image_speed = 1;
@@ -270,19 +269,21 @@ if(playerhp[3] &lt;= 0 &amp;&amp; deathbool == false){
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>obj_arrow4</whoName>
+        <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy();
+            <string>with(other){
+    instance_destroy();
+}
 playerhp[3] = playerhp[3] - arrowdmg;
 gamepad_set_vibration(2,0.5,0.5);
 obj_player3.alarm[2] = room_speed/2;
 
 // Apply knockback
-Knockback(other, self, basekb);
+Knockback(self, other, basekb);
 
 audio_play_sound(Bow_Hit, 10, false);
 
@@ -403,19 +404,21 @@ if (!audio_is_playing(Flail_Hit)) {
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>obj_arrow2</whoName>
+        <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy();
+            <string>with(other){
+    instance_destroy();
+}
 playerhp[3] = playerhp[3] - arrowdmg;
 gamepad_set_vibration(2,0.5,0.5);
 obj_player3.alarm[2] = room_speed/2;
 
 // Apply knockback
-Knockback(other, self, basekb);
+Knockback(self, other, basekb);
 
 audio_play_sound(Bow_Hit, 10, false);
 
@@ -506,21 +509,22 @@ if (!audio_is_playing(Flail_Hit)) {
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>obj_arrow1</whoName>
+        <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>playerhp[3] = playerhp[3] - arrowdmg;
+            <string>with(other){
+    instance_destroy();
+}
+
+playerhp[3] = playerhp[3] - arrowdmg;
 gamepad_set_vibration(2,0.5,0.5);
-obj_player3.alarm[2] = room_speed/2;
+alarm[2] = room_speed/2;
 
 // Apply knockback
-Knockback(other, self, basekb);
-
-instance_destroy();
-
+Knockback(self, other, basekb);
 audio_play_sound(Bow_Hit, 10, false);
 
 </string>
