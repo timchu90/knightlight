@@ -42,7 +42,8 @@ else if (menuconfirm[player] == true && menustart[player] == true)
             if (menuconfirm[i])
                 numOfConfirmedPlayers++;
         }
-        if (numOfActivePlayers == numOfConfirmedPlayers)
+        if (numOfActivePlayers == numOfConfirmedPlayers
+            && numOfActivePlayers > 1)
             room_goto_next();
     }
 }
