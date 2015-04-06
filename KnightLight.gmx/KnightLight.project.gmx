@@ -31,6 +31,10 @@
     <sprite>sprites\sp_yellowghost</sprite>
     <sprite>sprites\sp_spark</sprite>
     <sprite>sprites\sp_death</sprite>
+    <sprite>sprites\sp_redmenu</sprite>
+    <sprite>sprites\sp_bluemenu</sprite>
+    <sprite>sprites\sp_greenmenu</sprite>
+    <sprite>sprites\sp_yellowmenu</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_dungeon_tile</background>
