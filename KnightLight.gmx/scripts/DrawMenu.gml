@@ -3,7 +3,7 @@ player = argument0;
 
 if(menustart[player] == false){
     draw_set_color(c_black);
-    draw_text(x,y,"PRESS <START> TO JOIN");
+    draw_text(x+50,y,"PRESS <START> TO JOIN");
 }
 else{
     if(player == 1){

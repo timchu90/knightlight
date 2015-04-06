@@ -675,16 +675,17 @@ alarm[2] = room_speed/8;
 x=xprevious;
 y=yprevious;
 
-if(abs(hspeed) &gt;= abs(vspeed)&amp;&amp;not place_meeting(x + hspeed,y,obj_wall)){
+if(not place_meeting(x + hspeed,y,obj_wall)){
     x+=hspeed; 
     exit;
 }
-if(abs(vspeed) &gt;= abs(hspeed)&amp;&amp;not place_meeting(x,y+vspeed,obj_wall)){
+if(not place_meeting(x,y + vspeed,obj_wall)){
     y+=vspeed;
     exit
 }
-
 speed = 0;
+
+
 </string>
           </argument>
         </arguments>
