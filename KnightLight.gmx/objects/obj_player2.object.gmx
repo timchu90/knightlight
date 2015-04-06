@@ -42,6 +42,30 @@ deathbool = false;
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="11">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Invincibility ends
+image_index = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="5">
       <action>
         <libid>1</libid>
@@ -93,7 +117,6 @@ deathbool = false;
 // Stop after being knocked back.
 speed = 0;
 friction = 0;
-image_index = 0;
 </string>
           </argument>
         </arguments>
@@ -276,18 +299,22 @@ if(playerhp[2] &lt;= 0 &amp;&amp; deathbool == false){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with(other){
+            <string>if (alarm[11] == -1) { // invincibility
+    playerhp[2] = playerhp[2] - arrowdmg;
+    gamepad_set_vibration(1,0.5,0.5);
+    obj_player2.alarm[1] = room_speed/2;
+    
+    // knockback
+    Knockback(self,other, basekb);
+    
+    // audio
+    audio_play_sound(Bow_Hit, 10, false);
+}
+
+// destroy arrow
+with(other){
     instance_destroy();
 }
-playerhp[2] = playerhp[2] - arrowdmg;
-gamepad_set_vibration(1,0.5,0.5);
-obj_player2.alarm[1] = room_speed/2;
-
-// Apply knockback
-Knockback(self,other, basekb);
-
-audio_play_sound(Bow_Hit, 10, false);
-
 </string>
           </argument>
         </arguments>
@@ -310,19 +337,21 @@ audio_play_sound(Bow_Hit, 10, false);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>playerhp[2] = playerhp[2] - obj_sword4.speed;
-gamepad_set_vibration(3,0.5,0.5);
-alarm[3] = room_speed/4;
-gamepad_set_vibration(1,0.5,0.5);
-alarm[1] = room_speed/2;
-
-// Apply knockback
-Knockback(self, other, basekb);
-
-if (!audio_is_playing(Sword_Hit)) {
-    audio_play_sound(Sword_Hit, 10, false);
+            <string>if (alarm[11] == -1) { // invincibility
+    playerhp[2] = playerhp[2] - obj_sword4.speed;
+    gamepad_set_vibration(3,0.5,0.5);
+    alarm[3] = room_speed/4;
+    gamepad_set_vibration(1,0.5,0.5);
+    alarm[1] = room_speed/2;
+    
+    // knockback
+    Knockback(self, other, basekb);
+    
+    // audio
+    if (!audio_is_playing(Sword_Hit)) {
+        audio_play_sound(Sword_Hit, 10, false);
+    }
 }
-
 </string>
           </argument>
         </arguments>
@@ -345,21 +374,23 @@ if (!audio_is_playing(Sword_Hit)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>playerhp[2] = playerhp[2] - obj_flail4.speed;
-//vibrate self
-gamepad_set_vibration(1,0.5,0.5);
-alarm[1] = room_speed/4;
-//vibrate enemy
-gamepad_set_vibration(3,0.5,0.5);
-alarm[3] = room_speed/2;
-
-// Apply knockback
-Knockback(self, other, basekb);
-
-if (!audio_is_playing(Flail_Hit)) {
-    audio_play_sound(Flail_Hit, 10, false);
+            <string>if (alarm[11] == -1) { // invincibility
+    playerhp[2] = playerhp[2] - obj_flail4.speed;
+    //vibrate self
+    gamepad_set_vibration(1,0.5,0.5);
+    alarm[1] = room_speed/4;
+    //vibrate enemy
+    gamepad_set_vibration(3,0.5,0.5);
+    alarm[3] = room_speed/2;
+    
+    // knockback
+    Knockback(self, other, basekb);
+    
+    // audio
+    if (!audio_is_playing(Flail_Hit)) {
+        audio_play_sound(Flail_Hit, 10, false);
+    }
 }
-
 </string>
           </argument>
         </arguments>
@@ -382,18 +413,22 @@ if (!audio_is_playing(Flail_Hit)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with(other){
+            <string>if (alarm[11] == -1) { // invincibility
+    playerhp[2] = playerhp[2] - arrowdmg;
+    gamepad_set_vibration(1,0.5,0.5);
+    obj_player2.alarm[1] = room_speed/2;
+    
+    // knockback
+    Knockback(self,other, basekb);
+    
+    // audio
+    audio_play_sound(Bow_Hit, 10, false);
+}
+
+// destroy arrow
+with(other){
     instance_destroy();
 }
-playerhp[2] = playerhp[2] - arrowdmg;
-gamepad_set_vibration(1,0.5,0.5);
-obj_player2.alarm[1] = room_speed/2;
-
-// Apply knockback
-Knockback(self,other, basekb);
-
-audio_play_sound(Bow_Hit, 10, false);
-
 </string>
           </argument>
         </arguments>
@@ -416,20 +451,22 @@ audio_play_sound(Bow_Hit, 10, false);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>playerhp[2] = playerhp[2] - obj_sword3.speed;
-gamepad_set_vibration(1,0.5,0.5);
-alarm[1] = room_speed/2;
-gamepad_set_vibration(2,0.5,0.5);
-alarm[2] = room_speed/4;
-
-
-// Apply knockback
-Knockback(self, other, basekb);
-
-if (!audio_is_playing(Sword_Hit)) {
-    audio_play_sound(Sword_Hit, 10, false);
+            <string>if (alarm[11] == -1) { // invincibility
+    playerhp[2] = playerhp[2] - obj_sword3.speed;
+    gamepad_set_vibration(1,0.5,0.5);
+    alarm[1] = room_speed/2;
+    gamepad_set_vibration(2,0.5,0.5);
+    alarm[2] = room_speed/4;
+    
+    
+    // knockback
+    Knockback(self, other, basekb);
+    
+    // audio
+    if (!audio_is_playing(Sword_Hit)) {
+        audio_play_sound(Sword_Hit, 10, false);
+    }
 }
-
 </string>
           </argument>
         </arguments>
@@ -452,19 +489,21 @@ if (!audio_is_playing(Sword_Hit)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>playerhp[2] = playerhp[2] - obj_flail3.speed;
-gamepad_set_vibration(2,0.5,0.5);
-gamepad_set_vibration(1,0.5,0.5);
-alarm[1] = room_speed/2;
-alarm[2] = room_speed/4;
-
-// Apply knockback
-Knockback(self, other, basekb);
-
-if (!audio_is_playing(Flail_Hit)) {
-    audio_play_sound(Flail_Hit, 10, false);
+            <string>if (alarm[11] == -1) { // invincibility
+    playerhp[2] = playerhp[2] - obj_flail3.speed;
+    gamepad_set_vibration(2,0.5,0.5);
+    gamepad_set_vibration(1,0.5,0.5);
+    alarm[1] = room_speed/2;
+    alarm[2] = room_speed/4;
+    
+    // knockback
+    Knockback(self, other, basekb);
+    
+    // audio
+    if (!audio_is_playing(Flail_Hit)) {
+        audio_play_sound(Flail_Hit, 10, false);
+    }
 }
-
 </string>
           </argument>
         </arguments>
@@ -487,13 +526,16 @@ if (!audio_is_playing(Flail_Hit)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>playerhp[2] = playerhp[2]-(obj_flail2.speed/4);
-gamepad_set_vibration(1,0.5,0.5);
-alarm[1] = room_speed/2;
-if (!audio_is_playing(Flail_Hit)) {
-    audio_play_sound(Flail_Hit, 10, false);
+            <string>if (alarm[11] == -1) { // invincibility
+    playerhp[2] = playerhp[2]-(obj_flail2.speed/4);
+    gamepad_set_vibration(1,0.5,0.5);
+    alarm[1] = room_speed/2;
+    
+    // audio
+    if (!audio_is_playing(Flail_Hit)) {
+        audio_play_sound(Flail_Hit, 10, false);
+    }
 }
-
 </string>
           </argument>
         </arguments>
@@ -516,18 +558,22 @@ if (!audio_is_playing(Flail_Hit)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with(other){
+            <string>if (alarm[11] == -1) { // invincibility
+    playerhp[2] = playerhp[2] - arrowdmg;
+    gamepad_set_vibration(1,0.5,0.5);
+    obj_player2.alarm[1] = room_speed/2;
+    
+    // knockback
+    Knockback(self,other, basekb);
+    
+    // audio
+    audio_play_sound(Bow_Hit, 10, false);
+}
+
+// destroy arrow
+with(other){
     instance_destroy();
 }
-playerhp[2] = playerhp[2] - arrowdmg;
-gamepad_set_vibration(1,0.5,0.5);
-obj_player2.alarm[1] = room_speed/2;
-
-// Apply knockback
-Knockback(self,other, basekb);
-
-audio_play_sound(Bow_Hit, 10, false);
-
 </string>
           </argument>
         </arguments>
@@ -550,19 +596,21 @@ audio_play_sound(Bow_Hit, 10, false);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>playerhp[2] = playerhp[2] - obj_sword1.speed;
-gamepad_set_vibration(1,0.5,0.5);
-alarm[0] = room_speed/4;
-gamepad_set_vibration(0,0.5,0.5);
-alarm[1] = room_speed/2;
-
-// Apply knockback
-Knockback(self, other, basekb);
-
-if (!audio_is_playing(Sword_Hit)) {
-    audio_play_sound(Sword_Hit, 10, false);
+            <string>if (alarm[11] == -1) { // invincibility
+    playerhp[2] = playerhp[2] - obj_sword1.speed;
+    gamepad_set_vibration(1,0.5,0.5);
+    alarm[0] = room_speed/4;
+    gamepad_set_vibration(0,0.5,0.5);
+    alarm[1] = room_speed/2;
+    
+    // knockback
+    Knockback(self, other, basekb);
+    
+    // audio
+    if (!audio_is_playing(Sword_Hit)) {
+        audio_play_sound(Sword_Hit, 10, false);
+    }
 }
-
 </string>
           </argument>
         </arguments>
@@ -585,17 +633,21 @@ if (!audio_is_playing(Sword_Hit)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>playerhp[2] = playerhp[2] - obj_flail1.speed;
-gamepad_set_vibration(1,0.5,0.5);
-alarm[0] = room_speed/4;
-gamepad_set_vibration(0,0.5,0.5);
-alarm[1] = room_speed/2;
-if (!audio_is_playing(Flail_Hit)) {
-    audio_play_sound(Flail_Hit, 10, false);
+            <string>if (alarm[11] == -1) { // invincibility
+    playerhp[2] = playerhp[2] - obj_flail1.speed;
+    gamepad_set_vibration(1,0.5,0.5);
+    alarm[0] = room_speed/4;
+    gamepad_set_vibration(0,0.5,0.5);
+    alarm[1] = room_speed/2;
+    
+    // audio
+    if (!audio_is_playing(Flail_Hit)) {
+        audio_play_sound(Flail_Hit, 10, false);
+    }
+    
+    // knockback
+    Knockback(self, other, basekb);
 }
-
-// Apply knockback
-Knockback(self, other, basekb);
 </string>
           </argument>
         </arguments>
