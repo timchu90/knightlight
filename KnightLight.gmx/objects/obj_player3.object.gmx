@@ -275,7 +275,12 @@ if(playerhp[3] &lt;= 0 &amp;&amp; deathbool == false){
     flashon[3] = true;
     alarm[5] = room_speed;
 }
-
+if(collision_circle(x + hspeed, y - vspeed, 16, obj_wall, 1, 1)) { // Horizontal collision
+    hspeed = 0; // Stop horizontal movement
+}
+if(collision_circle(x - hspeed, y + vspeed, 16, obj_wall, 1, 1)) { // Vertical collision
+    vspeed = 0; // Stop vertical movement
+}
 </string>
           </argument>
         </arguments>
@@ -672,6 +677,7 @@ with(other){
             <kind>1</kind>
             <string>gamepad_set_vibration(2,0.1,0.1);
 alarm[2] = room_speed/8;
+/*
 x=xprevious;
 y=yprevious;
 
@@ -684,6 +690,7 @@ if(not place_meeting(x,y + vspeed,obj_wall)){
     exit
 }
 speed = 0;
+*/
 
 
 </string>
