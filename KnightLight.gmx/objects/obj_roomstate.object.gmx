@@ -133,7 +133,7 @@ if(deathcount == (numberofplayers - 1)){
             if (numberOfRounds == 3)
                 room_goto(room_first);
             else
-                room_restart();
+                room_goto_next();
         }
     }
 }

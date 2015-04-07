@@ -25,6 +25,7 @@
     <sprite>sprites\sp_yellowknight</sprite>
     <sprite>sprites\sp_lightmask</sprite>
     <sprite>sprites\sp_torch</sprite>
+    <sprite>sprites\sp_campfire</sprite>
     <sprite>sprites\sp_redghost</sprite>
     <sprite>sprites\sp_blueghost</sprite>
     <sprite>sprites\sp_greenghost</sprite>
@@ -123,10 +124,14 @@
     </objects>
     <object>objects\eff_screenshake</object>
     <object>objects\obj_death</object>
+    <object>objects\obj_campfire</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
+    <room>rooms\rm_house</room>
     <room>rooms\rm_dungeon</room>
+    <room>rooms\rm_campfire</room>
+    <room>rooms\rm_temple</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
