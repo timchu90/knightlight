@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = 0.4;
+audio_play_sound(Death,10,false);
 alarm[0] = room_speed;
 </string>
           </argument>
