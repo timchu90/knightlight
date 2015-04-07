@@ -675,9 +675,10 @@ with(other){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>gamepad_set_vibration(2,0.1,0.1);
+            <string>/*
+gamepad_set_vibration(2,0.1,0.1);
 alarm[2] = room_speed/8;
-/*
+
 x=xprevious;
 y=yprevious;
 
