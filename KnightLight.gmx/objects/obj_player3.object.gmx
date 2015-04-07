@@ -342,14 +342,14 @@ with(other){
           <argument>
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
-    playerhp[3] = playerhp[3] - obj_sword4.speed;
+    playerhp[3] = playerhp[3] - other.speed;
     gamepad_set_vibration(3,0.5,0.5);
     alarm[3] = room_speed/4;
     gamepad_set_vibration(2,0.5,0.5);
     alarm[2] = room_speed/2;
     
     // knockback
-    Knockback(self, other, basekb);
+    Knockback(self, other, basekb, other.speed);
     
     // audio
     if (!audio_is_playing(Sword_Hit)) {
@@ -379,7 +379,7 @@ with(other){
           <argument>
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
-    playerhp[3] = playerhp[3] - obj_flail4.speed;
+    playerhp[3] = playerhp[3] - other.speed;
     //vibrate self
     gamepad_set_vibration(2,0.5,0.5);
     alarm[2] = room_speed/4;
@@ -388,7 +388,7 @@ with(other){
     alarm[3] = room_speed/2;
     
     // knockback
-    Knockback(self, other, basekb);
+    Knockback(self, other, basekb, other.speed);
     
     // audio
     if (!audio_is_playing(Flail_Hit)) {
@@ -418,7 +418,7 @@ with(other){
           <argument>
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
-    playerhp[3] = playerhp[3]-(obj_flail3.speed/4);
+    playerhp[3] = playerhp[3]-(other.speed/4);
     gamepad_set_vibration(2,0.5,0.5);
     alarm[2] = room_speed/2;
     
@@ -488,7 +488,7 @@ with(other){
           <argument>
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
-    playerhp[3] = playerhp[3] - obj_sword2.speed;
+    playerhp[3] = playerhp[3] - other.speed;
     gamepad_set_vibration(2,0.5,0.5);
     alarm[2] = room_speed/2;
     gamepad_set_vibration(1,0.5,0.5);
@@ -496,7 +496,7 @@ with(other){
     
     
     // Apply knockback
-    Knockback(self, other, basekb);
+    Knockback(self, other, basekb, other.speed);
     
     // audio
     if (!audio_is_playing(Sword_Hit)) {
@@ -526,14 +526,14 @@ with(other){
           <argument>
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
-    playerhp[3] = playerhp[3] - obj_flail2.speed;
+    playerhp[3] = playerhp[3] - other.speed;
     gamepad_set_vibration(1,0.5,0.5);
     gamepad_set_vibration(2,0.5,0.5);
     alarm[2] = room_speed/2;
     alarm[1] = room_speed/4;
     
     // knockback
-    Knockback(self, other, basekb);
+    Knockback(self, other, basekb, other.speed);
     
     // audio
     if (!audio_is_playing(Flail_Hit)) {
@@ -602,14 +602,14 @@ with(other){
           <argument>
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
-    playerhp[3] = playerhp[3] - obj_sword1.speed;
+    playerhp[3] = playerhp[3] - other.speed;
     gamepad_set_vibration(2,0.5,0.5);
     alarm[2] = room_speed/2;
     gamepad_set_vibration(0,0.5,0.5);
     alarm[0] = room_speed/4;
     
     // knockback
-    Knockback(self, other, basekb);
+    Knockback(self, other, basekb, other.speed);
     
     // audio
     if (!audio_is_playing(Sword_Hit)) {
@@ -639,7 +639,7 @@ with(other){
           <argument>
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
-    playerhp[3] = playerhp[3] - obj_flail1.speed;
+    playerhp[3] = playerhp[3] - other.speed;
     gamepad_set_vibration(2,0.5,0.5);
     alarm[2] = room_speed/2;
     gamepad_set_vibration(0,0.5,0.5);
@@ -651,7 +651,7 @@ with(other){
     }
     
     // knockback
-    Knockback(self, other, basekb);
+    Knockback(self, other, basekb, other.speed);
 }
 </string>
           </argument>
