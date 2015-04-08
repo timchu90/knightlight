@@ -29,6 +29,7 @@
 globalvar roomgrav, flailfric, flailmass,swordfric,swordmass,bowfric,bowmass;
 globalvar basemove, reloadmove, basekb;
 globalvar arrowdmg, arrowspd;
+globalvar flaildmgmod, sworddmgmod;
 globalvar canshoot, flashon;
 globalvar playerhp;
 globalvar deathcount;
@@ -71,6 +72,10 @@ reloadmove = 3;
 //bow related variables
 arrowdmg = 40;
 arrowspd = 20;
+
+//melee weapon damage modifiers
+flaildmgmod = 2.7;
+sworddmgmod = 2.4;
 
 
 //base knockback speed
