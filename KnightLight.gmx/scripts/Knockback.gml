@@ -19,6 +19,8 @@ victim.alarm[4] = room_speed/6; // knockback immobility
 victim.alarm[11] = room_speed * 0.4; // invincibility
 
 
-instance_create(victim.x,victim.y,obj_spark)
+instance_create(victim.x,victim.y,obj_spark);
+Sleep(50);
 instance_create(x,y,eff_screenshake);
 victim.image_index = 1;
+

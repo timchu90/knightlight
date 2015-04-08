@@ -1,7 +1,4 @@
 //update all lights
-with(obj_campfire){
-    light_update(true);
-    }
 with(obj_player1){
     if(flashon[1] == true){
         light_update(true);
@@ -127,9 +124,7 @@ with(obj_ghost3){
 with(obj_ghost4){
     light_draw();
 }
-with(obj_campfire){
-    light_draw();
-    }
+
 //reset blend mode
 draw_set_blend_mode(bm_normal);
 
