@@ -32,6 +32,7 @@
     </sounds>
     <sounds name="Music">
       <sound>sound\Loop_1</sound>
+      <sound>sound\bgm_dungeon</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">

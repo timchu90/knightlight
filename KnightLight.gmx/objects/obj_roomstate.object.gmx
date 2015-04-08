@@ -76,9 +76,9 @@ arrowspd = 20;
 //base knockback speed
 basekb = 10;
 
-// BGM
-if(!audio_is_playing(Loop_1)){
-    audio_play_sound(Loop_1,10,true);
+audio_stop_sound(Loop_1);
+if(!audio_is_playing(bgm_dungeon)){
+    audio_play_sound(bgm_dungeon,10,true);
 }
 
 </string>
