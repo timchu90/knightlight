@@ -55,6 +55,7 @@
     <sprite>sprites\sp_greenghost</sprite>
     <sprite>sprites\sp_yellowghost</sprite>
     <sprite>sprites\sp_spark</sprite>
+    <sprite>sprites\sp_littlespark</sprite>
     <sprite>sprites\sp_death</sprite>
     <sprite>sprites\sp_redmenu</sprite>
     <sprite>sprites\sp_bluemenu</sprite>
@@ -96,6 +97,7 @@
     <object>objects\obj_menubase</object>
     <object>objects\obj_roomstate</object>
     <object>objects\obj_spark</object>
+    <object>objects\obj_littlespark</object>
     <objects name="player1">
       <object>objects\obj_menu1</object>
       <object>objects\obj_player1</object>
