@@ -5,12 +5,34 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\Bow_Hit</sound>
-    <sound>sound\Bow_Shot</sound>
-    <sound>sound\Flail_Hit</sound>
-    <sound>sound\Sword_Hit</sound>
-    <sound>sound\Loop_1</sound>
-    <sound>sound\Death</sound>
+    <sounds name="Bow_Shot">
+      <sound>sound\Bow_Shot</sound>
+      <sound>sound\Bow_Shot2</sound>
+      <sound>sound\Bow_Shot3</sound>
+    </sounds>
+    <sounds name="Death">
+      <sound>sound\Death</sound>
+      <sound>sound\Death2</sound>
+      <sound>sound\Death3</sound>
+    </sounds>
+    <sounds name="Bow_Hit">
+      <sound>sound\Bow_Hit</sound>
+      <sound>sound\Bow_Hit2</sound>
+      <sound>sound\Bow_Hit3</sound>
+    </sounds>
+    <sounds name="Flail_Hit">
+      <sound>sound\Flail_Hit</sound>
+      <sound>sound\Flail_Hit2</sound>
+      <sound>sound\Flail_Hit3</sound>
+    </sounds>
+    <sounds name="Sword_Hit">
+      <sound>sound\Sword_Hit</sound>
+      <sound>sound\Sword_Hit2</sound>
+      <sound>sound\Sword_Hit3</sound>
+    </sounds>
+    <sounds name="Music">
+      <sound>sound\Loop_1</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sp_redknight</sprite>
@@ -58,6 +80,11 @@
     <script>scripts\NavigateMenu.gml</script>
     <script>scripts\DrawMenu.gml</script>
     <script>scripts\Knockback.gml</script>
+    <script>scripts\PlayBowShot.gml</script>
+    <script>scripts\PlayDeath.gml</script>
+    <script>scripts\PlayFlailHit.gml</script>
+    <script>scripts\PlayBowHit.gml</script>
+    <script>scripts\PlaySwordHit.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_healthbars</object>
