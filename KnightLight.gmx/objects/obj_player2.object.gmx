@@ -313,7 +313,7 @@ if(collision_circle(x - hspeed, y + vspeed, 16, obj_wall, 1, 1)) { // Vertical c
     Knockback(self,other, basekb);
     
     // audio
-    audio_play_sound(Bow_Hit, 10, false);
+    PlayBowHit();
 }
 
 // destroy arrow
@@ -353,9 +353,7 @@ with(other){
     Knockback(self, other, basekb);
     
     // audio
-    if (!audio_is_playing(Sword_Hit)) {
-        audio_play_sound(Sword_Hit, 10, false);
-    }
+    PlaySwordHit();
 }
 </string>
           </argument>
@@ -392,9 +390,7 @@ with(other){
     Knockback(self, other, basekb);
     
     // audio
-    if (!audio_is_playing(Flail_Hit)) {
-        audio_play_sound(Flail_Hit, 10, false);
-    }
+    PlayFlailHit();
 }
 </string>
           </argument>
@@ -427,7 +423,7 @@ with(other){
     Knockback(self,other, basekb);
     
     // audio
-    audio_play_sound(Bow_Hit, 10, false);
+    PlayBowHit();
 }
 
 // destroy arrow
@@ -468,9 +464,7 @@ with(other){
     Knockback(self, other, basekb);
     
     // audio
-    if (!audio_is_playing(Sword_Hit)) {
-        audio_play_sound(Sword_Hit, 10, false);
-    }
+    PlaySwordHit();
 }
 </string>
           </argument>
@@ -505,9 +499,7 @@ with(other){
     Knockback(self, other, basekb);
     
     // audio
-    if (!audio_is_playing(Flail_Hit)) {
-        audio_play_sound(Flail_Hit, 10, false);
-    }
+    PlayFlailHit();
 }
 </string>
           </argument>
@@ -537,9 +529,7 @@ with(other){
     alarm[1] = room_speed/2;
     
     // audio
-    if (!audio_is_playing(Flail_Hit)) {
-        audio_play_sound(Flail_Hit, 10, false);
-    }
+    PlayFlailHit();
 }
 </string>
           </argument>
@@ -572,7 +562,7 @@ with(other){
     Knockback(self,other, basekb);
     
     // audio
-    audio_play_sound(Bow_Hit, 10, false);
+    PlayBowHit();
 }
 
 // destroy arrow
@@ -612,9 +602,7 @@ with(other){
     Knockback(self, other, basekb);
     
     // audio
-    if (!audio_is_playing(Sword_Hit)) {
-        audio_play_sound(Sword_Hit, 10, false);
-    }
+    PlaySwordHit();
 }
 </string>
           </argument>
@@ -646,9 +634,7 @@ with(other){
     alarm[1] = room_speed/2;
     
     // audio
-    if (!audio_is_playing(Flail_Hit)) {
-        audio_play_sound(Flail_Hit, 10, false);
-    }
+    PlayFlailHit();
     
     // knockback
     Knockback(self, other, basekb);
