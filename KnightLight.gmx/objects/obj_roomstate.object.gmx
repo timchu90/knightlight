@@ -53,10 +53,10 @@ playerhp[4] = 200;
 deathcount = 0;
 
 //physics variables for weapons
-roomgrav = -0.4;//corrects for inherent gravity
+roomgrav = -0.4;//corrects for inherent gravity -0.4
 
-flailfric = 0.05;
-flailmass = 0.4;
+flailfric = 0.02;//0.05
+flailmass = 0.4;//0.4
 
 swordfric = 0.1;
 swordmass = 0.5;

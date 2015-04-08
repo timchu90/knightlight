@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>CreatePendulum(obj_player1,roomgrav,flailfric,flailmass);
+            <string>CreatePendulum(obj_player1,0,flailfric,flailmass);
 </string>
           </argument>
         </arguments>
@@ -50,7 +50,7 @@
             <kind>1</kind>
             <string>MovePendulum();
 ApplyForce(point_direction(x,y,obj_reticle1.x,obj_reticle1.y)/100, point_direction(x,y,obj_reticle1.x,obj_reticle1.y));
-
+///100
 </string>
           </argument>
         </arguments>

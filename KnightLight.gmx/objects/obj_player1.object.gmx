@@ -629,7 +629,7 @@ with(other){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (alarm[11] == -1) { // invincibility
+            <string>/*if (alarm[11] == -1) { // invincibility
     playerhp[1] = playerhp[1] - (obj_flail1.speed/4);
     gamepad_set_vibration(0,0.5,0.5);
     alarm[0] = room_speed/2;
@@ -637,6 +637,8 @@ with(other){
     // audio
     PlayFlailHit();
 }
+*/
+;
 </string>
           </argument>
         </arguments>
