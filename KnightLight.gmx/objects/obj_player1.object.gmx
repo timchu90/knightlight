@@ -342,7 +342,7 @@ with(other){
           <argument>
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
-    playerhp[1] = playerhp[1] - other.speed;
+    playerhp[1] = playerhp[1] - other.speed * sworddmgmod;
     gamepad_set_vibration(3,0.5,0.5);
     alarm[3] = room_speed/4;
     gamepad_set_vibration(0,0.5,0.5);
@@ -379,7 +379,7 @@ with(other){
           <argument>
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
-    playerhp[1] = playerhp[1] - other.speed;
+    playerhp[1] = playerhp[1] - other.speed * flaildmgmod;
     //vibrate self
     gamepad_set_vibration(0,0.5,0.5);
     alarm[0] = room_speed/4;
@@ -456,7 +456,7 @@ with(other){
           <argument>
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
-    playerhp[1] = playerhp[1] - other.speed;
+    playerhp[1] = playerhp[1] - other.speed * sworddmgmod;
     gamepad_set_vibration(0,0.5,0.5);
     alarm[0] = room_speed/2;
     gamepad_set_vibration(2,0.5,0.5);
@@ -493,7 +493,7 @@ with(other){
           <argument>
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
-    playerhp[1] = playerhp[1] - other.speed;
+    playerhp[1] = playerhp[1] - other.speed * flaildmgmod;
     gamepad_set_vibration(2,0.5,0.5);
     gamepad_set_vibration(0,0.5,0.5);
     alarm[0] = room_speed/2;
@@ -568,7 +568,7 @@ with(other){
           <argument>
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
-    playerhp[1] = playerhp[1] - other.speed;
+    playerhp[1] = playerhp[1] - other.speed * sworddmgmod;
     gamepad_set_vibration(0,0.5,0.5);
     alarm[0] = room_speed/2;
     gamepad_set_vibration(1,0.5,0.5);
@@ -605,7 +605,7 @@ with(other){
           <argument>
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
-    playerhp[1] = playerhp[1] - other.speed;
+    playerhp[1] = playerhp[1] - other.speed * flaildmgmod;
     gamepad_set_vibration(1,0.5,0.5);
     gamepad_set_vibration(0,0.5,0.5);
     alarm[0] = room_speed/2;
