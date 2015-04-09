@@ -31,16 +31,36 @@ with(obj_light){
     light_update(true);
 }
 with(obj_arrow1){
-    light_update(true);
+    if(alarm[3] == -1){
+        light_update(true);
+    }
+    else{
+        light_update(false);
+    }
 }
 with(obj_arrow2){
-    light_update(true);
+    if(alarm[3] == -1){
+        light_update(true);
+    }
+    else{
+        light_update(false);
+    }
 }
 with(obj_arrow3){
-    light_update(true);
+    if(alarm[3] == -1){
+        light_update(true);
+    }
+    else{
+        light_update(false);
+    }
 }
 with(obj_arrow4){
-    light_update(true);
+    if(alarm[3] == -1){
+        light_update(true);
+    }
+    else{
+        light_update(false);
+    }
 }
 with(obj_spark){
     light_update(true);
@@ -111,7 +131,6 @@ with(obj_arrow4){
 with(obj_spark){
     light_draw();
 }
-
 with(obj_ghost1){
     light_draw();
 }
