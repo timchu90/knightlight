@@ -30,7 +30,7 @@ var max_hp = 200;
 if(menustart[1] == true){
     p1 = (playerhp[1] / max_hp) * 100;
     draw_healthbar(50, 50, 250, 70, p1, c_white, c_red, c_red, 0, true, false);
-    draw_text(50,80,obj_player1.speed);
+    //draw_text(50,80,obj_player1.speed);
 }
 if(menustart[2] == true){
     p2 = (playerhp[2] / max_hp) * 100;

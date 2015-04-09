@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//object holding variables for easy game tweaking
-/*
+
 globalvar roomgrav, flailfric, flailmass,swordfric,swordmass,bowfric,bowmass;
 globalvar basemove, reloadmove, basekb;
 globalvar arrowdmg, arrowspd;
@@ -80,7 +80,7 @@ sworddmgmod = 2.5;
 
 //base knockback speed
 basekb = 10;
-*/
+
 audio_stop_sound(Loop_1);
 if(!audio_is_playing(bgm_dungeon)){
     audio_play_sound(bgm_dungeon,10,true);
@@ -136,8 +136,16 @@ if(deathcount == (numberofplayers - 1)){
 ");
             }
             file_text_close(file);
-            if (numberOfRounds == 3)
+            
+            gamepad_set_vibration(0,0,0);
+            gamepad_set_vibration(1,0,0);
+            gamepad_set_vibration(2,0,0);
+            gamepad_set_vibration(3,0,0);
+            
+            if (numberOfRounds == 3){
+                audio_stop_sound(bgm_dungeon);
                 room_goto(room_first);
+            }
             else if (numberOfRounds == 2)
                 room_goto_next();
             else if (numberOfRounds == 1)

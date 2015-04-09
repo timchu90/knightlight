@@ -166,7 +166,6 @@
     <room>rooms\rm_temple</room>
     <room>rooms\rm_menu_tutorial</room>
     <room>rooms\rm_win_screen</room>
-    <room>rooms\rm_house</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
