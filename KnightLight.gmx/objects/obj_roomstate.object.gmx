@@ -112,7 +112,7 @@ if(deathcount == (numberofplayers - 1)){
     for(var i =1;i&lt;=4;i++){
         if(menustart[i] == true and playerhp[i] &gt; 0){
             //show_message("PLAYER " +string(i)+" WINS!");
-            sleep(1000);
+            Sleep(1000);
             numberOfRounds++;
             //go to win screen
             /*
