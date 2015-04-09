@@ -158,9 +158,11 @@
     <object>objects\eff_screenshake</object>
     <object>objects\obj_death</object>
     <object>objects\obj_campfire</object>
+    <object>objects\object59</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
+    <room>rooms\room5</room>
     <room>rooms\rm_dungeon</room>
     <room>rooms\rm_temple</room>
     <room>rooms\rm_house</room>

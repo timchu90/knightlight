@@ -111,8 +111,10 @@ if(!audio_is_playing(bgm_dungeon)){
 if(deathcount == (numberofplayers - 1)){
     for(var i =1;i&lt;=4;i++){
         if(menustart[i] == true and playerhp[i] &gt; 0){
-            show_message("PLAYER " +string(i)+" WINS!");
+            //show_message("PLAYER " +string(i)+" WINS!");
+            sleep(1000);
             numberOfRounds++;
+            //go to win screen
             /*
                 Creates a file and saves the weapon of the winner.
                 The file is saved in C:/Users/(Your username)/AppData/Local/KnightLight
@@ -136,12 +138,13 @@ if(deathcount == (numberofplayers - 1)){
             file_text_close(file);
             if (numberOfRounds == 3)
                 room_goto(room_first);
-            else
+            else if (numberOfRounds == 2)
                 room_goto_next();
+            else if (numberOfRounds == 1)
+                room_restart();
         }
     }
 }
-
 </string>
           </argument>
         </arguments>
