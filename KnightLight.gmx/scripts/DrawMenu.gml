@@ -27,6 +27,12 @@ else{
             draw_set_color(c_red);
         }
         draw_sprite_stretched(sp_flail,-1,x+80,y,100,100);
+        if(player == 1 || player == 3){
+            draw_sprite(sp_flailcontrols,-1,x-150,y-25);
+        }
+        else{
+            draw_sprite(sp_flailcontrols,-1,x+325,y-25);
+        }
     }
     else{
         draw_set_color(c_gray);
@@ -41,6 +47,12 @@ else{
             draw_set_color(c_red);
         }
         draw_sprite_ext(sp_sword,-1,x+130,y+75,1.75,1.75,-90,c_white,1);
+        if(player == 1 || player == 3){
+            draw_sprite(sp_swordcontrols,-1,x-150,y-25);
+        }
+        else{
+            draw_sprite(sp_swordcontrols,-1,x+325,y-25);
+        }
     }
     else{
         draw_set_color(c_gray);
@@ -55,6 +67,12 @@ else{
             draw_set_color(c_red);
         }
         draw_sprite_ext(sp_bow,-1,x+130,y+75,3,3,0,c_white,1);
+        if(player == 1 || player == 3){
+            draw_sprite(sp_bowcontrols,-1,x-150,y-25);
+        }
+        else{
+            draw_sprite(sp_bowcontrols,-1,x+325,y-25);
+        }
     }
     else{
         draw_set_color(c_gray);

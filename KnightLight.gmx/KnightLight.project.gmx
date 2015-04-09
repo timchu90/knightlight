@@ -61,6 +61,9 @@
     <sprite>sprites\sp_bluemenu</sprite>
     <sprite>sprites\sp_greenmenu</sprite>
     <sprite>sprites\sp_yellowmenu</sprite>
+    <sprite>sprites\sp_flailcontrols</sprite>
+    <sprite>sprites\sp_bowcontrols</sprite>
+    <sprite>sprites\sp_swordcontrols</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_dungeon_tile</background>
