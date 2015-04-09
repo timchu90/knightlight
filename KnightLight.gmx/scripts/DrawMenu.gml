@@ -93,5 +93,5 @@ if (menuconfirm[player] == true && menustart[player] == true)
     {
         draw_set_color(c_black);
     }
-    draw_text(338,470,"PRESS <START> WHEN ALL PLAYERS ARE READY");
+    draw_text(320,450,"PRESS <START> WHEN ALL PLAYERS ARE READY");
 }
