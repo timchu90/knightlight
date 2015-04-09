@@ -36,7 +36,6 @@ if(menuselect[1] == 3){
 }
 image_speed = 0;
 image_index = 0;
-deathbool = false;
 </string>
           </argument>
         </arguments>
@@ -234,7 +233,8 @@ friction = 0;
             <kind>1</kind>
             <string>//contains code for moving player and turning on/off light
 //not done
-if (menustart[1] &amp;&amp; menuconfirm[1] &amp;&amp; room_get_name(room) != "rm_menu_tutorial"){
+if (menustart[1] &amp;&amp; menuconfirm[1] &amp;&amp; room_get_name(room) != "rm_menu_tutorial"
+    &amp;&amp; room_get_name(room) != "rm_win_screen"){
 if(playerhp[1] &gt; 0){
     if (alarm[4] == -1) MovePlayer(1,obj_reticle1);
 }

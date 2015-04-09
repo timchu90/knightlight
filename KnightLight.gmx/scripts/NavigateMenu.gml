@@ -42,7 +42,8 @@ else if (menuconfirm[player] == true && menustart[player] == true)
     {
         menuconfirm[player] = false;
     }
-    else if (gamepad_button_check_pressed(controller,gp_start))
+    else if (gamepad_button_check_pressed(controller,gp_start)
+        || keyboard_check_pressed(vk_anykey))
     {
         var numOfActivePlayers = 0;
         var numOfConfirmedPlayers = 0;

@@ -17,7 +17,7 @@ if(!audio_is_playing(Loop_1)){
 
 //CREATE PLAYERS AND RESET ALARMS
 if(menustart[1] == true){
-    instance_create(288,320,obj_player1);//105,105
+    instance_create(288,300,obj_player1);//105,105
     instance_create(463,320,obj_reticle1);//280,105
     obj_player1.alarm[0] = room_speed/5;
     obj_player1.alarm[1] = room_speed/5;
