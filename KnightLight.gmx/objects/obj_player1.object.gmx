@@ -233,9 +233,12 @@ friction = 0;
           <argument>
             <kind>1</kind>
             <string>//contains code for moving player and turning on/off light
-if(playerhp[1] &gt;0){
+//not done
+if (menustart[1] &amp;&amp; menuconfirm[1] &amp;&amp; room_get_name(room) != "rm_menu_tutorial"){
+if(playerhp[1] &gt; 0){
     if (alarm[4] == -1) MovePlayer(1,obj_reticle1);
 }
+
 if(playerhp[1] &lt;= 0 &amp;&amp; deathbool == false){
     deathbool = true;
     deathcount++;
@@ -280,6 +283,7 @@ if(collision_circle(x + hspeed, y - vspeed, 16, obj_wall, 1, 1)) { // Horizontal
 }
 if(collision_circle(x - hspeed, y + vspeed, 16, obj_wall, 1, 1)) { // Vertical collision
     vspeed = 0; // Stop vertical movement
+}
 }
 </string>
           </argument>
@@ -629,7 +633,8 @@ with(other){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (alarm[11] == -1) { // invincibility
+            <string>/*
+if (alarm[11] == -1) { // invincibility
     playerhp[1] = playerhp[1] - (other.speed/4);
     gamepad_set_vibration(0,0.5,0.5);
     alarm[0] = room_speed/2;
@@ -637,6 +642,7 @@ with(other){
     // audio
     PlayFlailHit();
 }
+*/
 </string>
           </argument>
         </arguments>

@@ -45,6 +45,107 @@ menuconfirm[1] = false;
 menuconfirm[2] = false;
 menuconfirm[3] = false;
 menuconfirm[4] = false;
+
+//roomstate globals
+globalvar roomgrav, flailfric, flailmass,swordfric,swordmass,bowfric,bowmass;
+globalvar basemove, reloadmove, basekb;
+globalvar arrowdmg, arrowspd;
+globalvar flaildmgmod, sworddmgmod;
+globalvar canshoot, flashon;
+globalvar playerhp;
+globalvar deathcount;
+globalvar numberofplayers;
+
+//holds player boolean values
+canshoot[1] = true;
+canshoot[2] = true;
+canshoot[3] = true;
+canshoot[4] = true;
+//canshoot[2] = true;
+//canshoot[3] = true;
+flashon[1] = true;
+flashon[2] = true;
+flashon[3] = true;
+flashon[4] = true;
+//player base hp
+playerhp[1] = 200;
+playerhp[2] = 200;
+playerhp[3] = 200;
+playerhp[4] = 200;
+deathcount = 0;
+
+//physics variables for weapons
+roomgrav = -0.4;//corrects for inherent gravity
+
+flailfric = 0.08;
+flailmass = 0.4;
+
+swordfric = 0.1;
+swordmass = 0.5;
+
+bowfric = 0.1;
+bowmass = 0.5;
+
+//base movement speed and move speed during relaod
+basemove = 5;
+reloadmove = 3;
+
+//bow related variables
+arrowdmg = 40;
+arrowspd = 20;
+
+//melee weapon damage modifiers
+flaildmgmod = 2.7;
+sworddmgmod = 2.4;
+
+//base knockback speed
+basekb = 10;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>;
 </string>
           </argument>
         </arguments>

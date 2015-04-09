@@ -2,6 +2,8 @@
 player = argument0;
 controller = player-1;
 weapon_num = 3;
+currentLAxisState = gamepad_axis_value(controller, gp_axislv);
+currentRAxisState = gamepad_axis_value(controller, gp_axisrv);
 
 if (menuconfirm[player] == false && menustart[player] == false)
 {
@@ -10,24 +12,31 @@ if (menuconfirm[player] == false && menustart[player] == false)
     }
 }
 else if(menuconfirm[player] == false && menustart[player] == true){
-    if (gamepad_button_check_pressed(controller,gp_padu)){
-        menuselect[player] = menuselect[player] - 1;
-    }
-    if (gamepad_button_check_pressed(controller,gp_padd)){
+    if ((currentLAxisState > 0.5 && obj_menubase.alarm[1] < 1)
+        || (currentRAxisState > 0.5 && obj_menubase.alarm[1] < 1)){
         menuselect[player] = menuselect[player] + 1;
+        obj_menubase.alarm[1] = room_speed / 3;
     }
-    if (gamepad_button_check_pressed(controller,gp_face1)){
+    else if ((currentLAxisState < -0.5 && obj_menubase.alarm[2] < 1)
+        || (currentRAxisState < -0.5 && obj_menubase.alarm[2] < 1)){
+        menuselect[player] = menuselect[player] - 1;
+        obj_menubase.alarm[2] = room_speed / 3;
+    }
+    else if (gamepad_button_check_pressed(controller,gp_face1)
+        || gamepad_button_check_pressed(controller,gp_shoulderr)
+        || gamepad_button_check_pressed(controller,gp_shoulderrb)){
         menuconfirm[player] = true;
-        
     }
-    if (gamepad_button_check_pressed(controller,gp_start))
+    else if (gamepad_button_check_pressed(controller,gp_start))
     {
         menustart[player] = false;
     }
 }
 else if (menuconfirm[player] == true && menustart[player] == true)
 {
-    if (gamepad_button_check_pressed(controller,gp_face2))
+    if (gamepad_button_check_pressed(controller,gp_face2)
+        || gamepad_button_check_pressed(controller,gp_shoulderl)
+        || gamepad_button_check_pressed(controller,gp_shoulderlb))
     {
         menuconfirm[player] = false;
     }

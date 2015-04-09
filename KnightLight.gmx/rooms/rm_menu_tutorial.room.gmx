@@ -17,8 +17,8 @@ if(!audio_is_playing(Loop_1)){
 
 //CREATE PLAYERS AND RESET ALARMS
 if(menustart[1] == true){
-    instance_create(105,105,obj_player1);
-    instance_create(280,105,obj_reticle1);
+    instance_create(288,320,obj_player1);//105,105
+    instance_create(463,320,obj_reticle1);//280,105
     obj_player1.alarm[0] = room_speed/5;
     obj_player1.alarm[1] = room_speed/5;
     obj_player1.alarm[2] = room_speed/5;
@@ -155,11 +155,13 @@ for(var i = 1; i&lt;=4; i++){
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_menu1" x="64" y="256" name="inst_222A35F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_menu1" x="0" y="256" name="inst_222A35F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_menu2" x="544" y="256" name="inst_045C64AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_menubase" x="512" y="128" name="inst_2A70DDE4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_menu3" x="160" y="544" name="inst_74430824" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_menu4" x="544" y="544" name="inst_4AECB8D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player1" x="256" y="320" name="inst_C2F77275" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_reticle1" x="331" y="305" name="inst_F37D32AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

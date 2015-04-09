@@ -33,6 +33,7 @@ else{
         gamepad_axis_value(controller, gp_axisrv))+90;
 }
 
-if(gamepad_button_check_pressed(controller,gp_shoulderl)){
+if(gamepad_button_check_pressed(controller,gp_shoulderl)
+    || gamepad_button_check_pressed(controller,gp_shoulderlb)){
     flashon[player] = !flashon[player];
 }
