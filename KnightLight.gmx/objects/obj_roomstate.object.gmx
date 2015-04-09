@@ -56,7 +56,7 @@ deathcount = 0;
 //physics variables for weapons
 roomgrav = -0.4;//corrects for inherent gravity
 
-flailfric = 0.05;
+flailfric = 0.08;
 flailmass = 0.4;
 
 swordfric = 0.1;
