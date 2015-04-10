@@ -64,6 +64,7 @@
     <sprite>sprites\sp_flailcontrols</sprite>
     <sprite>sprites\sp_bowcontrols</sprite>
     <sprite>sprites\sp_swordcontrols</sprite>
+    <sprite>sprites\sprite28</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_dungeon_tile</background>
