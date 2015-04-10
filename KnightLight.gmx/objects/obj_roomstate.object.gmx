@@ -75,7 +75,7 @@ arrowdmg = 40;
 arrowspd = 20;
 
 //melee weapon damage modifiers
-flaildmgmod = 2.2;
+flaildmgmod = 2;
 sworddmgmod = 3;
 
 //base knockback speed

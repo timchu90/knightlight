@@ -317,7 +317,7 @@ if (menustart[1] &amp;&amp; menuconfirm[1] &amp;&amp; room_get_name(room) != "rm
     obj_player1.alarm[0] = room_speed/2;
     
     // knockback
-    Knockback(self, other, false);
+    Knockback(self,other, basekb);
     
     // audio
     PlayBowHit();
@@ -357,7 +357,7 @@ with(other){
     alarm[0] = room_speed/2;
     
     // knockback
-    Knockback(self, other, true);
+    Knockback(self, other, basekb, other.speed);
     
     // audio
     PlaySwordHit();
@@ -394,7 +394,7 @@ with(other){
     alarm[3] = room_speed/2;
     
     // Apply knockback
-    Knockback(self, other, true);
+    Knockback(self, other, basekb, other.speed);
     
     // audio
     PlayFlailHit();
@@ -427,7 +427,7 @@ with(other){
     obj_player1.alarm[0] = room_speed/2;
     
     // knockback
-    Knockback(self, other, false);
+    Knockback(self,other, basekb);
     
     // audio
     PlayBowHit();
@@ -467,7 +467,7 @@ with(other){
     alarm[2] = room_speed/4;
     
     // knockback
-    Knockback(self, other, true);
+    Knockback(self, other, basekb, other.speed);
     
     // audio
     PlaySwordHit();
@@ -502,7 +502,7 @@ with(other){
     alarm[2] = room_speed/4;
     
     // knockback
-    Knockback(self, other, true);
+    Knockback(self, other, basekb, other.speed);
     
     // audio
     PlayFlailHit();
@@ -535,7 +535,7 @@ with(other){
     obj_player1.alarm[0] = room_speed/2;
     
     // Apply knockback
-    Knockback(self, other, false);
+    Knockback(self, other, basekb);
     
     // audio
     PlayBowHit();
@@ -575,7 +575,7 @@ with(other){
     alarm[1] = room_speed/4;
     
     // knockback
-    Knockback(self, other, true);
+    Knockback(self, other, basekb, other.speed);
     
     // audio
     PlaySwordHit();
@@ -610,7 +610,7 @@ with(other){
     alarm[1] = room_speed/4;
     
     // knockback
-    Knockback(self, other, true);
+    Knockback(self, other, basekb, other.speed);
     
     // audio
     PlayFlailHit();
