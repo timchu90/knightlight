@@ -237,55 +237,57 @@ friction = 0;
 //not done
 if (menustart[1] &amp;&amp; menuconfirm[1] &amp;&amp; room_get_name(room) != "rm_menu_tutorial"
     &amp;&amp; room_get_name(room) != "rm_win_screen"){
-if(playerhp[1] &gt; 0){
-    if (alarm[4] == -1) MovePlayer(1,obj_reticle1);
-}
-
-if(playerhp[1] &lt;= 0 &amp;&amp; deathbool == false){
-    deathbool = true;
-    deathcount++;
-    if(menuselect[1] == 1){
-        with(obj_link_1_1){
-            instance_destroy();
-        }   
-        with(obj_link_1_2){
-            instance_destroy();
-        }   
-        with(obj_link_1_3){
-            instance_destroy();
-        }   
-        with(obj_flail1){
-            instance_destroy();
-        }   
-    }
-    if(menuselect[1] == 2){
-        with(obj_hand1){
-            instance_destroy();
-        }
-        with(obj_sword1){
-            instance_destroy();
+    if(playerhp[1] &gt; 0){
+        if (alarm[4] == -1){
+            MovePlayer(1,obj_reticle1);
         }
     }
-    if(menuselect[1] == 3){
-        with(obj_bow1){
+    
+    if(playerhp[1] &lt;= 0 &amp;&amp; deathbool == false){
+        deathbool = true;
+        deathcount++;
+        if(menuselect[1] == 1){
+            with(obj_link_1_1){
+                instance_destroy();
+            }   
+            with(obj_link_1_2){
+                instance_destroy();
+            }   
+            with(obj_link_1_3){
+                instance_destroy();
+            }   
+            with(obj_flail1){
+                instance_destroy();
+            }   
+        }
+        if(menuselect[1] == 2){
+            with(obj_hand1){
+                instance_destroy();
+            }
+            with(obj_sword1){
+                instance_destroy();
+            }
+        }
+        if(menuselect[1] == 3){
+            with(obj_bow1){
+                instance_destroy();
+            }
+        }
+        with(obj_reticle1){
             instance_destroy();
         }
+        speed = 0;
+        image_speed = 1;
+        flashon[1] = true;
+        alarm[5] = room_speed;
     }
-    with(obj_reticle1){
-        instance_destroy();
+    
+    if(collision_circle(x + hspeed, y - vspeed, 16, obj_wall, 1, 1)) { // Horizontal collision
+        hspeed = 0; // Stop horizontal movement
     }
-    speed = 0;
-    image_speed = 1;
-    flashon[1] = true;
-    alarm[5] = room_speed;
-}
-
-if(collision_circle(x + hspeed, y - vspeed, 16, obj_wall, 1, 1)) { // Horizontal collision
-    hspeed = 0; // Stop horizontal movement
-}
-if(collision_circle(x - hspeed, y + vspeed, 16, obj_wall, 1, 1)) { // Vertical collision
-    vspeed = 0; // Stop vertical movement
-}
+    if(collision_circle(x - hspeed, y + vspeed, 16, obj_wall, 1, 1)) { // Vertical collision
+        vspeed = 0; // Stop vertical movement
+    }
 }
 </string>
           </argument>
