@@ -95,7 +95,6 @@
     <script>scripts\MoveFlail.gml</script>
     <script>scripts\ThrustLance.gml</script>
   </scripts>
-  <fonts name="fonts"/>
   <objects name="objects">
     <object>objects\obj_healthbars</object>
     <object>objects\obj_lightmap</object>

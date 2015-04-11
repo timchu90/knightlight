@@ -41,7 +41,9 @@ thrustDirectionArray[0] = 0;
 thrustDirectionArray[1] = 0;
 thrustDirectionArray[2] = 0;
 thrustDirectionArray[3] = 0;
-
+globalvar thrustDirectionX;
+globalvar thrustDirectionY;
+//
 //holds player boolean values
 canshoot[1] = true;
 canshoot[2] = true;
