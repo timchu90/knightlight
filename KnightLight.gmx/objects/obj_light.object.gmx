@@ -28,8 +28,6 @@
             <string>//environmental light object
 light_init(100,make_color_rgb(255,169,10),1);
 image_speed = 0.25
-
-
 </string>
           </argument>
         </arguments>

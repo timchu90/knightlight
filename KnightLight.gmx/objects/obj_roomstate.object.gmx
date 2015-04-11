@@ -96,6 +96,126 @@ if(!audio_is_playing(bgm_dungeon)){
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>;
+//don't delete this tim!
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>;
+//don't delete this tim!
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>;
+//don't delete this tim!
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>;
+//don't delete this tim!
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>;
+//don't delete this tim!
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -116,15 +236,16 @@ if(!audio_is_playing(bgm_dungeon)){
             <string>//if all but one playing character has died, declare game over
 if(deathcount == (numberofplayers - 1)){
     for(var i =1;i&lt;=4;i++){
-        if(menustart[i] == true and playerhp[i] &gt; 0){
+        if(menustart[i] == true &amp;&amp; playerhp[i] &gt; 0 &amp;&amp; alarm[0] &lt; 1){
             //show_message("PLAYER " +string(i)+" WINS!");
-            Sleep(1000);
-            numberOfRounds++;
             //go to win screen
             /*
                 Creates a file and saves the weapon of the winner.
                 The file is saved in C:/Users/(Your username)/AppData/Local/KnightLight
             */
+            alarm[i] = room_speed * 2;
+            numberOfRounds++;
+            alarm[0] = room_speed * 2;
             file = file_text_open_append(working_directory + "listOfWinningWeapons.txt");
             if (menuselect[i] == 1)
             {
@@ -152,7 +273,30 @@ if(deathcount == (numberofplayers - 1)){
 ");
             }
             file_text_close(file);
-            
+        }
+    }
+    if (alarm[0] &gt; 1)//Slow motion for me, slow motion for me, yeah move it slow motion
+    {//for meeeeeee
+        if (alarm[0] &gt; room_speed * 0.25)
+        {
+            Sleep((120 - alarm[0]));
+        }
+        /*
+        if (alarm[0] &gt; room_speed * 0.75)
+        {
+            Sleep(100);
+        }
+        else if (alarm[0] &gt; room_speed * 0.5)
+        {
+            Sleep(200);
+        }
+        else if (alarm[0] &gt; room_speed * 0.25)
+        {
+            Sleep(300);
+        }
+        */
+        else if (alarm[0] &lt; room_speed * 0.25)
+        {
             gamepad_set_vibration(0,0,0);
             gamepad_set_vibration(1,0,0);
             gamepad_set_vibration(2,0,0);

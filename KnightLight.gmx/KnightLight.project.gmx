@@ -95,6 +95,7 @@
     <script>scripts\MoveFlail.gml</script>
     <script>scripts\ThrustLance.gml</script>
   </scripts>
+  <fonts name="fonts"/>
   <objects name="objects">
     <object>objects\obj_healthbars</object>
     <object>objects\obj_lightmap</object>
@@ -164,7 +165,6 @@
     <object>objects\eff_screenshake</object>
     <object>objects\obj_death</object>
     <object>objects\obj_campfire</object>
-    <object>objects\object59</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
