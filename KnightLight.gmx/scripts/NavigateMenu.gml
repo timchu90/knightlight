@@ -1,7 +1,7 @@
 //NavigateMenu(int player)
 player = argument0;
 controller = player-1;
-weapon_num = 3;
+weapon_num = 5;
 currentLAxisState = gamepad_axis_value(controller, gp_axislv);
 currentRAxisState = gamepad_axis_value(controller, gp_axisrv);
 

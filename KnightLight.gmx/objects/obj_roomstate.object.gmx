@@ -35,6 +35,12 @@ globalvar canshoot, flashon;
 globalvar playerhp;
 globalvar deathcount;
 globalvar numberofplayers;
+//
+globalvar thrustDirectionArray;
+thrustDirectionArray[0] = 0;
+thrustDirectionArray[1] = 0;
+thrustDirectionArray[2] = 0;
+thrustDirectionArray[3] = 0;
 
 //holds player boolean values
 canshoot[1] = true;
@@ -133,6 +139,16 @@ if(deathcount == (numberofplayers - 1)){
             else if (menuselect[i] == 3)
             {
                 file_text_write_string(file, "Bow
+");
+            }
+            else if (menuselect[i] == 4)
+            {
+                file_text_write_string(file, "Lance
+");
+            }
+            else if (menuselect[i] == 5)
+            {
+                file_text_write_string(file, "Magic
 ");
             }
             file_text_close(file);

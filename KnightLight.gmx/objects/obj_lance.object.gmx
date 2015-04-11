@@ -25,7 +25,30 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>CreatePendulum(obj_hand1,roomgrav,swordfric,swordmass);
+            <string>//CreatePendulum(obj_player1,roomgrav,bowfric,bowmass);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>canshoot[1] = true;
 </string>
           </argument>
         </arguments>
@@ -48,10 +71,34 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>MovePendulum();
-image_angle = point_direction(obj_hand1.x,obj_hand1.y,x,y);
-ApplyForce(point_direction(x,y,obj_reticle1.x,obj_reticle1.y)/50, 
-    point_direction(x,y,obj_reticle1.x,obj_reticle1.y));
+            <string>//MovePendulum();
+controller = 0;
+x = obj_player1.x+lengthdir_x(25,obj_player1.image_angle-90);
+y = obj_player1.y+lengthdir_y(25,obj_player1.image_angle-90);
+gamepad_set_axis_deadzone(controller,.15);
+
+if((gamepad_axis_value(controller,gp_axisrh) &lt; 0.5 
+    and gamepad_axis_value(controller,gp_axisrv) &lt; 0.5) 
+    and (gamepad_axis_value(controller,gp_axisrh) &gt; -0.5 
+    and gamepad_axis_value(controller,gp_axisrv) &gt; -0.5))
+{
+    image_angle = point_direction(0,0, 
+        gamepad_axis_value(controller, gp_axislh), 
+        gamepad_axis_value(controller, gp_axislv))-90;
+}
+else
+{        
+    image_angle = point_direction(0,0, 
+        gamepad_axis_value(controller, gp_axisrh), 
+        gamepad_axis_value(controller, gp_axisrv))-90;
+}
+
+if((gamepad_button_check_pressed(0,gp_shoulderr)
+    || gamepad_button_check_pressed(0,gp_shoulderrb)) and canshoot[1] = true){
+    instance_create(x,y,obj_arrow1);
+    canshoot[1] = false;
+    alarm[0] = room_speed * 0.7;
+}
 </string>
           </argument>
         </arguments>
@@ -69,8 +116,5 @@ ApplyForce(point_direction(x,y,obj_reticle1.x,obj_reticle1.y)/50,
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints>
-    <point>0,0</point>
-    <point>16,16</point>
-  </PhysicsShapePoints>
+  <PhysicsShapePoints/>
 </object>

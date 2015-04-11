@@ -64,6 +64,7 @@
     <sprite>sprites\sp_flailcontrols</sprite>
     <sprite>sprites\sp_bowcontrols</sprite>
     <sprite>sprites\sp_swordcontrols</sprite>
+    <sprite>sprites\rotatedSword</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_dungeon_tile</background>
@@ -92,6 +93,7 @@
     <script>scripts\PlaySwordHit.gml</script>
     <script>scripts\Sleep.gml</script>
     <script>scripts\MoveFlail.gml</script>
+    <script>scripts\ThrustLance.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_healthbars</object>
@@ -115,6 +117,7 @@
       <object>objects\obj_bow1</object>
       <object>objects\obj_arrow1</object>
       <object>objects\obj_ghost1</object>
+      <object>objects\obj_lance1</object>
     </objects>
     <objects name="player2">
       <object>objects\obj_menu2</object>
