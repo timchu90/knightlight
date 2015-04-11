@@ -90,16 +90,43 @@ if(menuselect[4] == 2 &amp;&amp; menustart[4] == true){
 }
 
 //BOW
-if(menuselect[1] == 3&amp;&amp; menustart[1] == true){
+if(menuselect[1] == 3 &amp;&amp; menustart[1] == true){
     instance_create(130,105,obj_bow1);
 }
-if(menuselect[2] == 3&amp;&amp; menustart[2] == true){
+if(menuselect[2] == 3 &amp;&amp; menustart[2] == true){
     instance_create(795,105,obj_bow2);
 }
-if(menuselect[3] == 3&amp;&amp; menustart[3] == true){
+if(menuselect[3] == 3 &amp;&amp; menustart[3] == true){
     instance_create(130,665,obj_bow3);
 }
-if(menuselect[4] == 3&amp;&amp; menustart[4] == true){
+if(menuselect[4] == 3 &amp;&amp; menustart[4] == true){
+    instance_create(795,665,obj_bow4);
+}
+
+//LANCE
+if(menuselect[1] == 4 &amp;&amp; menustart[1] == true){
+    instance_create(130,105,obj_lance1);
+}
+if(menuselect[2] == 4 &amp;&amp; menustart[2] == true){
+    instance_create(795,105,obj_lance2);
+}
+if(menuselect[3] == 4 &amp;&amp; menustart[3] == true){
+    instance_create(130,665,obj_lance3);
+}
+if(menuselect[4] == 4 &amp;&amp; menustart[4] == true){
+    instance_create(795,665,obj_lance4);
+}
+//MAGIC
+if(menuselect[1] == 5 &amp;&amp; menustart[1] == true){//load in the magic weapon objects here
+    instance_create(130,105,obj_bow1);
+}
+if(menuselect[2] == 5 &amp;&amp; menustart[2] == true){
+    instance_create(795,105,obj_bow2);
+}
+if(menuselect[3] == 5 &amp;&amp; menustart[3] == true){
+    instance_create(130,665,obj_bow3);
+}
+if(menuselect[4] == 5 &amp;&amp; menustart[4] == true){
     instance_create(795,665,obj_bow4);
 }
 
