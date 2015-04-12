@@ -65,6 +65,7 @@
     <sprite>sprites\sp_bowcontrols</sprite>
     <sprite>sprites\sp_swordcontrols</sprite>
     <sprite>sprites\rotatedSword</sprite>
+    <sprite>sprites\sp_lance</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_dungeon_tile</background>
