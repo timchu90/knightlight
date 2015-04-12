@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>//MovePendulum();
 controller = 0;
-x = obj_player1.x+lengthdir_x(25,obj_player1.image_angle-90);
-y = obj_player1.y+lengthdir_y(25,obj_player1.image_angle-90);
+x = obj_player3.x+lengthdir_x(25,obj_player3.image_angle-90);
+y = obj_player3.y+lengthdir_y(25,obj_player3.image_angle-90);
 gamepad_set_axis_deadzone(controller,.15);
 
 if((gamepad_axis_value(controller,gp_axisrh) &lt; 0.5 
@@ -91,7 +91,7 @@ if((gamepad_button_check_pressed(controller,gp_shoulderr)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>canshoot[1] = true;
+            <string>canshoot[3] = true;
 </string>
           </argument>
         </arguments>
@@ -118,8 +118,8 @@ if((gamepad_button_check_pressed(controller,gp_shoulderr)
 controller = 0;
 if (alarm[0] &lt; room_speed * 0.4)
 {
-    x = obj_player1.x+lengthdir_x(25,obj_player1.image_angle-90);
-    y = obj_player1.y+lengthdir_y(25,obj_player1.image_angle-90);
+    x = obj_player3.x+lengthdir_x(25,obj_player3.image_angle-90);//
+    y = obj_player3.y+lengthdir_y(25,obj_player3.image_angle-90);//
 }
 gamepad_set_axis_deadzone(controller,.15);
 
@@ -155,7 +155,7 @@ if((gamepad_button_check_pressed(controller,gp_shoulderr)
             gamepad_axis_value(controller, gp_axisrv));
         thrustDirectionX[controller] = gamepad_axis_value(controller, gp_axisrh);
         thrustDirectionY[controller] = gamepad_axis_value(controller, gp_axisrv);
-        move_towards_point(obj_reticle1.x, obj_reticle1.y, 10);//
+        move_towards_point(obj_reticle3.x, obj_reticle3.y, 10);//
     }
     else
     {
@@ -164,8 +164,8 @@ if((gamepad_button_check_pressed(controller,gp_shoulderr)
             gamepad_axis_value(controller, gp_axislv));
         thrustDirectionX[controller] = gamepad_axis_value(controller, gp_axislh);
         thrustDirectionY[controller] = gamepad_axis_value(controller, gp_axislv);
-        move_towards_point(obj_lance1.x + thrustDirectionX[controller],//
-            obj_lance1.y + thrustDirectionY[controller], 10);//
+        move_towards_point(obj_lance3.x + thrustDirectionX[controller],//
+            obj_lance3.y + thrustDirectionY[controller], 10);//
     }
 }
 </string>
