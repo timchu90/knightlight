@@ -177,7 +177,6 @@
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
     <room>rooms\rm_dungeon</room>
-    <room>rooms\rm_disco</room>
     <room>rooms\rm_temple</room>
     <room>rooms\rm_disco</room>
     <room>rooms\rm_menu_tutorial</room>
