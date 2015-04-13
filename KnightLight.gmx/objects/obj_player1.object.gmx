@@ -244,6 +244,7 @@ if(playerhp[1] &gt; 0){
     if (alarm[4] == -1) MovePlayer(1,obj_reticle1);
 }
 
+
 if(playerhp[1] &lt;= 0 &amp;&amp; deathbool == false){
     deathbool = true;
     deathcount++;
@@ -291,13 +292,6 @@ if(playerhp[1] &lt;= 0 &amp;&amp; deathbool == false){
     image_speed = 1;
     flashon[1] = true;
     alarm[5] = room_speed;
-}
-
-if(collision_circle(x + hspeed, y - vspeed, 16, obj_wall, 1, 1)) { // Horizontal collision
-    hspeed = 0; // Stop horizontal movement
-}
-if(collision_circle(x - hspeed, y + vspeed, 16, obj_wall, 1, 1)) { // Vertical collision
-    vspeed = 0; // Stop vertical movement
 }
 
 if (menuselect[1] == 4)

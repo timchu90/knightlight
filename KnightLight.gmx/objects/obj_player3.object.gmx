@@ -275,12 +275,7 @@ if(playerhp[3] &lt;= 0 &amp;&amp; deathbool == false){
     flashon[3] = true;
     alarm[5] = room_speed;
 }
-if(collision_circle(x + hspeed, y - vspeed, 16, obj_wall, 1, 1)) { // Horizontal collision
-    hspeed = 0; // Stop horizontal movement
-}
-if(collision_circle(x - hspeed, y + vspeed, 16, obj_wall, 1, 1)) { // Vertical collision
-    vspeed = 0; // Stop vertical movement
-}
+
 </string>
           </argument>
         </arguments>

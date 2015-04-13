@@ -66,7 +66,10 @@ else{
         else{
             draw_set_color(c_red);
         }
-        draw_sprite_ext(sp_bow,-1,x+130,y+75,3,3,0,c_white,1);
+        with(draw_sprite_ext(sp_bow,2,x+130,y+50,3,3,0,c_white,1)){
+            image_speed = 0;
+        }
+        
         if(player == 1 || player == 3){
             draw_sprite(sp_bowcontrols,-1,x-150,y-25);
         }
@@ -86,7 +89,7 @@ else{
         else{
             draw_set_color(c_red);
         }
-        draw_sprite_ext(sp_bow,-1,x+130,y+75,3,3,0,c_white,1);//draw lance sprite
+        draw_sprite_ext(sp_lance,-1,x+130,y+75,1.2,1.2,0,c_white,1);//draw lance sprite
         if(player == 1 || player == 3){
             draw_sprite(sp_bowcontrols,-1,x-150,y-25);
         }
