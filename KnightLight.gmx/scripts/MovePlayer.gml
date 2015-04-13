@@ -38,4 +38,3 @@ if(gamepad_button_check_pressed(controller,gp_shoulderl)
     flashon[player] = !flashon[player];
 }
 
-

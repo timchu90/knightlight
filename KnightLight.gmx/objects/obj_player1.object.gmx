@@ -243,14 +243,7 @@ if (menustart[1] &amp;&amp; menuconfirm[1] &amp;&amp; room_get_name(room) != "rm
 if(playerhp[1] &gt; 0){
     if (alarm[4] == -1) MovePlayer(1,obj_reticle1);
 }
-if(collision_circle(x + hspeed, y - vspeed, 16, obj_wall, false, true)) { // Horizontal collision
-    hspeed = 0; // Stop horizontal movement
-    x = xprevious;
-}
-if(collision_circle(x - hspeed, y + vspeed, 16, obj_wall, false, true)) { // Vertical collision
-    vspeed = 0; // Stop vertical movement
-    y = yprevious;
-}
+CollisionCheck();
 
 if(playerhp[1] &lt;= 0 &amp;&amp; deathbool == false){
     deathbool = true;
