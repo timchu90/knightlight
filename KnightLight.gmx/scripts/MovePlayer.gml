@@ -38,9 +38,4 @@ if(gamepad_button_check_pressed(controller,gp_shoulderl)
     flashon[player] = !flashon[player];
 }
 
-if(collision_circle(x + hspeed, y - vspeed, 16, obj_wall, false, true)) { // Horizontal collision
-    hspeed = 0; // Stop horizontal movement
-}
-if(collision_circle(x - hspeed, y + vspeed, 16, obj_wall, false, true)) { // Vertical collision
-    vspeed = 0; // Stop vertical movement
-}
+

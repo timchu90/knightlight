@@ -235,7 +235,12 @@ friction = 0;
 if(playerhp[3] &gt; 0){
     if (alarm[4] == -1) MovePlayer(3,obj_reticle3); 
 }
-
+if(collision_circle(x + hspeed, y - vspeed, 16, obj_wall, false, true)) { // Horizontal collision
+    hspeed = 0; // Stop horizontal movement
+}
+if(collision_circle(x - hspeed, y + vspeed, 16, obj_wall, false, true)) { // Vertical collision
+    vspeed = 0; // Stop vertical movement
+}
 if(playerhp[3] &lt;= 0 &amp;&amp; deathbool == false){
     deathbool = true;
     deathcount++;
@@ -300,41 +305,6 @@ if(playerhp[3] &lt;= 0 &amp;&amp; deathbool == false){
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
     playerhp[3] = playerhp[3] - obj_player4.speed * 6;//object needs to be changed
-    gamepad_set_vibration(3,0.5,0.5);
-    alarm[3] = room_speed/4;
-    gamepad_set_vibration(1,0.5,0.5);
-    alarm[1] = room_speed/2;
-    
-    // knockback
-    Knockback(self, other, basekb, other.speed);
-    
-    // audio
-    PlaySwordHit();
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_lance2">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (alarm[11] == -1) { // invincibility
-    playerhp[3] = playerhp[3] - obj_player2.speed * 6;//object needs to be changed
     gamepad_set_vibration(3,0.5,0.5);
     alarm[3] = room_speed/4;
     gamepad_set_vibration(1,0.5,0.5);
@@ -488,6 +458,41 @@ if (alarm[11] == -1) { // invincibility
     PlayFlailHit();
 }
 */
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_lance2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (alarm[11] == -1) { // invincibility
+    playerhp[3] = playerhp[3] - obj_player2.speed * 6;//object needs to be changed
+    gamepad_set_vibration(3,0.5,0.5);
+    alarm[3] = room_speed/4;
+    gamepad_set_vibration(1,0.5,0.5);
+    alarm[1] = room_speed/2;
+    
+    // knockback
+    Knockback(self, other, basekb, other.speed);
+    
+    // audio
+    PlaySwordHit();
+}
 </string>
           </argument>
         </arguments>
