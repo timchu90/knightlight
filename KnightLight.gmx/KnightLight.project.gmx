@@ -94,6 +94,7 @@
     <script>scripts\Sleep.gml</script>
     <script>scripts\MoveFlail.gml</script>
     <script>scripts\ThrustLance.gml</script>
+    <script>scripts\CollisionCheck.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_healthbars</object>
