@@ -1,22 +1,24 @@
 // Arguments: player that is hit, the weapon that connected,
-// and the base knockback speed.
-// Optional 4th argument - speed of the striking weapon.
+// and boolean if speed of the striking weapon should effect knockback.
 victim = argument[0];
 source = argument[1];
-kb = argument[2];
-hit_speed = 1;  // default hit speed multiplier set to 1
-kb_mod = 0.1;   // modifies impact of weapon speed on knockback
+using_speed = argument[2];
+kb_mod = 1;         // default knockback modifier
+speed_mod = 0.09;   // modifies impact of weapon speed on knockback
 
-if (argument_count > 3)
-    if (argument[3] * kb_mod > 1){
-        hit_speed = argument[3] * kb_mod;
+if (using_speed){
+    if (source.speed * speed_mod > 1){
+        // only using speed of hit if it results in knockback
+        // greater than the basekb.
+        kb_mod = source.speed * speed_mod;
         instance_create(x,y,eff_screenshake);
         instance_create(victim.x,victim.y,obj_spark);
-        }
-    // else hit_speed remains 1, meaning kb == basekb
+    }
+    // else kb_mod remains 1 - meaning basekb is used
+}
 
 victim.direction = point_direction(source.x, source.y, victim.x, victim.y);
-victim.speed = kb * hit_speed;
+victim.speed = basekb * kb_mod;
 victim.friction = 0.5;
 victim.alarm[4] = room_speed/6; // knockback immobility 
 victim.alarm[11] = room_speed * 0.4; // invincibility

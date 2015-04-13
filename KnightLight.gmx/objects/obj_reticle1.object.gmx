@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>if(point_distance(obj_reticle1.x,obj_reticle1.y,obj_player1.x,obj_player1.y) &gt; 140){
-        move_towards_point(obj_player1.x,obj_player1.y,2);
+        move_towards_point(obj_player1.x,obj_player1.y,5);
 }
 else{
     speed = 0;

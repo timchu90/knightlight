@@ -13,7 +13,7 @@ ApplyForce(point_distance(x,y,attached.x,attached.y)-length,
     point_direction(x,y,attached.x,attached.y));
     
 if(length < 35 && speed > 7.5)
-    length += 3;
+    length += 2;
 if(length > 15 )
     length -= 1
 

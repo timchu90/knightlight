@@ -34,9 +34,16 @@ if(menuselect[2] == 2){
 if(menuselect[2] == 3){
     light_init(120,c_white,1);
 }
+else if (menuselect[2] == 4){
+    light_init(180,c_white,1);
+}
+else if (menuselect[2] == 5){
+    light_init(100,c_white,1);
+}
 image_speed = 0;
 image_index = 0;
 deathbool = false;
+
 </string>
           </argument>
         </arguments>
@@ -236,6 +243,7 @@ if(playerhp[2] &gt; 0){
     if (alarm[4] == -1) MovePlayer(2,obj_reticle2); 
 }
 CollisionCheck();
+
 if(playerhp[2] &lt;= 0 &amp;&amp; deathbool == false){
     deathbool = true;
     deathcount++;
@@ -263,6 +271,16 @@ if(playerhp[2] &lt;= 0 &amp;&amp; deathbool == false){
     }
     if(menuselect[2] == 3){
         with(obj_bow2){
+            instance_destroy();
+        }
+    }
+    else if(menuselect[2] == 4){
+        with(obj_lance2){
+            instance_destroy();
+        }
+    }
+    else if(menuselect[2] == 5){
+        with(obj_something){//destroy magic weapon here
             instance_destroy();
         }
     }
@@ -340,7 +358,7 @@ if(playerhp[2] &lt;= 0 &amp;&amp; deathbool == false){
     obj_player2.alarm[1] = room_speed/2;
     
     // knockback
-    Knockback(self,other, basekb);
+    Knockback(self, other, false);
     
     // audio
     PlayBowHit();
@@ -380,7 +398,7 @@ with(other){
     alarm[1] = room_speed/2;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlaySwordHit();
@@ -417,7 +435,7 @@ with(other){
     alarm[3] = room_speed/2;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlayFlailHit();
@@ -446,8 +464,8 @@ with(other){
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
     playerhp[2] = playerhp[2] - obj_player3.speed * 6;//object needs to be changed
-    gamepad_set_vibration(3,0.5,0.5);
-    alarm[3] = room_speed/4;
+    gamepad_set_vibration(2,0.5,0.5);
+    alarm[2] = room_speed/4;
     gamepad_set_vibration(1,0.5,0.5);
     alarm[1] = room_speed/2;
     
@@ -485,7 +503,7 @@ with(other){
     obj_player2.alarm[1] = room_speed/2;
     
     // knockback
-    Knockback(self,other, basekb);
+    Knockback(self, other, false);
     
     // audio
     PlayBowHit();
@@ -526,7 +544,7 @@ with(other){
     
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlaySwordHit();
@@ -561,7 +579,7 @@ with(other){
     alarm[2] = room_speed/4;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlayFlailHit();
@@ -622,8 +640,8 @@ if (alarm[11] == -1) { // invincibility
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
     playerhp[2] = playerhp[2] - obj_player1.speed * 6;//object needs to be changed
-    gamepad_set_vibration(3,0.5,0.5);
-    alarm[3] = room_speed/4;
+    gamepad_set_vibration(0,0.5,0.5);
+    alarm[0] = room_speed/4;
     gamepad_set_vibration(1,0.5,0.5);
     alarm[1] = room_speed/2;
     
@@ -661,7 +679,7 @@ if (alarm[11] == -1) { // invincibility
     obj_player2.alarm[1] = room_speed/2;
     
     // knockback
-    Knockback(self,other, basekb);
+    Knockback(self, other, false);
     
     // audio
     PlayBowHit();
@@ -701,7 +719,7 @@ with(other){
     alarm[1] = room_speed/2;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlaySwordHit();
@@ -739,7 +757,7 @@ with(other){
     PlayFlailHit();
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
 }
 </string>
           </argument>
@@ -763,23 +781,7 @@ with(other){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*
-gamepad_set_vibration(1,0.1,0.1);
-alarm[1] = room_speed/8;
-
-x=xprevious;
-y=yprevious;
-
-if(not place_meeting(x + hspeed,y,obj_wall)){
-    x+=hspeed; 
-    exit;
-}
-if(not place_meeting(x,y + vspeed,obj_wall)){
-    y+=vspeed;
-    exit
-}
-speed = 0;
-*/
+            <string>;
 </string>
           </argument>
         </arguments>

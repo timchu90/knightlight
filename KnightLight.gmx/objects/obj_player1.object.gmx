@@ -43,6 +43,7 @@ else if (menuselect[1] == 5){
 image_speed = 0;
 image_index = 0;
 deathbool = false;
+
 </string>
           </argument>
         </arguments>
@@ -266,8 +267,13 @@ if(playerhp[1] &lt;= 0 &amp;&amp; deathbool == false){
         with(obj_hand1){
             instance_destroy();
         }
-        with(obj_sword1){
-            instance_destroy();
+        if(menuselect[1] == 2){
+            with(obj_hand1){
+                instance_destroy();
+            }
+            with(obj_sword1){
+                instance_destroy();
+            }
         }
     }
     else if(menuselect[1] == 3){
@@ -294,25 +300,6 @@ if(playerhp[1] &lt;= 0 &amp;&amp; deathbool == false){
     alarm[5] = room_speed;
 }
 
-if (menuselect[1] == 4)
-{
-    if (obj_lance1.alarm[0] &gt; room_speed * 0.4)
-    {
-        ThrustLance(9, 9, 0, obj_player1);
-    }
-    else if (obj_lance1.alarm[0] &gt; room_speed * 0.25)
-    {
-        ThrustLance(3, 3, 0, obj_player1);
-    }
-    else if (obj_lance1.alarm[0] &gt; room_speed * 0.15)
-    {
-        ThrustLance(2, 2, 0, obj_player1);
-    }
-    else if (obj_lance1.alarm[0] &gt; 1)
-    {
-        ThrustLance(1, 1, 0, obj_player1);
-    }
-}
 }
 </string>
           </argument>
@@ -340,8 +327,8 @@ if (menuselect[1] == 4)
     playerhp[1] = playerhp[1] - obj_player4.speed * 6;//object needs to be changed
     gamepad_set_vibration(3,0.5,0.5);
     alarm[3] = room_speed/4;
-    gamepad_set_vibration(1,0.5,0.5);
-    alarm[1] = room_speed/2;
+    gamepad_set_vibration(0,0.5,0.5);
+    alarm[0] = room_speed/2;
     
     // knockback
     Knockback(self, other, basekb, other.speed);
@@ -377,7 +364,7 @@ if (menuselect[1] == 4)
     obj_player1.alarm[0] = room_speed/2;
     
     // knockback
-    Knockback(self,other, basekb);
+    Knockback(self, other, false);
     
     // audio
     PlayBowHit();
@@ -417,7 +404,7 @@ with(other){
     alarm[0] = room_speed/2;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlaySwordHit();
@@ -454,7 +441,7 @@ with(other){
     alarm[3] = room_speed/2;
     
     // Apply knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlayFlailHit();
@@ -483,10 +470,10 @@ with(other){
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
     playerhp[1] = playerhp[1] - obj_player3.speed * 6;//object needs to be changed
-    gamepad_set_vibration(3,0.5,0.5);
-    alarm[3] = room_speed/4;
-    gamepad_set_vibration(1,0.5,0.5);
-    alarm[1] = room_speed/2;
+    gamepad_set_vibration(2,0.5,0.5);
+    alarm[2] = room_speed/4;
+    gamepad_set_vibration(0,0.5,0.5);
+    alarm[0] = room_speed/2;
     
     // knockback
     Knockback(self, other, basekb, other.speed);
@@ -522,7 +509,7 @@ with(other){
     obj_player1.alarm[0] = room_speed/2;
     
     // knockback
-    Knockback(self,other, basekb);
+    Knockback(self, other, false);
     
     // audio
     PlayBowHit();
@@ -562,7 +549,7 @@ with(other){
     alarm[2] = room_speed/4;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlaySwordHit();
@@ -597,7 +584,7 @@ with(other){
     alarm[2] = room_speed/4;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlayFlailHit();
@@ -626,10 +613,10 @@ with(other){
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
     playerhp[1] = playerhp[1] - obj_player2.speed * 6;//object needs to be changed
-    gamepad_set_vibration(3,0.5,0.5);
-    alarm[3] = room_speed/4;
     gamepad_set_vibration(1,0.5,0.5);
-    alarm[1] = room_speed/2;
+    alarm[1] = room_speed/4;
+    gamepad_set_vibration(0,0.5,0.5);
+    alarm[0] = room_speed/2;
     
     // knockback
     Knockback(self, other, basekb, other.speed);
@@ -665,7 +652,7 @@ with(other){
     obj_player1.alarm[0] = room_speed/2;
     
     // Apply knockback
-    Knockback(self, other, basekb);
+    Knockback(self, other, false);
     
     // audio
     PlayBowHit();
@@ -705,7 +692,7 @@ with(other){
     alarm[1] = room_speed/4;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlaySwordHit();
@@ -740,7 +727,7 @@ with(other){
     alarm[1] = room_speed/4;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlayFlailHit();
@@ -799,24 +786,7 @@ if (alarm[11] == -1) { // invincibility
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*
-gamepad_set_vibration(0,0.1,0.1);
-alarm[0] = room_speed/8;
-
-x=xprevious;
-y=yprevious;
-
-if(not place_meeting(x + hspeed,y,obj_wall)){
-    x+=hspeed; 
-    exit;
-}
-if(not place_meeting(x,y + vspeed,obj_wall)){
-    y+=vspeed;
-    exit
-}
-speed = 0;
-*/
-
+            <string>;
 </string>
           </argument>
         </arguments>

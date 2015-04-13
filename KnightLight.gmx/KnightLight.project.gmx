@@ -34,6 +34,10 @@
       <sound>sound\Loop_1</sound>
       <sound>sound\bgm_dungeon</sound>
     </sounds>
+    <sounds name="Menu">
+      <sound>sound\Select</sound>
+      <sound>sound\Confirm</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sp_redknight</sprite>

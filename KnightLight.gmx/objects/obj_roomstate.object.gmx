@@ -71,7 +71,7 @@ deathcount = 0;
 //physics variables for weapons
 roomgrav = -0.4;//corrects for inherent gravity
 
-flailfric = 0.08;
+flailfric = 0.09;
 flailmass = 0.4;
 
 swordfric = 0.1;
@@ -92,8 +92,8 @@ arrowspd = 15;
 maxcharge = room_speed * 3;
 
 //melee weapon damage modifiers
-flaildmgmod = 2.5;
-sworddmgmod = 2.5;
+flaildmgmod = 2.2;
+sworddmgmod = 3;
 arrowdmgmod = 1.5;
 
 //base knockback speed
