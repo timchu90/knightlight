@@ -17,17 +17,20 @@ else if(menuconfirm[player] == false && menustart[player] == true){
         || gamepad_button_check_pressed(controller,gp_padd)){
         menuselect[player] = menuselect[player] + 1;
         obj_menubase.alarm[1] = room_speed / 3;
+        audio_play_sound(Select,10,false);
     }
     else if ((currentLAxisState < -0.5 && obj_menubase.alarm[2] < 1)
         || (currentRAxisState < -0.5 && obj_menubase.alarm[2] < 1)
         || gamepad_button_check_pressed(controller,gp_padu)){
         menuselect[player] = menuselect[player] - 1;
         obj_menubase.alarm[2] = room_speed / 3;
+        audio_play_sound(Select,10,false);
     }
     else if (gamepad_button_check_pressed(controller,gp_face1)
         || gamepad_button_check_pressed(controller,gp_shoulderr)
         || gamepad_button_check_pressed(controller,gp_shoulderrb)){
         menuconfirm[player] = true;
+        audio_play_sound(Confirm,10,false);
     }
     else if (gamepad_button_check_pressed(controller,gp_start))
     {
