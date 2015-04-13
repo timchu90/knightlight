@@ -140,7 +140,7 @@ if((gamepad_button_check_pressed(controller,gp_shoulderr)
             gamepad_axis_value(controller, gp_axisrv));
         thrustDirectionX[controller] = gamepad_axis_value(controller, gp_axisrh);
         thrustDirectionY[controller] = gamepad_axis_value(controller, gp_axisrv);
-        move_towards_point(obj_reticle1.x, obj_reticle1.y, 10);//
+        move_towards_point(obj_reticle1.x, obj_reticle1.y, 20);//
     }
     else
     {
@@ -150,7 +150,7 @@ if((gamepad_button_check_pressed(controller,gp_shoulderr)
         thrustDirectionX[controller] = gamepad_axis_value(controller, gp_axislh);
         thrustDirectionY[controller] = gamepad_axis_value(controller, gp_axislv);
         move_towards_point(obj_lance1.x + thrustDirectionX[controller],//
-            obj_lance1.y + thrustDirectionY[controller], 10);//
+            obj_lance1.y + thrustDirectionY[controller], 20);//
     }
     
 }
