@@ -64,7 +64,6 @@
     <sprite>sprites\sp_flailcontrols</sprite>
     <sprite>sprites\sp_bowcontrols</sprite>
     <sprite>sprites\sp_swordcontrols</sprite>
-    <sprite>sprites\rotatedSword</sprite>
     <sprite>sprites\sp_lance</sprite>
   </sprites>
   <backgrounds name="background">
@@ -133,6 +132,7 @@
       <object>objects\obj_bow2</object>
       <object>objects\obj_arrow2</object>
       <object>objects\obj_ghost2</object>
+      <object>objects\obj_lance2</object>
     </objects>
     <objects name="player3">
       <object>objects\obj_menu3</object>
@@ -147,6 +147,7 @@
       <object>objects\obj_bow3</object>
       <object>objects\obj_arrow3</object>
       <object>objects\obj_ghost3</object>
+      <object>objects\obj_lance3</object>
     </objects>
     <objects name="player4">
       <object>objects\obj_menu4</object>
@@ -161,6 +162,7 @@
       <object>objects\obj_bow4</object>
       <object>objects\obj_arrow4</object>
       <object>objects\obj_ghost4</object>
+      <object>objects\obj_lance4</object>
     </objects>
     <object>objects\eff_screenshake</object>
     <object>objects\obj_death</object>
@@ -171,6 +173,7 @@
     <room>rooms\rm_dungeon</room>
     <room>rooms\rm_disco</room>
     <room>rooms\rm_temple</room>
+    <room>rooms\rm_disco</room>
     <room>rooms\rm_menu_tutorial</room>
     <room>rooms\rm_win_screen</room>
   </rooms>
