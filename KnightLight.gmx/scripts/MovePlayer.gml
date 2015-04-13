@@ -8,13 +8,19 @@ direction = point_direction(0,0,
     gamepad_axis_value(controller, gp_axislh), 
     gamepad_axis_value(controller, gp_axislv));
 
-if(canshoot[player] == true){
+if(menuselect[1] == 3){
+    if(ischarging[1]) {
+        hspeed = gamepad_axis_value(controller, gp_axislh) * chargemove;
+        vspeed = gamepad_axis_value(controller, gp_axislv) * chargemove;
+    }
+    else {
+        hspeed = gamepad_axis_value(controller, gp_axislh) * archermove;
+        vspeed = gamepad_axis_value(controller, gp_axislv) * archermove;
+    }
+}
+else {
     hspeed = gamepad_axis_value(controller, gp_axislh) * basemove;
     vspeed = gamepad_axis_value(controller, gp_axislv) * basemove;
-}
-else{
-    hspeed = gamepad_axis_value(controller, gp_axislh) * reloadmove;
-    vspeed = gamepad_axis_value(controller, gp_axislv) * reloadmove;
 }
 
 if((gamepad_axis_value(controller,gp_axisrh) < 0.5 
@@ -37,4 +43,3 @@ if(gamepad_button_check_pressed(controller,gp_shoulderl)
     || gamepad_button_check_pressed(controller,gp_shoulderlb)){
     flashon[player] = !flashon[player];
 }
-

@@ -95,6 +95,7 @@
     <script>scripts\MoveFlail.gml</script>
     <script>scripts\ThrustLance.gml</script>
     <script>scripts\CollisionCheck.gml</script>
+    <script>scripts\ShootArrow.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_healthbars</object>
