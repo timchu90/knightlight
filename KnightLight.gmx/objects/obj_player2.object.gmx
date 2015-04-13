@@ -34,6 +34,12 @@ if(menuselect[2] == 2){
 if(menuselect[2] == 3){
     light_init(120,c_white,1);
 }
+else if (menuselect[2] == 4){
+    light_init(180,c_white,1);
+}
+else if (menuselect[2] == 5){
+    light_init(100,c_white,1);
+}
 image_speed = 0;
 image_index = 0;
 deathbool = false;
@@ -236,6 +242,7 @@ if(playerhp[2] &gt; 0){
     if (alarm[4] == -1) MovePlayer(2,obj_reticle2); 
 }
 CollisionCheck();
+
 if(playerhp[2] &lt;= 0 &amp;&amp; deathbool == false){
     deathbool = true;
     deathcount++;
@@ -263,6 +270,16 @@ if(playerhp[2] &lt;= 0 &amp;&amp; deathbool == false){
     }
     if(menuselect[2] == 3){
         with(obj_bow2){
+            instance_destroy();
+        }
+    }
+    else if(menuselect[2] == 4){
+        with(obj_lance2){
+            instance_destroy();
+        }
+    }
+    else if(menuselect[2] == 5){
+        with(obj_something){//destroy magic weapon here
             instance_destroy();
         }
     }
@@ -763,23 +780,7 @@ with(other){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*
-gamepad_set_vibration(1,0.1,0.1);
-alarm[1] = room_speed/8;
-
-x=xprevious;
-y=yprevious;
-
-if(not place_meeting(x + hspeed,y,obj_wall)){
-    x+=hspeed; 
-    exit;
-}
-if(not place_meeting(x,y + vspeed,obj_wall)){
-    y+=vspeed;
-    exit
-}
-speed = 0;
-*/
+            <string>;
 </string>
           </argument>
         </arguments>

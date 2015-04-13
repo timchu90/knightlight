@@ -1,7 +1,7 @@
-var hspeed_ = argument0;
-var vspeed_ = argument1;
+var player = argument3;
+hspeed_ = argument0;
+vspeed_ = argument1;
 var controller = argument2;
-var player_ = argument3;
 var hCollide = false;
 var vCollide = false;
 
@@ -39,10 +39,13 @@ if (collision_circle(x + hspeed_, y + vspeed_, 16, obj_wall, 1, 1))
 
 if (!hCollide)
 {
-    hspeed = hspeed_;
+    player.hspeed = hspeed_;
 }
 if (!vCollide)
 {
-    vspeed = vspeed_;
+    player.vspeed = vspeed_;
 }
-direction = thrustDirectionArray[controller];
+
+
+
+player.direction = thrustDirectionArray[controller];
