@@ -43,6 +43,7 @@ else if (menuselect[1] == 5){
 image_speed = 0;
 image_index = 0;
 deathbool = false;
+
 </string>
           </argument>
         </arguments>
@@ -266,8 +267,13 @@ if(playerhp[1] &lt;= 0 &amp;&amp; deathbool == false){
         with(obj_hand1){
             instance_destroy();
         }
-        with(obj_sword1){
-            instance_destroy();
+        if(menuselect[1] == 2){
+            with(obj_hand1){
+                instance_destroy();
+            }
+            with(obj_sword1){
+                instance_destroy();
+            }
         }
     }
     else if(menuselect[1] == 3){

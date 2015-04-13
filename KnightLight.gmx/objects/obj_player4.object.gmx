@@ -390,7 +390,7 @@ if (alarm[11] == -1) { // invincibility
     obj_player4.alarm[3] = room_speed/2;
     
     // knockback
-    Knockback(self,other, basekb);
+    Knockback(self, other, false);
     
     // audio
     PlayBowHit();
@@ -430,7 +430,7 @@ with(other){
     alarm[2] = room_speed/4;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlaySwordHit();
@@ -465,7 +465,7 @@ with(other){
     alarm[2] = room_speed/4;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlayFlailHit();
@@ -533,7 +533,7 @@ with(other){
     obj_player4.alarm[3] = room_speed/2;
     
     // knockback
-    Knockback(self,other, basekb);
+    Knockback(self, other, false);
     
     // audio
     PlayBowHit();
@@ -573,7 +573,7 @@ with(other){
     alarm[1] = room_speed/4;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlaySwordHit();
@@ -608,7 +608,7 @@ with(other){
     alarm[1] = room_speed/4;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlayFlailHit();
@@ -676,7 +676,7 @@ with(other){
     obj_player4.alarm[3] = room_speed/2;
     
     // knockback
-    Knockback(self,other, basekb);
+    Knockback(self, other, false);
     
     // audio
     PlayBowHit();
@@ -716,7 +716,7 @@ with(other){
     alarm[0] = room_speed/4;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlaySwordHit();
@@ -754,7 +754,7 @@ with(other){
     PlayFlailHit();
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
 }
 </string>
           </argument>
