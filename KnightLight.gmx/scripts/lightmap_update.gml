@@ -81,9 +81,9 @@ with(obj_ghost4){
 //
 with(obj_discoball)
 {
-    if (alarm[0] < 1)
-        light_update(false);
-    else
+    //if (alarm[0] < 1)
+        //light_update(false);
+    //else
         light_update(true);
 }
 //set the surface target
