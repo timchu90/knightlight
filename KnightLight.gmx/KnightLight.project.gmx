@@ -110,6 +110,7 @@
     <object>objects\obj_healthbars</object>
     <object>objects\obj_lightmap</object>
     <object>objects\obj_light</object>
+    <object>objects\obj_shadowcaster</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_menubase</object>
     <object>objects\obj_roomstate</object>

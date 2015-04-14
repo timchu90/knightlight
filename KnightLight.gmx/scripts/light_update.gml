@@ -34,7 +34,7 @@ var object;
 object = id;
 
 //loop through all shadowcasters
-with(obj_wall){
+with(obj_shadowcaster){
     //begin drawing primitives, triangle strip, because then each point connects with every other point.
     draw_primitive_begin(pr_trianglestrip);
     
