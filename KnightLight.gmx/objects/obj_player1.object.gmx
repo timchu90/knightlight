@@ -324,7 +324,10 @@ if(playerhp[1] &lt;= 0 &amp;&amp; deathbool == false){
           <argument>
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
-    playerhp[1] = playerhp[1] - obj_player4.speed * 6;//object needs to be changed
+    if (obj_lance4.alarm[0] &gt; 1)//
+        playerhp[1] = playerhp[1] - obj_player4.speed * 6;//
+    else
+        playerhp[1] = playerhp[1] - obj_player4.speed * 3;//
     gamepad_set_vibration(3,0.5,0.5);
     alarm[3] = room_speed/4;
     gamepad_set_vibration(0,0.5,0.5);
@@ -469,7 +472,10 @@ with(other){
           <argument>
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
-    playerhp[1] = playerhp[1] - obj_player3.speed * 6;//object needs to be changed
+    if (obj_lance3.alarm[0] &gt; 1)//
+        playerhp[1] = playerhp[1] - obj_player3.speed * 6;//
+    else
+        playerhp[1] = playerhp[1] - obj_player3.speed * 3;//
     gamepad_set_vibration(2,0.5,0.5);
     alarm[2] = room_speed/4;
     gamepad_set_vibration(0,0.5,0.5);
@@ -612,7 +618,10 @@ with(other){
           <argument>
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
-    playerhp[1] = playerhp[1] - obj_player2.speed * 6;//object needs to be changed
+    if (obj_lance2.alarm[0] &gt; 1)//
+        playerhp[1] = playerhp[1] - obj_player2.speed * 6;//
+    else
+        playerhp[1] = playerhp[1] - obj_player2.speed * 3;//
     gamepad_set_vibration(1,0.5,0.5);
     alarm[1] = room_speed/4;
     gamepad_set_vibration(0,0.5,0.5);
