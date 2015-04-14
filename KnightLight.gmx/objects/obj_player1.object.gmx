@@ -362,7 +362,7 @@ if(playerhp[1] &lt;= 0 &amp;&amp; deathbool == false){
           <argument>
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
-    playerhp[1] = playerhp[1] - arrowdmg;
+    playerhp[1] = playerhp[1] - other.speed * arrowdmgmod;
     gamepad_set_vibration(0,0.5,0.5);
     obj_player1.alarm[0] = room_speed/2;
     
@@ -510,7 +510,7 @@ with(other){
           <argument>
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
-    playerhp[1] = playerhp[1] - arrowdmg;
+    playerhp[1] = playerhp[1] - other.speed * arrowdmgmod;
     gamepad_set_vibration(0,0.5,0.5);
     obj_player1.alarm[0] = room_speed/2;
     
@@ -656,7 +656,7 @@ with(other){
           <argument>
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
-    playerhp[1] = playerhp[1] - arrowdmg;
+    playerhp[1] = playerhp[1] - other.speed * arrowdmgmod;
     gamepad_set_vibration(0,0.5,0.5);
     obj_player1.alarm[0] = room_speed/2;
     

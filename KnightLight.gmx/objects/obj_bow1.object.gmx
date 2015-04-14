@@ -72,6 +72,7 @@
           <argument>
             <kind>1</kind>
             <string>//MovePendulum();
+
 controller = 0;
 x = obj_player1.x+lengthdir_x(25,obj_player1.image_angle-90);
 y = obj_player1.y+lengthdir_y(25,obj_player1.image_angle-90);
@@ -91,12 +92,7 @@ else
         gamepad_axis_value(controller, gp_axisrv))-90;
 }
 
-if((gamepad_button_check_pressed(0,gp_shoulderr)
-    || gamepad_button_check_pressed(0,gp_shoulderrb)) and canshoot[1] = true){
-    instance_create(x,y,obj_arrow1);
-    canshoot[1] = false;
-    alarm[0] = room_speed * 0.7;
-}
+ShootArrow(1);
 </string>
           </argument>
         </arguments>

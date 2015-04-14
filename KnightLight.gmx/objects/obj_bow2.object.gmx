@@ -91,12 +91,7 @@ else
         gamepad_axis_value(controller, gp_axisrv))-90;
 }
 
-if((gamepad_button_check_pressed(1,gp_shoulderr)
-    || gamepad_button_check_pressed(1,gp_shoulderrb)) and canshoot[2] = true){
-    instance_create(x,y,obj_arrow2);
-    canshoot[2] = false;
-    alarm[0] = room_speed * 0.7;
-}
+ShootArrow(2);
 </string>
           </argument>
         </arguments>
