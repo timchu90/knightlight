@@ -8,79 +8,6 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//MovePendulum();
-//just copied this from the bow lol
-controller = 3;
-x = obj_player4.x+lengthdir_x(25,obj_player4.image_angle-90);
-y = obj_player4.y+lengthdir_y(25,obj_player4.image_angle-90);
-gamepad_set_axis_deadzone(controller,.15);
-
-if((gamepad_axis_value(controller,gp_axisrh) &lt; 0.5 
-    and gamepad_axis_value(controller,gp_axisrv) &lt; 0.5) 
-    and (gamepad_axis_value(controller,gp_axisrh) &gt; -0.5 
-    and gamepad_axis_value(controller,gp_axisrv) &gt; -0.5))
-{
-    image_angle = point_direction(0,0, 
-        gamepad_axis_value(controller, gp_axislh), 
-        gamepad_axis_value(controller, gp_axislv))-90;
-}
-else
-{
-    image_angle = point_direction(0,0, 
-        gamepad_axis_value(controller, gp_axisrh), 
-        gamepad_axis_value(controller, gp_axisrv))-90;
-}
-
-if((gamepad_button_check_pressed(controller,gp_shoulderr)
-        || gamepad_button_check_pressed(controller,gp_shoulderrb))
-    &amp;&amp; canshoot[controller + 1] = true){
-    canshoot[controller + 1] = false;
-    alarm[0] = room_speed * 0.5;
-    
-    //sets the thrust direction to the direction of an analog stick
-    //if the player is looking, it will use that direction
-    //otherwise it will use the movement direction
-    //the direction is stored in thrustDirectionArray
-    /*yeah... i don't actually need this
-    if ((gamepad_axis_value(controller, gp_axisrh) &gt; 0.5
-        || gamepad_axis_value(controller, gp_axisrh) &lt; -0.5)
-    || (gamepad_axis_value(controller, gp_axisrv) &gt; 0.5
-        || gamepad_axis_value(controller, gp_axisrv) &lt; -0.5))
-    {
-        thrustDirectionArray[controller] = point_direction(0,0, 
-            gamepad_axis_value(controller, gp_axisrh), 
-            gamepad_axis_value(controller, gp_axisrv));
-    }
-    else
-    {
-        thrustDirectionArray[controller] = point_direction(0,0, 
-            gamepad_axis_value(controller, gp_axislh), 
-            gamepad_axis_value(controller, gp_axislv));
-    }
-    */
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
@@ -140,6 +67,7 @@ if((gamepad_button_check_pressed(controller,gp_shoulderr)
     
     //sets the thrust direction to the direction of an analog stick
     //if the player is looking, it will use that direction
+    //if the player is not lookg or moving, it will use the image_angle
     //otherwise it will use the movement direction
     //the direction is stored in thrustDirectionArray
     if ((gamepad_axis_value(controller, gp_axisrh) &gt; 0.5
@@ -150,22 +78,24 @@ if((gamepad_button_check_pressed(controller,gp_shoulderr)
         thrustDirectionArray[controller] = point_direction(0,0, 
             gamepad_axis_value(controller, gp_axisrh), 
             gamepad_axis_value(controller, gp_axisrv));
-        //stores the X and Y directions separately
-        //this is done so that each part can be added to the
-        //move_towards_point function below
-        thrustDirectionX[controller] = gamepad_axis_value(controller, gp_axisrh);
-        thrustDirectionY[controller] = gamepad_axis_value(controller, gp_axisrv);
-        move_towards_point(obj_reticle4.x, obj_reticle4.y, 20);
+        move_towards_point(obj_reticle4.x, obj_reticle4.y, 20);//
+    }
+    else if (gamepad_axis_value(controller, gp_axisrh) == 0
+        &amp;&amp; gamepad_axis_value(controller, gp_axisrv) == 0)
+    {
+        thrustDirectionArray[controller] = point_direction(0, 0,
+            lengthdir_x(1,obj_player4.image_angle-90),//
+            lengthdir_y(1,obj_player4.image_angle-90));//
+        move_towards_point(obj_lance4.x + lengthdir_x(1,obj_player4.image_angle-90),//
+            obj_lance4.y + lengthdir_y(1,obj_player4.image_angle-90), 20);//
     }
     else
     {
         thrustDirectionArray[controller] = point_direction(0,0, 
             gamepad_axis_value(controller, gp_axislh), 
             gamepad_axis_value(controller, gp_axislv));
-        thrustDirectionX[controller] = gamepad_axis_value(controller, gp_axislh);
-        thrustDirectionY[controller] = gamepad_axis_value(controller, gp_axislv);
-        move_towards_point(obj_lance4.x + thrustDirectionX[controller],
-            obj_lance4.y + thrustDirectionY[controller], 20);
+        move_towards_point(obj_lance4.x + lengthdir_x(1,obj_player4.image_angle-90),//
+            obj_lance4.y + lengthdir_y(1,obj_player4.image_angle-90), 20);//
     }
 }
 //this passes the speed to ThrustLance and changes to
