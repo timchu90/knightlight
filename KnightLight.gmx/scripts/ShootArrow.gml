@@ -1,4 +1,4 @@
-var player = argument[0];
+var player = argument0;
 var controller = player -1;
 
 if (canshoot[player] = true) {

@@ -27,11 +27,11 @@
             <kind>1</kind>
             <string>//object holding variables for easy game tweaking
 globalvar roomgrav, flailfric, flailmass,swordfric,swordmass,bowfric,bowmass;
-globalvar basemove, reloadmove, basekb;
+globalvar basemove, archermove, chargemove, basekb;
 globalvar arrowdmg, arrowspd;
-globalvar flaildmgmod, sworddmgmod;
+globalvar flaildmgmod, sworddmgmod, arrowdmgmod;
 globalvar thrustDirectionArray, lanceDmgMod, lanceThrustDmgMod;
-globalvar canshoot, flashon;
+globalvar canshoot, ischarging, charge, maxcharge, flashon;
 globalvar playerhp;
 globalvar deathcount;
 globalvar numberofplayers;
@@ -58,8 +58,18 @@ playerhp[1] = 200;
 playerhp[2] = 200;
 playerhp[3] = 200;
 playerhp[4] = 200;
+
 deathcount = 0;
 
+ischarging[1] = false;
+ischarging[2] = false;
+ischarging[3] = false;
+ischarging[4] = false;
+
+charge[1] = false;
+charge[2] = false;
+charge[3] = false;
+charge[4] = false;
 //physics variables for weapons
 roomgrav = -0.4;//corrects for inherent gravity
 
@@ -74,15 +84,18 @@ bowmass = 0.5;
 
 //base movement speed and move speed during relaod
 basemove = 5;
-reloadmove = 3;
+archermove = 6;
+chargemove = 3;
 
 //bow related variables
 arrowdmg = 40;
-arrowspd = 20;
+arrowspd = 15;  
+maxcharge = room_speed * 3;
 
 //melee weapon damage modifiers
 flaildmgmod = 2;
 sworddmgmod = 3;
+arrowdmgmod = 1.5;
 lanceDmgMod = 3;
 lanceThrustDmgMod = 6;
 //base knockback speed
