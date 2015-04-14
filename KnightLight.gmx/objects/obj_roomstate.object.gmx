@@ -88,8 +88,20 @@ lanceThrustDmgMod = 6;
 basekb = 10;
 
 audio_stop_sound(Loop_1);
-if(!audio_is_playing(bgm_dungeon)){
-    audio_play_sound(bgm_dungeon,10,true);
+if (room_get_name(room) == "rm_dungeon" || room_get_name(room) == "rm_temple")
+{
+    if(!audio_is_playing(bgm_dungeon)){
+        audio_play_sound(bgm_dungeon,10,true);
+    }
+    if(audio_is_playing(bgm_disco))
+        audio_stop_sound(bgm_disco);
+}
+else if (room_get_name(room) == "rm_disco")
+{
+    if(!audio_is_playing(bgm_disco))//sound_isplaying(bgm_disco);
+        audio_play_sound(bgm_disco,10,true);
+    if(audio_is_playing(bgm_dungeon))
+        audio_stop_sound(bgm_dungeon);
 }
 </string>
           </argument>
@@ -238,14 +250,11 @@ if(deathcount == (numberofplayers - 1)){
     for(var i =1;i&lt;=4;i++){
         if(menustart[i] == true &amp;&amp; playerhp[i] &gt; 0 &amp;&amp; alarm[0] &lt; 1){
             //show_message("PLAYER " +string(i)+" WINS!");
-            //go to win screen
-            /*
-                Creates a file and saves the weapon of the winner.
-                The file is saved in C:/Users/(Your username)/AppData/Local/KnightLight
-            */
             alarm[i] = room_speed * 2;
             numberOfRounds++;
             alarm[0] = room_speed * 2;
+            //Creates a file and saves the weapon of the winner.
+            //The file is saved in C:/Users/(Your username)/AppData/Local/KnightLight
             file = file_text_open_append(working_directory + "listOfWinningWeapons.txt");
             if (menuselect[i] == 1)
             {
@@ -281,20 +290,6 @@ if(deathcount == (numberofplayers - 1)){
         {
             Sleep((120 - alarm[0]));
         }
-        /*
-        if (alarm[0] &gt; room_speed * 0.75)
-        {
-            Sleep(100);
-        }
-        else if (alarm[0] &gt; room_speed * 0.5)
-        {
-            Sleep(200);
-        }
-        else if (alarm[0] &gt; room_speed * 0.25)
-        {
-            Sleep(300);
-        }
-        */
         else if (alarm[0] &lt; room_speed * 0.25)
         {
             gamepad_set_vibration(0,0,0);
@@ -302,14 +297,16 @@ if(deathcount == (numberofplayers - 1)){
             gamepad_set_vibration(2,0,0);
             gamepad_set_vibration(3,0,0);
             
+            //audio_stop_all();
+            //sound_stop_all();
             if (numberOfRounds == 3){
-                audio_stop_sound(bgm_dungeon);
                 room_goto(room_first);
+                audio_stop_all();
             }
             else if (numberOfRounds == 2)
-                room_goto_next();
-            else if (numberOfRounds == 1)
                 room_restart();
+            else if (numberOfRounds == 1)
+                room_goto_next();
         }
     }
 }

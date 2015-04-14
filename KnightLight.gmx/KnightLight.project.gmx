@@ -33,6 +33,7 @@
     <sounds name="Music">
       <sound>sound\Loop_1</sound>
       <sound>sound\bgm_dungeon</sound>
+      <sound>sound\bgm_disco</sound>
     </sounds>
     <sounds name="Menu">
       <sound>sound\Select</sound>
@@ -79,31 +80,31 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\CreatePendulum.gml</script>
-    <script>scripts\MovePendulum.gml</script>
     <script>scripts\ApplyForce.gml</script>
     <script>scripts\caster_draw.gml</script>
     <script>scripts\caster_init.gml</script>
+    <script>scripts\CollisionCheck.gml</script>
+    <script>scripts\CreatePendulum.gml</script>
+    <script>scripts\DrawMenu.gml</script>
+    <script>scripts\Knockback.gml</script>
     <script>scripts\light_draw.gml</script>
     <script>scripts\light_init.gml</script>
     <script>scripts\light_update.gml</script>
     <script>scripts\lightmap_draw.gml</script>
     <script>scripts\lightmap_init.gml</script>
     <script>scripts\lightmap_update.gml</script>
+    <script>scripts\MoveFlail.gml</script>
+    <script>scripts\MovePendulum.gml</script>
     <script>scripts\MovePlayer.gml</script>
     <script>scripts\NavigateMenu.gml</script>
-    <script>scripts\DrawMenu.gml</script>
-    <script>scripts\Knockback.gml</script>
+    <script>scripts\PlayBowHit.gml</script>
     <script>scripts\PlayBowShot.gml</script>
     <script>scripts\PlayDeath.gml</script>
     <script>scripts\PlayFlailHit.gml</script>
-    <script>scripts\PlayBowHit.gml</script>
     <script>scripts\PlaySwordHit.gml</script>
-    <script>scripts\Sleep.gml</script>
-    <script>scripts\MoveFlail.gml</script>
-    <script>scripts\ThrustLance.gml</script>
-    <script>scripts\CollisionCheck.gml</script>
     <script>scripts\ShootArrow.gml</script>
+    <script>scripts\Sleep.gml</script>
+    <script>scripts\ThrustLance.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_healthbars</object>
@@ -177,12 +178,13 @@
     <object>objects\eff_screenshake</object>
     <object>objects\obj_death</object>
     <object>objects\obj_campfire</object>
+    <object>objects\obj_discoball</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
+    <room>rooms\rm_disco</room>
     <room>rooms\rm_dungeon</room>
     <room>rooms\rm_temple</room>
-    <room>rooms\rm_disco</room>
     <room>rooms\rm_menu_tutorial</room>
     <room>rooms\rm_win_screen</room>
   </rooms>
