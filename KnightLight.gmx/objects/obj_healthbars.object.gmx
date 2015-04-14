@@ -46,35 +46,19 @@ if(menustart[4] == true){
 //putting this here because for some reason you can draw on top of the darkness here...
 if (obj_roomstate.alarm[1] &gt; 1)
 {
-    draw_set_color(c_red);
-    draw_set_halign(fa_center);
-    draw_set_valign(fa_middle);
-    draw_text_transformed(room_width / 2, room_height / 2, "RED KNIGHT WINS!",
-        2, 2, 0,);
+    draw_sprite(sp_redwins,-1,512,384);
 }
 else if (obj_roomstate.alarm[2] &gt; 1)
 {
-    draw_set_color(c_blue);
-    draw_set_halign(fa_center);
-    draw_set_valign(fa_middle);
-    draw_text_transformed(room_width / 2, room_height / 2, "BLUE KNIGHT WINS!",
-        2, 2, 0);
+    draw_sprite(sp_bluewins,-1,512,384);
 }
 else if (obj_roomstate.alarm[3] &gt; 1)
 {
-    draw_set_color(c_green);
-    draw_set_halign(fa_center);
-    draw_set_valign(fa_middle);
-    draw_text_transformed(room_width / 2, room_height / 2, "GREEN KNIGHT WINS!",
-        2, 2, 0);
+    draw_sprite(sp_greenwins,-1,512,384);
 }
 else if (obj_roomstate.alarm[4] &gt; 1)
 {
-    draw_set_color(c_red);
-    draw_set_halign(fa_center);
-    draw_set_valign(fa_middle);
-    draw_text_transformed(room_width / 2, room_height / 2, "YELLOW KNIGHT WINS!",
-        2, 2, 0);
+    draw_sprite(sp_yellowwins,-1,512,384);
 }
 </string>
           </argument>
