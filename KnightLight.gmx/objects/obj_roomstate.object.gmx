@@ -30,11 +30,11 @@ globalvar roomgrav, flailfric, flailmass,swordfric,swordmass,bowfric,bowmass;
 globalvar basemove, reloadmove, basekb;
 globalvar arrowdmg, arrowspd;
 globalvar flaildmgmod, sworddmgmod;
+globalvar thrustDirectionArray, lanceDmgMod, lanceThrustDmgMod;
 globalvar canshoot, flashon;
 globalvar playerhp;
 globalvar deathcount;
 globalvar numberofplayers;
-globalvar thrustDirectionArray;
 
 //holds players' initial thrust direction
 thrustDirectionArray[0] = 0;
@@ -82,7 +82,8 @@ arrowspd = 20;
 //melee weapon damage modifiers
 flaildmgmod = 2;
 sworddmgmod = 3;
-
+lanceDmgMod = 3;
+lanceThrustDmgMod = 6;
 //base knockback speed
 basekb = 10;
 
