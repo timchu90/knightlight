@@ -74,7 +74,6 @@
     <sprite>sprites\sp_bluewins</sprite>
     <sprite>sprites\sp_greenwins</sprite>
     <sprite>sprites\sp_yellowwins</sprite>
-    <sprite>sprites\sprite33</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_dungeon_tile</background>

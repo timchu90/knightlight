@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>thunder_timing = random_range(5,15);
+            <string>thunder_timing = random_range(10,20);
 alarm[0] = room_speed * thunder_timing;
 </string>
           </argument>
@@ -54,7 +54,7 @@ instance_create(672,-96,obj_thunder);
 instance_create(320,832,obj_thunder);
 instance_create(672,832,obj_thunder);
 
-thunder_timing = random_range(5,15);
+thunder_timing = random_range(10,20);
 alarm[0] = room_speed * thunder_timing;
 </string>
           </argument>
