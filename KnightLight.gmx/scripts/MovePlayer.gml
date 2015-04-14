@@ -27,6 +27,18 @@ else {
     vspeed = gamepad_axis_value(controller, gp_axislv) * basemove;
 }
 
+if((gamepad_axis_value(controller,gp_axislh) < 0.5 
+    and gamepad_axis_value(controller,gp_axislv) < 0.5) 
+    and (gamepad_axis_value(controller,gp_axislh) > -0.5 
+    and gamepad_axis_value(controller,gp_axislv) > -0.5)){
+    //DO NOTHING
+}
+else{
+    image_angle = point_direction(0,0, 
+        gamepad_axis_value(controller, gp_axislh), 
+        gamepad_axis_value(controller, gp_axislv))+90;
+}
+
 if((gamepad_axis_value(controller,gp_axisrh) < 0.5 
     and gamepad_axis_value(controller,gp_axisrv) < 0.5) 
     and (gamepad_axis_value(controller,gp_axisrh) > -0.5 
