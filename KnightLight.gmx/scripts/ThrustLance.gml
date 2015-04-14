@@ -1,6 +1,6 @@
 var player = argument3;
-hspeed_ = argument0;
-vspeed_ = argument1;
+var hspeed_ = argument0;
+var vspeed_ = argument1;
 var controller = argument2;
 var hCollide = false;
 var vCollide = false;

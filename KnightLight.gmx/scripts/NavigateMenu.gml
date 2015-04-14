@@ -50,7 +50,7 @@ else if (menuconfirm[player] == true && menustart[player] == true)
     {
         var numOfActivePlayers = 0;
         var numOfConfirmedPlayers = 0;
-        for (var i = 0; i < 4; i++)
+        for (var i = 1; i <= 4; i++)
         {
             if (menustart[i])
                 numOfActivePlayers++;
