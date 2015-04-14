@@ -78,13 +78,17 @@ with(obj_ghost3){
 with(obj_ghost4){
     light_update(true);
 }
-//
 with(obj_discoball)
 {
-    //if (alarm[0] < 1)
-        //light_update(false);
-    //else
+    light_update(true);
+}
+with(obj_thunder){
+    if(alarm[1] == -1){
         light_update(true);
+    }
+    else{
+        light_update(false);
+    }
 }
 //set the surface target
 surface_set_target(lightmap);
@@ -150,9 +154,12 @@ with(obj_ghost3){
 with(obj_ghost4){
     light_draw();
 }
-with(obj_discoball)
+with(obj_discoball){
     light_draw();
-
+}
+with(obj_thunder){
+    light_draw();
+}
 //reset blend mode
 draw_set_blend_mode(bm_normal);
 

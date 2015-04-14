@@ -74,6 +74,7 @@
     <sprite>sprites\sp_bluewins</sprite>
     <sprite>sprites\sp_greenwins</sprite>
     <sprite>sprites\sp_yellowwins</sprite>
+    <sprite>sprites\sprite33</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_dungeon_tile</background>
@@ -180,12 +181,14 @@
     <object>objects\obj_death</object>
     <object>objects\obj_campfire</object>
     <object>objects\obj_discoball</object>
+    <object>objects\obj_thunder</object>
+    <object>objects\obj_thundercontroller</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
+    <room>rooms\rm_temple</room>
     <room>rooms\rm_disco</room>
     <room>rooms\rm_dungeon</room>
-    <room>rooms\rm_temple</room>
     <room>rooms\rm_menu_tutorial</room>
     <room>rooms\rm_win_screen</room>
   </rooms>
