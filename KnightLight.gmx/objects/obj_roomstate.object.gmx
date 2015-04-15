@@ -90,12 +90,12 @@ chargemove = 3;
 //bow related variables
 arrowdmg = 40;
 arrowspd = 15;  
-maxcharge = room_speed * 3;
+maxcharge = room_speed * 2;
 
 //melee weapon damage modifiers
 flaildmgmod = 2;
 sworddmgmod = 3;
-arrowdmgmod = 1.7;
+arrowdmgmod = 2;
 lanceDmgMod = 3;
 lanceThrustDmgMod = 6;
 //base knockback speed
