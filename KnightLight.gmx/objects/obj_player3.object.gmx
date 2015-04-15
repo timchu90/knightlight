@@ -638,7 +638,7 @@ with(other){
           <argument>
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
-    playerhp[3] = playerhp[3] - obj_player1.speed * 6;//object needs to be changed
+    playerhp[3] -= other.speed * 2 ;//object needs to be changed
     gamepad_set_vibration(0,0.5,0.5);
     alarm[0] = room_speed/4;
     gamepad_set_vibration(2,0.5,0.5);

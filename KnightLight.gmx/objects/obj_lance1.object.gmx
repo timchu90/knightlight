@@ -81,6 +81,36 @@ if((gamepad_button_check_pressed(controller,gp_shoulderr)
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// End Thrust
+
+speed = 0;
+friction = 0;
+
+//then moves the lance in the last few frames
+move_towards_point(obj_player1.x+lengthdir_x(25,obj_player1.image_angle-90),
+    obj_player1.y+lengthdir_y(25,obj_player1.image_angle-90),1);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
@@ -124,71 +154,46 @@ if((gamepad_button_check_pressed(controller,gp_shoulderr)
             <string>//MovePendulum();
 controller = 0;
 //only allows the player to change the lance if she can move
-if (alarm[0] &lt; room_speed * 0.4)
-{
-    x = obj_player1.x+lengthdir_x(25,obj_player1.image_angle-90);
-    y = obj_player1.y+lengthdir_y(25,obj_player1.image_angle-90);
-}
+x = obj_player1.x+lengthdir_x(25,obj_player1.image_angle-90);
+y = obj_player1.y+lengthdir_y(25,obj_player1.image_angle-90);
 gamepad_set_axis_deadzone(controller,.15);
-image_angle = obj_player1.image_angle-180;
 
-if((gamepad_button_check_pressed(controller,gp_shoulderr)
-        || gamepad_button_check_pressed(controller,gp_shoulderrb))
-    &amp;&amp; canshoot[controller + 1] = true){
-    canshoot[controller + 1] = false;
-    alarm[0] = room_speed * 0.5;
+if((gamepad_axis_value(controller,gp_axisrh) &lt; 0.5 
+    and gamepad_axis_value(controller,gp_axisrv) &lt; 0.5) 
+    and (gamepad_axis_value(controller,gp_axisrh) &gt; -0.5 
+    and gamepad_axis_value(controller,gp_axisrv) &gt; -0.5))
+{   
+    image_angle = obj_player1.image_angle-180;
+}
+else
+{        
+    image_angle = point_direction(0,0, 
+        gamepad_axis_value(controller, gp_axisrh), 
+        gamepad_axis_value(controller, gp_axisrv))-90;
+}
+
+//ShootArrow(1);
+
     
-    //sets the thrust direction to the direction of an analog stick
-    //if the player is looking, it will use that direction
-    //otherwise it will use the movement direction
-    //the direction is stored in thrustDirectionArray
-    if ((gamepad_axis_value(controller, gp_axisrh) &gt; 0.5
-        || gamepad_axis_value(controller, gp_axisrh) &lt; -0.5)
-    || (gamepad_axis_value(controller, gp_axisrv) &gt; 0.5
-        || gamepad_axis_value(controller, gp_axisrv) &lt; -0.5))
-    {
-        thrustDirectionArray[controller] = point_direction(0,0, 
-            gamepad_axis_value(controller, gp_axisrh), 
-            gamepad_axis_value(controller, gp_axisrv));
-        //stores the X and Y directions separately
-        //this is done so that each part can be added to the
-        //move_towards_point function below
-        thrustDirectionX[controller] = gamepad_axis_value(controller, gp_axisrh);
-        thrustDirectionY[controller] = gamepad_axis_value(controller, gp_axisrv);
-        move_towards_point(obj_reticle1.x, obj_reticle1.y, 20);
-    }
-    else
-    {
-        thrustDirectionArray[controller] = point_direction(0,0, 
-            gamepad_axis_value(controller, gp_axislh), 
-            gamepad_axis_value(controller, gp_axislv));
-        thrustDirectionX[controller] = gamepad_axis_value(controller, gp_axislh);
-        thrustDirectionY[controller] = gamepad_axis_value(controller, gp_axislv);
-        move_towards_point(obj_lance1.x + thrustDirectionX[controller],
-            obj_lance1.y + thrustDirectionY[controller], 20);
-    }
-}
-//this passes the speed to ThrustLance and changes to
-//slow down over the thrust
-if (obj_lance1.alarm[0] &gt; room_speed * 0.4)
+// Thrust lance in direction player is facing (like the arrow for bow)
+if((gamepad_button_check_released(controller,gp_shoulderr) || 
+    gamepad_button_check_released(controller,gp_shoulderrb)) and
+    canshoot[1])
 {
-    ThrustLance(9, 9, 0, obj_player1);
+    canshoot[1] = false;
+    alarm[0] = room_speed * 0.7;
+    // player steps
+    obj_player1.alarm[4] = room_speed/6;
+    obj_player1.direction = point_direction(obj_player1.x, obj_player1.y, x, y);
+    //obj_player1.friction = 0.6;
+    obj_player1.speed = 10;
+    // lance thrusts
+    alarm[1] = room_speed/4;
+    direction = obj_player1.direction;
+    speed = 50;
+    //friction = 0.5;
 }
-else if (obj_lance1.alarm[0] &gt; room_speed * 0.25)
-{
-    ThrustLance(3, 3, 0, obj_player1);
-}
-else if (obj_lance1.alarm[0] &gt; room_speed * 0.15)
-{
-    ThrustLance(2, 2, 0, obj_player1);
-}
-else if (obj_lance1.alarm[0] &gt; 1)
-{
-    ThrustLance(1, 1, 0, obj_player1);
-    //then moves the lance in the last few frames
-    move_towards_point(obj_player1.x+lengthdir_x(25,obj_player1.image_angle-90),
-        obj_player1.y+lengthdir_y(25,obj_player1.image_angle-90),1);
-}
+
 </string>
           </argument>
         </arguments>
