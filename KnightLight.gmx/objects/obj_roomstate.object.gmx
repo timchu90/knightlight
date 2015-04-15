@@ -314,8 +314,8 @@ if(deathcount == (numberofplayers - 1)){
                 room_goto(room_first);
                 audio_stop_all();
             }
-            else if (numberOfRounds == 2)
-                room_restart();
+            //else if (numberOfRounds == 2)
+            //    room_restart();
             else if (numberOfRounds == 1)
                 room_goto_next();
         
