@@ -43,23 +43,7 @@ if(menustart[4] == true){
     p4 = (playerhp[4] / max_hp) * 100;
     draw_healthbar(774, 698, 974, 718, p4, c_white, c_yellow, c_yellow, 1, true, false);
 }
-//putting this here because for some reason you can draw on top of the darkness here...
-if (obj_roomstate.alarm[1] &gt; 1)
-{
-    draw_sprite(sp_redwins,-1,512,384);
-}
-else if (obj_roomstate.alarm[2] &gt; 1)
-{
-    draw_sprite(sp_bluewins,-1,512,384);
-}
-else if (obj_roomstate.alarm[3] &gt; 1)
-{
-    draw_sprite(sp_greenwins,-1,512,384);
-}
-else if (obj_roomstate.alarm[4] &gt; 1)
-{
-    draw_sprite(sp_yellowwins,-1,512,384);
-}
+
 </string>
           </argument>
         </arguments>
