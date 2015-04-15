@@ -39,6 +39,8 @@
       <sound>sound\Select</sound>
       <sound>sound\Confirm</sound>
     </sounds>
+    <sound>sound\Rain</sound>
+    <sound>sound\Thunder</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sp_redknight</sprite>

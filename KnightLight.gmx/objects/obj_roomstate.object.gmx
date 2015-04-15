@@ -301,14 +301,8 @@ if(deathcount == (numberofplayers - 1)){
             file_text_close(file);
         }
     }
-    if (alarm[0] &gt; 1)//Slow motion for me, slow motion for me, yeah move it slow motion
-    {//for meeeeeee
-        if (alarm[0] &gt; room_speed * 0.25)
-        {
-            Sleep((120 - alarm[0]));
-        }
-        else if (alarm[0] &lt; room_speed * 0.25)
-        {
+    room_speed = 15;
+        if(alarm[0] &lt; room_speed*0.25){
             gamepad_set_vibration(0,0,0);
             gamepad_set_vibration(1,0,0);
             gamepad_set_vibration(2,0,0);
@@ -324,7 +318,7 @@ if(deathcount == (numberofplayers - 1)){
                 room_restart();
             else if (numberOfRounds == 1)
                 room_goto_next();
-        }
+        
     }
 }
 </string>
