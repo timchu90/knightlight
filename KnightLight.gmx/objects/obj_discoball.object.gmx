@@ -148,10 +148,10 @@ else if (alarm[0] &lt; 1 &amp;&amp; alarm[2] &lt; 1)
 {
     alarm[2] = room_speed * 3.75;
     
-    flashon[1] = false;
-    flashon[2] = false;
-    flashon[3] = false;
-    flashon[4] = false;
+    //flashon[1] = false;
+    //flashon[2] = false;
+    //flashon[3] = false;
+    //flashon[4] = false;
     
     with(obj_player1)
     {

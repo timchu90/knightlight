@@ -66,7 +66,7 @@ else{
         else{
             draw_set_color(c_red);
         }
-        with(draw_sprite_ext(sp_bow,2,x+130,y+50,3,3,0,c_white,1)){
+        with(draw_sprite_ext(sp_bow,2,x+130,y+50,1.5,1.5,0,c_white,1)){
             image_speed = 0;
         }
         
