@@ -49,10 +49,10 @@ alarm[0] = room_speed * thunder_timing;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(320,-96,obj_thunder);
-instance_create(672,-96,obj_thunder);
-instance_create(320,832,obj_thunder);
-instance_create(672,832,obj_thunder);
+            <string>instance_create(336,-80,obj_thunder);
+instance_create(688,-80,obj_thunder);
+instance_create(336,832,obj_thunder);
+instance_create(688,832,obj_thunder);
 
 thunder_timing = random_range(10,20);
 alarm[0] = room_speed * thunder_timing;
