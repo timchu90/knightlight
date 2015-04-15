@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>//CreatePendulum(obj_player4,roomgrav,bowfric,bowmass);
+image_speed = 0;
+image_index = 0;
 </string>
           </argument>
         </arguments>

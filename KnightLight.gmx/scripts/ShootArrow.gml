@@ -8,7 +8,11 @@ if (canshoot[player] = true) {
     {
         ischarging[player] = true;
         if (charge[player] < maxcharge) {// if not fully chagred...
-            charge[player] += 1;         // increase charge every frame.
+            charge[player] += 1;   
+            image_index = 1;      // increase charge every frame.
+        }
+        else{
+            image_index = 2;
         }
     }
     
@@ -21,5 +25,6 @@ if (canshoot[player] = true) {
         ischarging[player] = false;
         charge[player] = 0;
         alarm[0] = room_speed * 0.7;
+        image_index = 0;
     }
 }
