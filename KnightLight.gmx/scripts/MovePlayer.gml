@@ -9,8 +9,8 @@ direction = point_direction(0,0,
     gamepad_axis_value(controller, gp_axislv));
 
 // If player is using a bow...
-if(menuselect[1] == 3){
-    if(ischarging[1]) {
+if(menuselect[player] == 3){
+    if(ischarging[player]) {
         // move slower while charging
         hspeed = gamepad_axis_value(controller, gp_axislh) * chargemove;
         vspeed = gamepad_axis_value(controller, gp_axislv) * chargemove;

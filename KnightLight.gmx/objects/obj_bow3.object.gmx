@@ -92,7 +92,7 @@ else
         gamepad_axis_value(controller, gp_axisrv))-90;
 }
 
-ShootArrow(3);
+ShootArrow(3, obj_arrow3);
 </string>
           </argument>
         </arguments>

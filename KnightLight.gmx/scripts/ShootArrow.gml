@@ -1,4 +1,5 @@
 var player = argument0;
+var arrow = argument1;
 var controller = player -1;
 
 if (canshoot[player] = true) {
@@ -20,7 +21,8 @@ if (canshoot[player] = true) {
     if((gamepad_button_check_released(controller,gp_shoulderr) || 
         gamepad_button_check_released(controller,gp_shoulderrb)))
     {
-        instance_create(x,y,obj_arrow1);
+        
+        instance_create(x,y,arrow);
         canshoot[player] = false;
         ischarging[player] = false;
         charge[player] = 0;

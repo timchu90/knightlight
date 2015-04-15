@@ -95,7 +95,7 @@ maxcharge = room_speed * 3;
 //melee weapon damage modifiers
 flaildmgmod = 2;
 sworddmgmod = 3;
-arrowdmgmod = 1.5;
+arrowdmgmod = 1.7;
 lanceDmgMod = 3;
 lanceThrustDmgMod = 6;
 //base knockback speed
