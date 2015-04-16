@@ -112,9 +112,8 @@ if (room_get_name(room) == "rm_dungeon" || room_get_name(room) == "rm_temple")
 }
 else if (room_get_name(room) == "rm_disco")
 {
-    if(!audio_is_playing(bgm_disco))//sound_isplaying(bgm_disco);
+    if(!audio_is_playing(bgm_disco))
     {
-        //audio_sound_set_track_position(bgm_disco, 0.1);
         audio_play_sound(bgm_disco,10,true);
     }
     if(audio_is_playing(bgm_dungeon))
