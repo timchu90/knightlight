@@ -55,6 +55,7 @@
     <sprite>sprites\sp_greenknight</sprite>
     <sprite>sprites\sp_yellowknight</sprite>
     <sprite>sprites\sp_lightmask</sprite>
+    <sprite>sprites\sp_discomask</sprite>
     <sprite>sprites\sp_torch</sprite>
     <sprite>sprites\sp_campfire</sprite>
     <sprite>sprites\sp_redghost</sprite>
@@ -92,6 +93,7 @@
     <script>scripts\light_draw.gml</script>
     <script>scripts\light_init.gml</script>
     <script>scripts\light_update.gml</script>
+    <script>scripts\light_update_disco.gml</script>
     <script>scripts\lightmap_draw.gml</script>
     <script>scripts\lightmap_init.gml</script>
     <script>scripts\lightmap_update.gml</script>

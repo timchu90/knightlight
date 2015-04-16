@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>light_init(100,c_white,1);
+            <string>disco_rotation = 0;
+light_init(100,c_white,1);
+
 </string>
           </argument>
         </arguments>
@@ -143,21 +145,21 @@
             <string>//doesn't check if player is playing
 randomize();
 var ranNum = irandom(3);
-
+disco_rotation++;
 surface_free(lightsurface);
 switch(ranNum)
 {
     case 0:
-        light_init(80,c_red,1);
+        light_init(300,c_red,1);
         break;
     case 1:
-        light_init(80,c_blue,1);
+        light_init(300,c_blue,1);
         break;
     case 2:
-        light_init(80,c_green,1);
+        light_init(300,c_green,1);
         break;
     case 3:
-        light_init(80,c_yellow,1);
+        light_init(300,c_yellow,1);
         break;
 }
 

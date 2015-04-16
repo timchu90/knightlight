@@ -80,7 +80,7 @@ with(obj_ghost4){
 }
 with(obj_discoball)
 {
-    light_update(true);
+    light_update_disco(true);
 }
 with(obj_thunder){
     if(alarm[1] == -1){
