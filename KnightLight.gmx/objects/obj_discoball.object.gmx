@@ -172,28 +172,28 @@ if (alarm[1] &lt; 1)
             with(obj_player1)
             {
                 surface_free(lightsurface);
-                light_init(80,c_red,1);
+                light_init(100,c_red,1);
             }
             break;
         case 1:
             with(obj_player2)
             {
                 surface_free(lightsurface);
-                light_init(80,c_blue,1);
+                light_init(100,c_blue,1);
             }
             break;
         case 2:
             with(obj_player3)
             {
                 surface_free(lightsurface);
-                light_init(80,c_green,1);
+                light_init(100,c_green,1);
             }
             break;
         case 3:
             with(obj_player4)
             {
                 surface_free(lightsurface);
-                light_init(80,c_yellow,1);
+                light_init(100,c_yellow,1);
             }
             break;
     }

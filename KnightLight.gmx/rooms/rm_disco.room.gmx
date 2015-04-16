@@ -2,7 +2,7 @@
 <room>
   <caption></caption>
   <width>1024</width>
-  <height>768</height>
+  <height>800</height>
   <vsnap>32</vsnap>
   <hsnap>32</hsnap>
   <isometric>0</isometric>
@@ -194,7 +194,7 @@ for(var i = 1; i&lt;=4; i++){
     <instance objName="obj_wall" x="1024" y="-32" name="inst_348E3E53" locked="0" code="" scaleX="1" scaleY="25" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1024" y="768" name="inst_DC14D93E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="-32" y="768" name="inst_3C7942BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="0" y="768" name="inst_4BB06800" locked="0" code="" scaleX="32" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="0" y="768" name="inst_4BB06800" locked="0" code="" scaleX="32" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_lightmap" x="64" y="32" name="inst_741F5298" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_healthbars" x="32" y="32" name="inst_6944DE90" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_roomstate" x="96" y="32" name="inst_5A9678E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
