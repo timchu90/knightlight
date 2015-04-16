@@ -51,6 +51,7 @@
     <sprite>sprites\sp_sword</sprite>
     <sprite>sprites\sp_bow</sprite>
     <sprite>sprites\sp_arrow</sprite>
+    <sprite>sprites\sp_bomb</sprite>
     <sprite>sprites\sp_logo</sprite>
     <sprite>sprites\sp_greenknight</sprite>
     <sprite>sprites\sp_yellowknight</sprite>
@@ -64,6 +65,7 @@
     <sprite>sprites\sp_spark</sprite>
     <sprite>sprites\sp_littlespark</sprite>
     <sprite>sprites\sp_death</sprite>
+    <sprite>sprites\sp_explode</sprite>
     <sprite>sprites\sp_redmenu</sprite>
     <sprite>sprites\sp_bluemenu</sprite>
     <sprite>sprites\sp_greenmenu</sprite>
@@ -103,6 +105,7 @@
     <script>scripts\PlayBowShot.gml</script>
     <script>scripts\PlayDeath.gml</script>
     <script>scripts\PlayFlailHit.gml</script>
+    <script>scripts\ThrowBomb.gml</script>
     <script>scripts\PlaySwordHit.gml</script>
     <script>scripts\ShootArrow.gml</script>
     <script>scripts\Sleep.gml</script>
@@ -117,6 +120,7 @@
     <object>objects\obj_menubase</object>
     <object>objects\obj_roomstate</object>
     <object>objects\obj_spark</object>
+    <object>objects\obj_bomb</object>
     <object>objects\obj_littlespark</object>
     <objects name="player1">
       <object>objects\obj_menu1</object>
@@ -184,6 +188,7 @@
     <object>objects\obj_discoball</object>
     <object>objects\obj_thunder</object>
     <object>objects\obj_thundercontroller</object>
+    <object>objects\obj_explode</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>

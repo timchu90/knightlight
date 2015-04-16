@@ -1,4 +1,4 @@
-
+///MoveFlail
 if(mass<>0){
 ApplyForce(grav/mass,270);
 
