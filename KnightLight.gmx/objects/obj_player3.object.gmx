@@ -224,6 +224,46 @@ friction = 0;
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>ThrowBomb</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>3</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>obj_bomb3</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -351,9 +391,9 @@ if(playerhp[3] &lt;= 0 &amp;&amp; deathbool == false){
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
     if (obj_lance4.alarm[0] &gt; 1)//
-        playerhp[3] = playerhp[3] - obj_player4.speed * lanceThrustDmgMod;//
+        playerhp[3] = playerhp[3] - other.speed * lanceThrustDmgMod;//
     else
-        playerhp[3] = playerhp[3] - obj_player4.speed * lanceDmgMod;//
+        playerhp[3] = playerhp[3] - other.speed * lanceDmgMod;//
     gamepad_set_vibration(3,0.5,0.5);
     alarm[3] = room_speed/4;
     gamepad_set_vibration(2,0.5,0.5);
@@ -531,9 +571,9 @@ if (alarm[11] == -1) { // invincibility
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
     if (obj_lance2.alarm[0] &gt; 1)//
-        playerhp[3] = playerhp[3] - obj_player2.speed * lanceThrustDmgMod;//
+        playerhp[3] = playerhp[3] - other.speed * lanceThrustDmgMod;//
     else
-        playerhp[3] = playerhp[3] - obj_player2.speed * lanceDmgMod;//
+        playerhp[3] = playerhp[3] - other.speed * lanceDmgMod;//
     gamepad_set_vibration(1,0.5,0.5);
     alarm[1] = room_speed/4;
     gamepad_set_vibration(2,0.5,0.5);
@@ -678,9 +718,9 @@ with(other){
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
     if (obj_lance1.alarm[0] &gt; 1)//
-        playerhp[3] = playerhp[3] - obj_player1.speed * lanceThrustDmgMod;//
+        playerhp[3] = playerhp[3] - other.speed * lanceThrustDmgMod;//
     else
-        playerhp[3] = playerhp[3] - obj_player1.speed * lanceDmgMod;//
+        playerhp[3] = playerhp[3] - other.speed * lanceDmgMod;//
     gamepad_set_vibration(0,0.5,0.5);
     alarm[0] = room_speed/4;
     gamepad_set_vibration(2,0.5,0.5);

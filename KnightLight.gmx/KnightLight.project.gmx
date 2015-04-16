@@ -56,6 +56,7 @@
     <sprite>sprites\sp_greenknight</sprite>
     <sprite>sprites\sp_yellowknight</sprite>
     <sprite>sprites\sp_lightmask</sprite>
+    <sprite>sprites\sp_discomask</sprite>
     <sprite>sprites\sp_torch</sprite>
     <sprite>sprites\sp_campfire</sprite>
     <sprite>sprites\sp_redghost</sprite>
@@ -94,6 +95,7 @@
     <script>scripts\light_draw.gml</script>
     <script>scripts\light_init.gml</script>
     <script>scripts\light_update.gml</script>
+    <script>scripts\light_update_disco.gml</script>
     <script>scripts\lightmap_draw.gml</script>
     <script>scripts\lightmap_init.gml</script>
     <script>scripts\lightmap_update.gml</script>
@@ -110,6 +112,7 @@
     <script>scripts\ShootArrow.gml</script>
     <script>scripts\Sleep.gml</script>
     <script>scripts\ThrustLance.gml</script>
+    <script>scripts\Bomb.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_healthbars</object>
@@ -120,7 +123,6 @@
     <object>objects\obj_menubase</object>
     <object>objects\obj_roomstate</object>
     <object>objects\obj_spark</object>
-    <object>objects\obj_bomb</object>
     <object>objects\obj_littlespark</object>
     <objects name="player1">
       <object>objects\obj_menu1</object>
@@ -136,11 +138,13 @@
       <object>objects\obj_arrow1</object>
       <object>objects\obj_ghost1</object>
       <object>objects\obj_lance1</object>
+      <object>objects\obj_bomb1</object>
     </objects>
     <objects name="player2">
       <object>objects\obj_menu2</object>
       <object>objects\obj_player2</object>
       <object>objects\obj_reticle2</object>
+      <object>objects\obj_bomb2</object>
       <object>objects\obj_link_2_1</object>
       <object>objects\obj_link_2_2</object>
       <object>objects\obj_link_2_3</object>
@@ -166,6 +170,7 @@
       <object>objects\obj_arrow3</object>
       <object>objects\obj_ghost3</object>
       <object>objects\obj_lance3</object>
+      <object>objects\obj_bomb3</object>
     </objects>
     <objects name="player4">
       <object>objects\obj_menu4</object>
@@ -181,6 +186,7 @@
       <object>objects\obj_arrow4</object>
       <object>objects\obj_ghost4</object>
       <object>objects\obj_lance4</object>
+      <object>objects\obj_bomb4</object>
     </objects>
     <object>objects\eff_screenshake</object>
     <object>objects\obj_death</object>
@@ -192,9 +198,9 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
-    <room>rooms\rm_dungeon</room>
     <room>rooms\rm_disco</room>
     <room>rooms\rm_temple</room>
+    <room>rooms\rm_dungeon</room>
     <room>rooms\rm_menu_tutorial</room>
     <room>rooms\rm_win_screen</room>
   </rooms>

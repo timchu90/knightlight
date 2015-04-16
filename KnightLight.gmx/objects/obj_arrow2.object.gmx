@@ -29,7 +29,7 @@
 direction = arrow_dir;
 image_angle = direction;
 light_init(100,make_color_rgb(255,169,10),1);
-speed = arrowspd * (1 + 3*charge[2]/maxcharge);
+speed = arrowspd * (1 + 2.5*charge[2]/maxcharge);
 audio_play_sound(Bow_Shot, 10, false);
 </string>
           </argument>
