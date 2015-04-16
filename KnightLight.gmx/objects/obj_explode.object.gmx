@@ -113,9 +113,7 @@ alarm[0] = room_speed/2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>light_update(obj_light);
-light_draw();
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>
