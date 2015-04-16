@@ -48,7 +48,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>canshoot[1] = false;
+            <string>/// Thrust Available
+
+canshoot[1] = false;
 </string>
           </argument>
         </arguments>

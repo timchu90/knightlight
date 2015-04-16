@@ -97,7 +97,8 @@ flaildmgmod = 2;
 sworddmgmod = 3;
 arrowdmgmod = 2;
 lanceDmgMod = 3;
-lanceThrustDmgMod = 6;
+lanceThrustDmgMod = 3;
+
 //base knockback speed
 basekb = 10;
 
