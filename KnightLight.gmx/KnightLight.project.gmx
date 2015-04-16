@@ -71,6 +71,8 @@
     <sprite>sprites\sp_yellowmenu</sprite>
     <sprite>sprites\sp_flailcontrols</sprite>
     <sprite>sprites\sp_bowcontrols</sprite>
+    <sprite>sprites\sp_lancecontrols</sprite>
+    <sprite>sprites\sp_magiccontrols</sprite>
     <sprite>sprites\sp_swordcontrols</sprite>
     <sprite>sprites\sp_lance</sprite>
     <sprite>sprites\sp_redwins</sprite>
