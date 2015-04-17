@@ -7,7 +7,7 @@ if (canshoot[player] = true && menuselect[player] == 5) {
 if((gamepad_button_check_pressed(controller,gp_shoulderr) || 
         gamepad_button_check_pressed(controller,gp_shoulderrb)))
     {
-        instance_create(x,y+30,bomb);
+        instance_create(lengthdir_x(25,image_angle-90),lengthdir_y(25,image_angle-90),bomb);
     }
     if((gamepad_button_check_released(controller,gp_shoulderr) || 
         gamepad_button_check_released(controller,gp_shoulderrb)))
