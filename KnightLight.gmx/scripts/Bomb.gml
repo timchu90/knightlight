@@ -11,8 +11,8 @@ if((gamepad_button_check(controller,gp_shoulderr) ||
             charge[player] += 1;  
             }
             if (player == 1) {
-            x=obj_player1.x;
-            y=obj_player1.y;
+x = obj_player1.x+lengthdir_x(25,obj_player1.image_angle-90);
+y = obj_player1.y+lengthdir_y(25,obj_player1.image_angle-90);
             }
             else if (player == 2) {
             x=obj_player2.x;

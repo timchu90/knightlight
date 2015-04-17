@@ -7,13 +7,13 @@ if (canshoot[player] = true && menuselect[player] == 5) {
 if((gamepad_button_check_pressed(controller,gp_shoulderr) || 
         gamepad_button_check_pressed(controller,gp_shoulderrb)))
     {
-        instance_create(x,y,bomb);
+        instance_create(x,y+30,bomb);
     }
     if((gamepad_button_check_released(controller,gp_shoulderr) || 
         gamepad_button_check_released(controller,gp_shoulderrb)))
     {
         canshoot[player] = false;
-        alarm[10] = room_speed * 0.7;
+        alarm[10] = room_speed * 0.3;
         image_index = 0;
     }
 }
