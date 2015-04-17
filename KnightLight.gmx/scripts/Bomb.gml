@@ -46,7 +46,11 @@ else if (collision_circle(x,y,17,obj_wall,false,true)){
 instance_destroy();
 }
 
-else {
-    image_xscale += room_speed/2500;
-    image_yscale += room_speed/2500;
+else if (alarm[0] > room_speed*0.25){ 
+    image_xscale += room_speed/2000;
+    image_yscale += room_speed/2000;
 }
+else {
+    image_xscale -= room_speed/2000;
+    image_yscale -= room_speed/2000;
+    }
