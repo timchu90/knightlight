@@ -319,11 +319,6 @@ if(playerhp[3] &lt;= 0 &amp;&amp; deathbool == false){
             instance_destroy();
         }
     }
-    else if(menuselect[3] == 5){
-        with(obj_something){//destroy magic weapon here
-            instance_destroy();
-        }
-    }
     with(obj_reticle3){
         instance_destroy();
     }
