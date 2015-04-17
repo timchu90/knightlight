@@ -2,7 +2,7 @@
 var player = argument0;
 var controller = player -1;
 
-
+if (alarm[0] == -1) {
 if((gamepad_button_check(controller,gp_shoulderr) || 
         gamepad_button_check(controller,gp_shoulderrb)))
     {
@@ -38,4 +38,8 @@ if(alarm[0] == -1 && ((gamepad_button_check_released(controller,gp_shoulderr) ||
        speed = bombspd * (1 + 2.5*charge[1]/maxcharge);
         ischarging[player] = false;
         charge[player] = 0;
+}}
+
+else if (collision_circle(x,y,17,obj_wall,false,true)){
+instance_destroy();
 }
