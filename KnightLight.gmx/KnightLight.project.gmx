@@ -73,12 +73,15 @@
     <sprite>sprites\sp_yellowmenu</sprite>
     <sprite>sprites\sp_flailcontrols</sprite>
     <sprite>sprites\sp_bowcontrols</sprite>
+    <sprite>sprites\sp_lancecontrols</sprite>
+    <sprite>sprites\sp_magiccontrols</sprite>
     <sprite>sprites\sp_swordcontrols</sprite>
     <sprite>sprites\sp_lance</sprite>
     <sprite>sprites\sp_redwins</sprite>
     <sprite>sprites\sp_bluewins</sprite>
     <sprite>sprites\sp_greenwins</sprite>
     <sprite>sprites\sp_yellowwins</sprite>
+    <sprite>sprites\sp_potion</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_dungeon_tile</background>
@@ -198,9 +201,9 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
+    <room>rooms\rm_dungeon</room>
     <room>rooms\rm_disco</room>
     <room>rooms\rm_temple</room>
-    <room>rooms\rm_dungeon</room>
     <room>rooms\rm_menu_tutorial</room>
     <room>rooms\rm_win_screen</room>
   </rooms>

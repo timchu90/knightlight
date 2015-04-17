@@ -91,10 +91,10 @@ else{
         }
         draw_sprite_ext(sp_lance,-1,x+130,y+100,1.2,1.2,0,c_white,1);//draw lance sprite
         if(player == 1 || player == 3){
-            draw_sprite(sp_bowcontrols,-1,x-150,y-25);
+            draw_sprite(sp_lancecontrols,-1,x-150,y-25);
         }
         else{
-            draw_sprite(sp_bowcontrols,-1,x+325,y-25);
+            draw_sprite(sp_lancecontrols,-1,x+325,y-25);
         }
     }
     else{
@@ -109,12 +109,12 @@ else{
         else{
             draw_set_color(c_red);
         }
-        draw_sprite_ext(sp_bow,-1,x+130,y+75,3,3,0,c_white,1);//draw magic sprite
+        draw_sprite_ext(sp_potion,-1,x+130,y+75,3,3,0,c_white,1);//draw magic sprite
         if(player == 1 || player == 3){
-            draw_sprite(sp_bowcontrols,-1,x-150,y-25);
+            draw_sprite(sp_magiccontrols,-1,x-150,y-25);
         }
         else{
-            draw_sprite(sp_bowcontrols,-1,x+325,y-25);
+            draw_sprite(sp_magiccontrols,-1,x+325,y-25);
         }
     }
     else{
