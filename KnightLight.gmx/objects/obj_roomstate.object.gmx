@@ -95,7 +95,7 @@ maxcharge = room_speed * 2;
 
 //bomb vars
 bombdmg = 15;
-bombspd = 5;
+bombspd = 3;
 maxbombcharge = room_speed *1.5;
 
 //melee weapon damage modifiers
