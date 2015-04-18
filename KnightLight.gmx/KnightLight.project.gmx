@@ -82,9 +82,11 @@
     <sprite>sprites\sp_greenwins</sprite>
     <sprite>sprites\sp_yellowwins</sprite>
     <sprite>sprites\sp_potion</sprite>
+    <sprite>sprites\sp_lava</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_dungeon_tile</background>
+    <background>background\bg_grate</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -198,9 +200,12 @@
     <object>objects\obj_thunder</object>
     <object>objects\obj_thundercontroller</object>
     <object>objects\obj_explode</object>
+    <object>objects\obj_lava</object>
+    <object>objects\obj_lavaroom</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
+    <room>rooms\rm_lava</room>
     <room>rooms\rm_dungeon</room>
     <room>rooms\rm_disco</room>
     <room>rooms\rm_temple</room>
