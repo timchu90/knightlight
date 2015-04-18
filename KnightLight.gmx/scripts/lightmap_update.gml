@@ -90,6 +90,12 @@ with(obj_thunder){
         light_update(false);
     }
 }
+with(obj_explode){
+    light_update(false);
+}
+with(obj_bomb){
+    light_update(true);
+}
 //set the surface target
 surface_set_target(lightmap);
 
@@ -158,6 +164,12 @@ with(obj_discoball){
     light_draw();
 }
 with(obj_thunder){
+    light_draw();
+}
+with(obj_explode){
+    light_draw();
+}
+with(obj_bomb){
     light_draw();
 }
 //reset blend mode
