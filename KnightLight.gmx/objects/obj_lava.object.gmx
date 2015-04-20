@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>image_speed = 0;
 image_index = 0;
-light_init(320,c_white,1);
+light_init_box(image_xscale*320,image_yscale*256,c_white,1);
 lava_on = false;
 </string>
           </argument>

@@ -104,6 +104,7 @@
     <script>scripts\Knockback.gml</script>
     <script>scripts\light_draw.gml</script>
     <script>scripts\light_init.gml</script>
+    <script>scripts\light_init_box.gml</script>
     <script>scripts\light_update.gml</script>
     <script>scripts\light_update_disco.gml</script>
     <script>scripts\light_update_lava.gml</script>
