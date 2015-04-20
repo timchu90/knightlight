@@ -36,6 +36,7 @@ lava[6] = lava7;
 lava[7] = lava8;
 lava[8] = lava9;
 alarm[0] = room_speed*5;
+
 </string>
           </argument>
         </arguments>

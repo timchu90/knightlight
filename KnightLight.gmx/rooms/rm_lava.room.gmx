@@ -3,8 +3,8 @@
   <caption></caption>
   <width>1024</width>
   <height>800</height>
-  <vsnap>64</vsnap>
-  <hsnap>64</hsnap>
+  <vsnap>32</vsnap>
+  <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -177,18 +177,18 @@ for(var i = 1; i&lt;=4; i++){
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_lava" x="0" y="0" name="lava1" locked="0" code="" scaleX="1.25" scaleY="1.33333337306976" colour="4294967295" rotation="0"/>
-    <instance objName="obj_lava" x="704" y="512" name="lava2" locked="0" code="" scaleX="1.25" scaleY="1.33333337306976" colour="4294967295" rotation="0"/>
-    <instance objName="obj_lava" x="320" y="0" name="lava3" locked="0" code="" scaleX="1.5" scaleY="1.33333337306976" colour="4294967295" rotation="0"/>
+    <instance objName="obj_lava" x="160" y="128" name="lava1" locked="0" code="" scaleX="1.25" scaleY="1.33333337306976" colour="4294967295" rotation="0"/>
+    <instance objName="obj_lava" x="864" y="640" name="lava2" locked="0" code="" scaleX="1.25" scaleY="1.33333337306976" colour="4294967295" rotation="0"/>
+    <instance objName="obj_lava" x="512" y="128" name="lava3" locked="0" code="" scaleX="1.5" scaleY="1.33333337306976" colour="4294967295" rotation="0"/>
     <instance objName="obj_healthbars" x="64" y="192" name="inst_25B85AE9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_lightmap" x="128" y="192" name="inst_AFC9F100" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_roomstate" x="192" y="192" name="inst_79028389" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_lava" x="0" y="512" name="lava9" locked="0" code="" scaleX="1.25" scaleY="1.33333337306976" colour="4294967295" rotation="0"/>
-    <instance objName="obj_lava" x="0" y="256" name="lava7" locked="0" code="" scaleX="1.25" scaleY="1.33333337306976" colour="4294967295" rotation="0"/>
-    <instance objName="obj_lava" x="320" y="512" name="lava5" locked="0" code="" scaleX="1.5" scaleY="1.33333337306976" colour="4294967295" rotation="0"/>
-    <instance objName="obj_lava" x="704" y="256" name="lava8" locked="0" code="" scaleX="1.25" scaleY="1.33333337306976" colour="4294967295" rotation="0"/>
-    <instance objName="obj_lava" x="320" y="256" name="lava6" locked="0" code="" scaleX="1.5" scaleY="1.33333337306976" colour="4294967295" rotation="0"/>
-    <instance objName="obj_lava" x="704" y="0" name="lava4" locked="0" code="" scaleX="1.25" scaleY="1.33333337306976" colour="4294967295" rotation="0"/>
+    <instance objName="obj_lava" x="160" y="640" name="lava9" locked="0" code="" scaleX="1.25" scaleY="1.33333337306976" colour="4294967295" rotation="0"/>
+    <instance objName="obj_lava" x="160" y="384" name="lava7" locked="0" code="" scaleX="1.25" scaleY="1.33333337306976" colour="4294967295" rotation="0"/>
+    <instance objName="obj_lava" x="512" y="640" name="lava5" locked="0" code="" scaleX="1.5" scaleY="1.33333337306976" colour="4294967295" rotation="0"/>
+    <instance objName="obj_lava" x="864" y="384" name="lava8" locked="0" code="" scaleX="1.25" scaleY="1.33333337306976" colour="4294967295" rotation="0"/>
+    <instance objName="obj_lava" x="512" y="384" name="lava6" locked="0" code="" scaleX="1.5" scaleY="1.33333337306976" colour="4294967295" rotation="0"/>
+    <instance objName="obj_lava" x="864" y="128" name="lava4" locked="0" code="" scaleX="1.25" scaleY="1.33333337306976" colour="4294967295" rotation="0"/>
     <instance objName="obj_lavaroom" x="256" y="192" name="inst_C7F0AFAE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_shadowcaster" x="288" y="224" name="inst_7FE8B8D1" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_shadowcaster" x="288" y="480" name="inst_0ED88CF4" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
@@ -198,6 +198,7 @@ for(var i = 1; i&lt;=4; i++){
     <instance objName="obj_wall" x="0" y="-32" name="inst_69FF884E" locked="0" code="" scaleX="33" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="-32" y="-32" name="inst_0D0E2625" locked="0" code="" scaleX="1" scaleY="27" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="0" y="768" name="inst_B846F190" locked="0" code="" scaleX="32" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_healthbars" x="1152" y="512" name="inst_740D3817" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="&lt;undefined&gt;" x="0" y="768" w="64" h="64" xo="0" yo="0" id="10005229" name="inst_353779F4" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
