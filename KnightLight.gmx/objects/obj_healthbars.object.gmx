@@ -29,19 +29,23 @@
 var max_hp = 200;
 if(menustart[1] == true){
     p1 = (playerhp[1] / max_hp) * 100;
-    draw_healthbar(28, 775, 228, 795, p1, c_white, c_red, c_red, 0, true, false);
+    draw_healthbar(28, 775, 228, 795, p1, c_black, c_red, c_red, 0, true, false);
+    draw_sprite(sp_healthbar,-1,28,775);
 }
 if(menustart[2] == true){
     p2 = (playerhp[2] / max_hp) * 100;
-    draw_healthbar(284, 775, 484, 795, p2, c_white, c_blue, c_blue, 1, true, false);
+    draw_healthbar(284, 775, 484, 795, p2, c_black, c_blue, c_blue, 0, true, false);
+    draw_sprite(sp_healthbar,-1,284,775);
 }
 if(menustart[3] == true){
     p3 = (playerhp[3] / max_hp) * 100;
-    draw_healthbar(540, 775, 740, 795, p3, c_white, c_green, c_green, 0, true, false);
+    draw_healthbar(540, 775, 740, 795, p3, c_black, c_green, c_green, 0, true, false);
+    draw_sprite(sp_healthbar,-1,540,775);
 }
 if(menustart[4] == true){
     p4 = (playerhp[4] / max_hp) * 100;
-    draw_healthbar(796, 775, 996, 795, p4, c_white, c_yellow, c_yellow, 1, true, false);
+    draw_healthbar(796, 775, 996, 795, p4, c_black, c_yellow, c_yellow, 0, true, false);
+    draw_sprite(sp_healthbar,-1,796,775);
 }
 
 </string>
