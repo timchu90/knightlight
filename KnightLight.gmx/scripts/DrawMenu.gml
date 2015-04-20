@@ -120,7 +120,7 @@ else{
     else{
         draw_set_color(c_gray);
     }
-    draw_text(x,y+160,"MAGIC");
+    draw_text(x,y+160,'"MAGIC"');
 }
 if (menuconfirm[player] == true && menustart[player] == true)
 {
