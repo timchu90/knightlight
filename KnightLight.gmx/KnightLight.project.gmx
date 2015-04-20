@@ -57,6 +57,7 @@
     <sprite>sprites\sp_greenknight</sprite>
     <sprite>sprites\sp_yellowknight</sprite>
     <sprite>sprites\sp_lightmask</sprite>
+    <sprite>sprites\sp_lavamask</sprite>
     <sprite>sprites\sp_discomask</sprite>
     <sprite>sprites\sp_torch</sprite>
     <sprite>sprites\sp_campfire</sprite>

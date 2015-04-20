@@ -20,7 +20,7 @@ draw_set_alpha(fadealpha);
 //draw a circle with the provided colors in the center of the surface.
 //since the surface is (radius*2,radius*2) big, the center is (radius,radius)
 
-draw_sprite_ext(sp_discomask,-1,radius,radius,radius*2/350,radius*2/350,disco_rotation,color,fadealpha);
+draw_sprite_ext(sp_lavamask,-1,radius,radius,1,1,0,color,fadealpha);
 //draw_circle_color(radius,radius,radius,color,c_black,false);
 
 //reseting the alpha value

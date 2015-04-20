@@ -96,6 +96,14 @@ with(obj_explode){
 with(obj_bomb){
     light_update(true);
 }
+with(obj_lava){
+    if(lava_on == true){
+        light_update_lava(true);
+    }
+    else{
+        light_update_lava(false);
+    }
+}
 //set the surface target
 surface_set_target(lightmap);
 
@@ -170,6 +178,9 @@ with(obj_explode){
     light_draw();
 }
 with(obj_bomb){
+    light_draw();
+}
+with(obj_lava){
     light_draw();
 }
 //reset blend mode
