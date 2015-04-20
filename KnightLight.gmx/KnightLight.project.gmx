@@ -104,6 +104,7 @@
     <script>scripts\light_init.gml</script>
     <script>scripts\light_update.gml</script>
     <script>scripts\light_update_disco.gml</script>
+    <script>scripts\light_update_lava.gml</script>
     <script>scripts\lightmap_draw.gml</script>
     <script>scripts\lightmap_init.gml</script>
     <script>scripts\lightmap_update.gml</script>
@@ -210,9 +211,9 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
+    <room>rooms\rm_lava</room>
     <room>rooms\rm_dungeon</room>
     <room>rooms\rm_temple</room>
-    <room>rooms\rm_lava</room>
     <room>rooms\rm_disco</room>
     <room>rooms\rm_menu_tutorial</room>
     <room>rooms\rm_win_screen</room>
