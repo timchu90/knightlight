@@ -52,7 +52,7 @@
             <string>MoveFlail();
 ApplyForce(point_direction(x,y,obj_reticle3.x,obj_reticle3.y)/50, 
     point_direction(x,y,obj_reticle3.x,obj_reticle3.y));
-
+image_angle = point_direction(x,y,obj_reticle3.x,obj_reticle3.y)+90;
 </string>
           </argument>
         </arguments>

@@ -45,10 +45,12 @@
   <sprites name="sprites">
     <sprite>sprites\sp_redknight</sprite>
     <sprite>sprites\sp_flail</sprite>
+    <sprite>sprites\sp_flailblur</sprite>
     <sprite>sprites\sp_link</sprite>
     <sprite>sprites\sp_blueknight</sprite>
     <sprite>sprites\sp_wall</sprite>
     <sprite>sprites\sp_sword</sprite>
+    <sprite>sprites\sp_swordblur</sprite>
     <sprite>sprites\sp_bow</sprite>
     <sprite>sprites\sp_arrow</sprite>
     <sprite>sprites\sp_bomb</sprite>
@@ -204,12 +206,13 @@
     <object>objects\obj_lava</object>
     <object>objects\obj_lavaroom</object>
     <object>objects\obj_bomb</object>
+    <object>objects\obj_swordblur</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
-    <room>rooms\rm_lava</room>
-    <room>rooms\rm_temple</room>
     <room>rooms\rm_dungeon</room>
+    <room>rooms\rm_temple</room>
+    <room>rooms\rm_lava</room>
     <room>rooms\rm_disco</room>
     <room>rooms\rm_menu_tutorial</room>
     <room>rooms\rm_win_screen</room>
