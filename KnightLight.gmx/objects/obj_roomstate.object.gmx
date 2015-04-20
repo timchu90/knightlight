@@ -94,7 +94,7 @@ arrowspd = 15;
 maxcharge = room_speed * 2;
 
 //bomb vars
-bombdmg = 30;
+bombdmg = 40;
 bombspd = 3;
 maxbombcharge = room_speed *1.5;
 
