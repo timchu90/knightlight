@@ -12,24 +12,29 @@ if((gamepad_button_check(controller,gp_shoulderr) ||
         if (charge[player] < maxcharge) {// if not fully chagred...
             charge[player] += 1;  
             }
-            if (player == 1) {
+            if (player == 1 && playerhp[player] > 0) {
 x = obj_player1.x+lengthdir_x(25,obj_player1.image_angle-90);
 y = obj_player1.y+lengthdir_y(25,obj_player1.image_angle-90);
+    direction = obj_player1.image_angle-90;
             }
-            else if (player == 2) {
-            
+            else if (player == 2 && playerhp[player] > 0) {
 x = obj_player2.x+lengthdir_x(25,obj_player2.image_angle-90);
 y = obj_player2.y+lengthdir_y(25,obj_player2.image_angle-90);
+    direction = obj_player2.image_angle-90;
             }
-            else if (player == 3) {
+            else if (player == 3 && playerhp[player] > 0) {
 x = obj_player3.x+lengthdir_x(25,obj_player3.image_angle-90);
 y = obj_player3.y+lengthdir_y(25,obj_player3.image_angle-90);
+    direction = obj_player3.image_angle-90;
             }
-            else {
+            else if (playerhp[player] > 0) {
 x = obj_player4.x+lengthdir_x(25,obj_player4.image_angle-90);
 y = obj_player4.y+lengthdir_y(25,obj_player4.image_angle-90);
+    direction = obj_player4.image_angle-90;
             }
-    direction = obj_player1.image_angle-90;
+            else {
+            instance_destroy();
+            }
 }
 
 if(alarm[0] == -1 && ((gamepad_button_check_released(controller,gp_shoulderr) || 
