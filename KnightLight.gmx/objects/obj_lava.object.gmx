@@ -29,6 +29,7 @@
 image_index = 0;
 light_init_box(image_xscale*320,image_yscale*256,c_white,1);
 lava_on = false;
+
 </string>
           </argument>
         </arguments>
@@ -52,6 +53,7 @@ lava_on = false;
           <argument>
             <kind>1</kind>
             <string>alarm[0] = room_speed*4.5;
+audio_play_sound(LavaExplosion,10,false);
 </string>
           </argument>
         </arguments>

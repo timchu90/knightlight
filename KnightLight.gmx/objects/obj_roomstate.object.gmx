@@ -95,8 +95,8 @@ maxcharge = room_speed * 2;
 
 //bomb vars
 bombdmg = 40;
-bombspd = 3;
-maxbombcharge = room_speed *1.5;
+bombspd = 2;
+maxbombcharge = room_speed *1.75;
 
 //melee weapon damage modifiers
 flaildmgmod = 2;
@@ -108,8 +108,11 @@ lanceThrustDmgMod = 3;
 //base knockback speed
 basekb = 10;
 
+audio_stop_all();
+
+/*
 audio_stop_sound(Loop_1);
-if (room_get_name(room) == "rm_dungeon" || room_get_name(room) == "rm_temple")
+if (room_get_name(room) == "rm_dungeon")
 {
     if(!audio_is_playing(bgm_dungeon)){
         audio_play_sound(bgm_dungeon,10,true);
@@ -126,6 +129,16 @@ else if (room_get_name(room) == "rm_disco")
     if(audio_is_playing(bgm_dungeon))
         audio_stop_sound(bgm_dungeon);
 }
+else if (room_get_name(room) == "rm_temple")
+{
+    if(!audio_is_playing(bgm_temple))
+    {
+        audio_play_sound(bgm_temple,10,true);
+    }
+    if(audio_is_playing(bgm_dungeon))
+        audio_stop_sound(bgm_dungeon);
+}
+*/
 </string>
           </argument>
         </arguments>

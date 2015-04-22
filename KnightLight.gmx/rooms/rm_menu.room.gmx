@@ -11,9 +11,8 @@
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
   <code>// BGM
-if(!audio_is_playing(Loop_1)){
-    audio_play_sound(Loop_1,10,true);
-}</code>
+audio_stop_all();
+audio_play_sound(Loop_1,10,true);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

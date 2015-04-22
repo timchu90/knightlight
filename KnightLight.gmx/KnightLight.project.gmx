@@ -34,6 +34,8 @@
       <sound>sound\Loop_1</sound>
       <sound>sound\bgm_dungeon</sound>
       <sound>sound\bgm_disco</sound>
+      <sound>sound\bgm_lava</sound>
+      <sound>sound\bgm_temple</sound>
     </sounds>
     <sounds name="Menu">
       <sound>sound\Select</sound>
@@ -41,6 +43,7 @@
     </sounds>
     <sound>sound\Rain</sound>
     <sound>sound\Thunder</sound>
+    <sound>sound\LavaExplosion</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sp_redknight</sprite>
@@ -215,10 +218,10 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
-    <room>rooms\rm_dungeon</room>
-    <room>rooms\rm_lava</room>
     <room>rooms\rm_temple</room>
     <room>rooms\rm_disco</room>
+    <room>rooms\rm_lava</room>
+    <room>rooms\rm_dungeon</room>
     <room>rooms\rm_menu_tutorial</room>
     <room>rooms\rm_win_screen</room>
   </rooms>
