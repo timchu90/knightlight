@@ -264,7 +264,7 @@ gamepad_set_vibration(3,0,0);
             
             //audio_stop_all();
             //sound_stop_all();
-if (numberOfRounds == 3){
+if (numberOfRounds == 4){
      room_goto(room_first);
      audio_stop_all();
 }
