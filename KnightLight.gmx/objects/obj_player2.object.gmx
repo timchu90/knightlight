@@ -319,11 +319,7 @@ if(playerhp[2] &lt;= 0 &amp;&amp; deathbool == false){
             instance_destroy();
         }
     }
-    else if(menuselect[2] == 5){
-        with(obj_something){//destroy magic weapon here
-            instance_destroy();
-        }
-    }
+
     with(obj_reticle2){
         instance_destroy();
     }
@@ -359,8 +355,8 @@ if(playerhp[2] &lt;= 0 &amp;&amp; deathbool == false){
             <kind>1</kind>
             <string>if (alarm[11] == -1) { // invincibility
     playerhp[2] -= ProximityDamage();
-    gamepad_set_vibration(0,0.5,0.5);
-    obj_player1.alarm[0] = room_speed/2;
+    gamepad_set_vibration(1,0.5,0.5);
+    obj_player2.alarm[1] = room_speed/2;
     
     // knockback
     Knockback(self, other, false);

@@ -42,7 +42,7 @@ if (alarm[0] == -1) {
     {
         audio_play_sound(Bow_Shot, 10, false);
         alarm[0] = room_speed*0.5;
-        speed = bombspd * (1 + 2.5*charge[1]/maxcharge);
+        speed = bombspd * (1 + 2.5*charge[player]/maxcharge);
         ischarging[player] = false;
         charge[player] = 0;
     }

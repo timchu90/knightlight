@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>canshoot[3] = true;
 instance_create(x,y,obj_explode);
 </string>
           </argument>
