@@ -111,7 +111,7 @@ else{
         }
         draw_sprite_ext(sp_potion,-1,x+130,y,3,3,0,c_white,1);//draw magic sprite
         if(player == 1 || player == 3){
-            draw_sprite(sp_magiccontrols,-1,x-150,y-5);
+            draw_sprite(sp_magiccontrols,-1,x-150,y-25);
         }
         else{
             draw_sprite(sp_magiccontrols,-1,x+325,y-25);
