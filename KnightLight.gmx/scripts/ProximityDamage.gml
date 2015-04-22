@@ -7,5 +7,9 @@ if (proximity == 0){
     return bombdmg;
 }
 else {
-    return bombdmg / (0.05 * proximity);
+    var damage = bombdmg / (0.05 * proximity);
+    if (damage > bombdmg)
+        return bombdmg;
+    else
+        return damage;
 }
