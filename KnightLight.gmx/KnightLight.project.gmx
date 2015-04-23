@@ -90,6 +90,7 @@
     <sprite>sprites\sp_lava</sprite>
     <sprite>sprites\sp_healthbar</sprite>
     <sprite>sprites\sp_explosion</sprite>
+    <sprite>sprites\sp_switch</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_dungeon_tile</background>
