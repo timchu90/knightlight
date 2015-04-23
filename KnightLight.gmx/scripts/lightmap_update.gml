@@ -78,8 +78,7 @@ with(obj_ghost3){
 with(obj_ghost4){
     light_update(true);
 }
-with(obj_discoball)
-{
+with(obj_discoball){
     light_update_disco(true);
 }
 with(obj_thunder){
@@ -103,6 +102,9 @@ with(obj_lava){
     else{
         light_update_lava(false);
     }
+}
+with(obj_ballz){
+    light_update(true);
 }
 //set the surface target
 surface_set_target(lightmap);
@@ -181,6 +183,9 @@ with(obj_bomb){
     light_draw();
 }
 with(obj_lava){
+    light_draw();
+}
+with(obj_ballz){
     light_draw();
 }
 //reset blend mode

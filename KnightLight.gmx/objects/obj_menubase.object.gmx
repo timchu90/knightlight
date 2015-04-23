@@ -45,7 +45,6 @@ menuconfirm[1] = false;
 menuconfirm[2] = false;
 menuconfirm[3] = false;
 menuconfirm[4] = false;
-
 </string>
           </argument>
         </arguments>
@@ -181,6 +180,11 @@ menuconfirm[1] = true;
 menuconfirm[2] = true;
 menuconfirm[3] = true;
 menuconfirm[4] = true;
+
+menuselect[1] = 3;
+menuselect[2] = 3;
+menuselect[3] = 3;
+menuselect[4] = 3;
 
 allconfirm = true;
 </string>
