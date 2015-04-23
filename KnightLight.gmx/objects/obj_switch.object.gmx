@@ -195,18 +195,18 @@ ready = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x,y,obj_littlespark);
-Sleep(50);
-if (other.speed &gt; 15){
-    hit_succeed = true;
-    instance_create(x,y,obj_spark);
-}
-else
-    alarm[1] = room_speed * 1.5;
-
-if(!audio_is_playing(Sword_Hit))
-    if (other.speed &gt; 5)
+            <string>if(alarm[1] == -1){
+    instance_create(x,y,obj_littlespark);
+    Sleep(50);
+    if (other.speed &gt; 15){
+        hit_succeed = true;
+        instance_create(x,y,obj_spark);
+    }
+    alarm[1] = room_speed * 0.5;
+    
+    if(!audio_is_playing(Sword_Hit))
         audio_play_sound(Sword_Hit,10,false);
+}
 </string>
           </argument>
         </arguments>
@@ -229,18 +229,19 @@ if(!audio_is_playing(Sword_Hit))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x,y,obj_littlespark);
-Sleep(50);
-if (other.speed &gt; 40){
-    hit_succeed = true;
-    instance_create(x,y,obj_spark);
-}
-else
-    alarm[1] = room_speed * 1.5;
-    
-PlayBowHit();
-with(other){
-    instance_destroy();
+            <string>if(alarm[1] == -1){
+    instance_create(x,y,obj_littlespark);
+    Sleep(50);
+    if (other.speed &gt; 40){
+        hit_succeed = true;
+        instance_create(x,y,obj_spark);
+    }
+    alarm[1] = room_speed * 0.5;
+        
+    PlayBowHit();
+    with(other){
+        instance_destroy();
+    }
 }
 </string>
           </argument>
@@ -264,18 +265,18 @@ with(other){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x,y,obj_littlespark);
-Sleep(50);
-if (other.speed &gt; 15){
-    hit_succeed = true;
-    instance_create(x,y,obj_spark);
-}
-else
-    alarm[1] = room_speed * 1.5;
-
-if(!audio_is_playing(Sword_Hit))
-    if (other.speed &gt; 5)
+            <string>if(alarm[1] == -1){
+    instance_create(x,y,obj_littlespark);
+    if (other.speed &gt; 15){
+        hit_succeed = true;
+        instance_create(x,y,obj_spark);
+    }
+    Sleep(50);
+    alarm[1] = room_speed * 0.5;
+    
+    if(!audio_is_playing(Sword_Hit))
         audio_play_sound(Sword_Hit,10,false);
+}
 </string>
           </argument>
         </arguments>
@@ -298,16 +299,17 @@ if(!audio_is_playing(Sword_Hit))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x,y,obj_littlespark);
-Sleep(50);
-if (other.speed &gt; 20){
-    hit_succeed = true;
-    instance_create(x,y,obj_spark);
-}
-else
-    alarm[1] = room_speed * 1.5;
-    
-PlayFlailHit();
+            <string>if(alarm[1] == -1){
+    instance_create(x,y,obj_littlespark);
+    Sleep(50);
+    if (other.speed &gt; 20){
+        hit_succeed = true;
+        instance_create(x,y,obj_spark);
+    }
+    alarm[1] = room_speed * 0.5;
+    PlayFlailHit();
+}  
+
 </string>
           </argument>
         </arguments>
@@ -330,15 +332,16 @@ PlayFlailHit();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x,y,obj_littlespark);
-Sleep(50);
-if (ProximityDamage() &gt; 40)
-    hit_succeed = true;
-else
-    alarm[1] = room_speed * 1.5;
-
-if(!audio_is_playing(Bow_Hit))
-    audio_play_sound(Bow_Hit,10,false);
+            <string>if(alarm[1] == -1){
+    instance_create(x,y,obj_littlespark);
+    Sleep(50);
+    if (ProximityDamage() &gt; 40)
+        hit_succeed = true;
+    alarm[1] = room_speed * 0.5;
+    
+    if(!audio_is_playing(Bow_Hit))
+        audio_play_sound(Bow_Hit,10,false);
+}
 </string>
           </argument>
         </arguments>
