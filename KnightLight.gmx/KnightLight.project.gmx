@@ -211,13 +211,13 @@
     <object>objects\obj_discoball</object>
     <object>objects\obj_thunder</object>
     <object>objects\obj_thundercontroller</object>
-    <object>objects\obj_explode</object>
     <object>objects\obj_lava</object>
     <object>objects\obj_lavaroom</object>
     <object>objects\obj_bomb</object>
     <object>objects\obj_swordblur</object>
     <object>objects\obj_switch</object>
     <object>objects\obj_thin_wall</object>
+    <object>objects\obj_explode</object>
     <object>objects\obj_flail_parent</object>
     <object>objects\obj_sword_parent</object>
     <object>objects\obj_arrow_parent</object>
