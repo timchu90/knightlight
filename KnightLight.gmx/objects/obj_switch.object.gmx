@@ -205,8 +205,7 @@ ready = false;
     alarm[1] = room_speed * 0.5;
     
     if(!audio_is_playing(Sword_Hit))
-        if (other.speed &gt; 5)
-            audio_play_sound(Sword_Hit,10,false);
+        audio_play_sound(Sword_Hit,10,false);
 }
 </string>
           </argument>
@@ -276,8 +275,7 @@ ready = false;
     alarm[1] = room_speed * 0.5;
     
     if(!audio_is_playing(Sword_Hit))
-        if (other.speed &gt; 5)
-            audio_play_sound(Sword_Hit,10,false);
+        audio_play_sound(Sword_Hit,10,false);
 }
 </string>
           </argument>
