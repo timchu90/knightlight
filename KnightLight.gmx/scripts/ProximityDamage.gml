@@ -3,13 +3,12 @@
 
 proximity = distance_to_point(other.x, other.y);
 
-if (proximity == 0){
-    return bombdmg;
+if (proximity <= 40){
+    return 80;
+}
+else if (proximity <= 90) {
+    return 60;
 }
 else {
-    var damage = bombdmg / (0.05 * proximity);
-    if (damage > bombdmg)
-        return bombdmg;
-    else
-        return damage;
+    return 40;
 }
