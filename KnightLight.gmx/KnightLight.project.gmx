@@ -91,6 +91,7 @@
     <sprite>sprites\sp_healthbar</sprite>
     <sprite>sprites\sp_explosion</sprite>
     <sprite>sprites\sp_switch</sprite>
+    <sprite>sprites\sp_thinwall</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_dungeon_tile</background>
@@ -126,7 +127,6 @@
     <script>scripts\ThrowBomb.gml</script>
     <script>scripts\PlaySwordHit.gml</script>
     <script>scripts\ShootArrow.gml</script>
-    <script>scripts\GreenBallz.gml</script>
     <script>scripts\Sleep.gml</script>
     <script>scripts\ThrustLance.gml</script>
     <script>scripts\Bomb.gml</script>
@@ -208,7 +208,6 @@
     </objects>
     <object>objects\eff_screenshake</object>
     <object>objects\obj_death</object>
-    <object>objects\obj_campfire</object>
     <object>objects\obj_discoball</object>
     <object>objects\obj_thunder</object>
     <object>objects\obj_thundercontroller</object>
@@ -217,8 +216,13 @@
     <object>objects\obj_lavaroom</object>
     <object>objects\obj_bomb</object>
     <object>objects\obj_swordblur</object>
-    <object>objects\obj_ballz</object>
+    <object>objects\obj_switch</object>
     <object>objects\obj_thin_wall</object>
+    <object>objects\obj_flail_parent</object>
+    <object>objects\obj_sword_parent</object>
+    <object>objects\obj_arrow_parent</object>
+    <object>objects\obj_lance_parent</object>
+    <object>objects\obj_tutorialroom</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>

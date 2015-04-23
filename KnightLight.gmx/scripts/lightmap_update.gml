@@ -103,7 +103,7 @@ with(obj_lava){
         light_update_lava(false);
     }
 }
-with(obj_ballz){
+with(obj_switch){
     light_update(true);
 }
 //set the surface target
@@ -185,7 +185,7 @@ with(obj_bomb){
 with(obj_lava){
     light_draw();
 }
-with(obj_ballz){
+with(obj_switch){
     light_draw();
 }
 //reset blend mode

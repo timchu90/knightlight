@@ -12,8 +12,8 @@
   <showcolour>-1</showcolour>
   <code>//CREATE PLAYERS AND RESET ALARMS
 if(menustart[1] == true){
-    instance_create(105,465,obj_player1);//105 105
-    instance_create(280,465,obj_reticle1);//280 105
+    instance_create(105,650,obj_player1);//105 105
+    instance_create(280,650,obj_reticle1);//280 105
     obj_player1.alarm[0] = room_speed/5;
     obj_player1.alarm[1] = room_speed/5;
     obj_player1.alarm[2] = room_speed/5;
@@ -21,8 +21,8 @@ if(menustart[1] == true){
     flashon[1] = false;
 }
 if(menustart[2] == true){
-    instance_create(361,465,obj_player2);//770 105
-    instance_create(536,465,obj_reticle2);//945 105
+    instance_create(361,650,obj_player2);//770 105
+    instance_create(536,650,obj_reticle2);//945 105
     obj_player2.alarm[0] = room_speed/5;
     obj_player2.alarm[1] = room_speed/5;
     obj_player2.alarm[2] = room_speed/5;
@@ -30,8 +30,8 @@ if(menustart[2] == true){
     flashon[2] = false;
 }
 if(menustart[3] == true){
-    instance_create(617,465,obj_player3);//105 665
-    instance_create(792,465,obj_reticle3);//280 665
+    instance_create(617,650,obj_player3);//105 665
+    instance_create(792,650,obj_reticle3);//280 665
     obj_player3.alarm[0] = room_speed/5;
     obj_player3.alarm[1] = room_speed/5;
     obj_player3.alarm[2] = room_speed/5;
@@ -39,8 +39,8 @@ if(menustart[3] == true){
     flashon[3] = false;
 }
 if(menustart[4] == true){
-    instance_create(873,465,obj_player4);//770 665
-    instance_create(1048,465,obj_reticle4);//945 665
+    instance_create(873,650,obj_player4);//770 665
+    instance_create(1048,650,obj_reticle4);//945 665
     obj_player4.alarm[0] = room_speed/5;
     obj_player4.alarm[1] = room_speed/5;
     obj_player4.alarm[2] = room_speed/5;
@@ -52,73 +52,73 @@ if(menustart[4] == true){
 
 //FLAIL
 if(menuselect[1] == 1 &amp;&amp; menustart[1] == true){
-    instance_create(140,465,obj_link_1_1);//140 105
-    instance_create(175,465,obj_link_1_2);
-    instance_create(210,465,obj_link_1_3);
-    instance_create(245,465,obj_flail1);
+    instance_create(140,650,obj_link_1_1);//140 105
+    instance_create(175,650,obj_link_1_2);
+    instance_create(210,650,obj_link_1_3);
+    instance_create(245,650,obj_flail1);
 }
 if(menuselect[2] == 1 &amp;&amp; menustart[2] == true){
-    instance_create(396,465,obj_link_2_1);//805 105
-    instance_create(431,465,obj_link_2_2);//840
-    instance_create(466,465,obj_link_2_3);//875
-    instance_create(501,465,obj_flail2);//910
+    instance_create(396,650,obj_link_2_1);//805 105
+    instance_create(431,650,obj_link_2_2);//840
+    instance_create(466,650,obj_link_2_3);//875
+    instance_create(501,650,obj_flail2);//910
 }
 if(menuselect[3] == 1 &amp;&amp; menustart[3] == true){
-    instance_create(652,465,obj_link_3_1);//140
-    instance_create(687,465,obj_link_3_2);//175
-    instance_create(722,465,obj_link_3_3);//210
-    instance_create(757,465,obj_flail3);//245
+    instance_create(652,650,obj_link_3_1);//140
+    instance_create(687,650,obj_link_3_2);//175
+    instance_create(722,650,obj_link_3_3);//210
+    instance_create(757,650,obj_flail3);//245
 }
 if(menuselect[4] == 1 &amp;&amp; menustart[4] == true){
-    instance_create(908,465,obj_link_4_1);//805
-    instance_create(943,465,obj_link_4_2);//840
-    instance_create(978,465,obj_link_4_3);//875
-    instance_create(1013,465,obj_flail4);//910
+    instance_create(908,650,obj_link_4_1);//805
+    instance_create(943,650,obj_link_4_2);//840
+    instance_create(978,650,obj_link_4_3);//875
+    instance_create(1013,650,obj_flail4);//910
 }
 //SWORD
 if(menuselect[1] == 2 &amp;&amp; menustart[1] == true){
-    instance_create(120,465,obj_hand1);//105
-    instance_create(153,465,obj_sword1);//105
+    instance_create(120,650,obj_hand1);//105
+    instance_create(153,650,obj_sword1);//105
 }
 if(menuselect[2] == 2 &amp;&amp; menustart[2] == true){
-    instance_create(376,465,obj_hand2);//785 105
-    instance_create(409,465,obj_sword2);//818 105
+    instance_create(376,650,obj_hand2);//785 105
+    instance_create(409,650,obj_sword2);//818 105
 }
 if(menuselect[3] == 2 &amp;&amp; menustart[3] == true){
-    instance_create(632,465,obj_hand3);//120
-    instance_create(665,465,obj_sword3);//153
+    instance_create(632,650,obj_hand3);//120
+    instance_create(665,650,obj_sword3);//153
 }
 if(menuselect[4] == 2 &amp;&amp; menustart[4] == true){
-    instance_create(888,465,obj_hand4);//785
-    instance_create(921,465,obj_sword4);//818
+    instance_create(888,650,obj_hand4);//785
+    instance_create(921,650,obj_sword4);//818
 }
 
 //BOW
 if(menuselect[1] == 3 &amp;&amp; menustart[1] == true){
-    instance_create(130,465,obj_bow1);//105
+    instance_create(130,650,obj_bow1);//105
 }
 if(menuselect[2] == 3 &amp;&amp; menustart[2] == true){
-    instance_create(386,465,obj_bow2);//795 105
+    instance_create(386,650,obj_bow2);//795 105
 }
 if(menuselect[3] == 3 &amp;&amp; menustart[3] == true){
-    instance_create(642,465,obj_bow3);//130
+    instance_create(642,650,obj_bow3);//130
 }
 if(menuselect[4] == 3 &amp;&amp; menustart[4] == true){
-    instance_create(898,465,obj_bow4);//795
+    instance_create(898,650,obj_bow4);//795
 }
 
 //LANCE
 if(menuselect[1] == 4 &amp;&amp; menustart[1] == true){
-    instance_create(130,465,obj_lance1);//105
+    instance_create(130,650,obj_lance1);//105
 }
 if(menuselect[2] == 4 &amp;&amp; menustart[2] == true){
-    instance_create(386,465,obj_lance2);//795 105
+    instance_create(386,650,obj_lance2);//795 105
 }
 if(menuselect[3] == 4 &amp;&amp; menustart[3] == true){
-    instance_create(642,465,obj_lance3);//130
+    instance_create(642,650,obj_lance3);//130
 }
 if(menuselect[4] == 4 &amp;&amp; menustart[4] == true){
-    instance_create(898,465,obj_lance4);//795
+    instance_create(898,650,obj_lance4);//795
 }
 //MAGIC
 /*if(menuselect[1] == 5 &amp;&amp; menustart[1] == true){//load in the magic weapon objects here
@@ -137,7 +137,7 @@ if(menuselect[4] == 5 &amp;&amp; menustart[4] == true){
 //add in some ballz
 for (var i = 1; i &lt;= 4; i++)
     if (menustart[i] == true)
-        instance_create(274 * (i-1) + 126, 160, obj_ballz);
+        instance_create(274 * (i-1) + 126, 160, obj_switch);
 
 //COUNT NUMBER OF PLAYERS
 numberofplayers = 0;
@@ -195,9 +195,9 @@ audio_play_sound(bgm_dungeon,10,true);</code>
     <instance objName="obj_wall" x="1024" y="-32" name="inst_C8A12DB2" locked="0" code="" scaleX="1" scaleY="26" colour="4294967295" rotation="0"/>
     <instance objName="obj_lightmap" x="70" y="35" name="inst_5CD04C2A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_shadowcaster" x="256" y="0" name="inst_0B0BA47B" locked="0" code="" scaleX="1" scaleY="24" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="0" y="510" name="inst_B8684F29" locked="0" code="" scaleX="32" scaleY="8" colour="4294967295" rotation="0"/>
     <instance objName="obj_shadowcaster" x="512" y="0" name="inst_66BAB982" locked="0" code="" scaleX="1" scaleY="24" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="-32" y="-32" name="inst_15F8737F" locked="0" code="" scaleX="34" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_tutorialroom" x="160" y="36" name="inst_F7535CD1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_dungeon_tile" x="384" y="0" w="32" h="32" xo="64" yo="0" id="10000214" name="inst_2FED7EBF" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
