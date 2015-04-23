@@ -74,15 +74,13 @@
             <string>//MovePendulum();
 controller = 3;
 //only allows the player to change the lance if she can move
-if (alarm[0] &lt; room_speed * 0.4)
-{
+if (alarm[0] &lt; room_speed * 0.4){
     x = obj_player4.x+lengthdir_x(25,obj_player4.image_angle-90);
     y = obj_player4.y+lengthdir_y(25,obj_player4.image_angle-90);
-}
-gamepad_set_axis_deadzone(controller,.15);
-if(alarm[0] == -1){
     image_angle = obj_player4.image_angle-180;
 }
+gamepad_set_axis_deadzone(controller,.15);
+
 if((gamepad_button_check_pressed(controller,gp_shoulderr)
         || gamepad_button_check_pressed(controller,gp_shoulderrb))
     &amp;&amp; canshoot[controller + 1] == true){
