@@ -10,7 +10,8 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>//CREATE PLAYERS AND RESET ALARMS
+  <code>instance_create(0,0,obj_transition);
+//CREATE PLAYERS AND RESET ALARMS
 if(menustart[1] == true){
     instance_create(105,650,obj_player1);//105 105
     instance_create(280,650,obj_reticle1);//280 105

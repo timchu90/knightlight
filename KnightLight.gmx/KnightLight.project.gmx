@@ -92,6 +92,7 @@
     <sprite>sprites\sp_explosion</sprite>
     <sprite>sprites\sp_switch</sprite>
     <sprite>sprites\sp_thinwall</sprite>
+    <sprite>sprites\sp_transition</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_dungeon_tile</background>
@@ -223,6 +224,7 @@
     <object>objects\obj_arrow_parent</object>
     <object>objects\obj_lance_parent</object>
     <object>objects\obj_tutorialroom</object>
+    <object>objects\obj_transition</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>

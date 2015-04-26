@@ -58,8 +58,13 @@ else if (menuconfirm[player] == true && menustart[player] == true)
                 numOfConfirmedPlayers++;
         }
         if (numOfActivePlayers == numOfConfirmedPlayers
-            && numOfActivePlayers > 1)
-            room_goto_next();
+            && numOfActivePlayers > 1){
+            obj_menubase.alarm[3] = room_speed*1;
+            with(obj_transition){
+                start = false;
+                move_towards_point(0,0,100);
+            }
+        }
     }
 }
 
