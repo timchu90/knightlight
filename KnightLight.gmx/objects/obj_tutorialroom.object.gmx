@@ -58,21 +58,17 @@
           <argument>
             <kind>1</kind>
             <string>var switch_on = 0;
-var switch_num = 0;
 
-for (var i = 0; i &lt; 4; i++)
+for (var i = 0; i &lt; numberofplayers; i++)
 {
-    if (menustart[i + 1])
+    with (instance_find(obj_switch, i))
     {
-        switch_num ++;
-        with (instance_find(obj_switch, i))
-        {
-            if(ready)
-                switch_on++;
-        }
+        if(ready)
+            switch_on++;
     }
 }
-if (switch_num == switch_on)
+
+if (numberofplayers == switch_on)
     room_goto_next();
 </string>
           </argument>
