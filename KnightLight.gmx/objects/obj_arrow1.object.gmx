@@ -31,6 +31,10 @@ image_angle = direction;
 light_init(100,make_color_rgb(255,169,10),1);
 speed = arrowspd * (1 + 2.5*charge[1]/maxcharge);
 audio_play_sound(Bow_Shot, 10, false);
+
+offset_len = 0;
+offset_angle = 0;
+stuck = false;
 </string>
           </argument>
         </arguments>
@@ -145,7 +149,7 @@ audio_play_sound(Bow_Shot, 10, false);
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_wall">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -162,11 +166,17 @@ audio_play_sound(Bow_Shot, 10, false);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>speed = 0;
-move_contact_solid(direction,-1);
-if(alarm[2] == -1){
-alarm[2] = room_speed*1;
+            <string>if(instance_exists(obj_player2)){
+    arrow_collision_check(2);
 }
+if(instance_exists(obj_player3)){
+    arrow_collision_check(3);
+}
+if(instance_exists(obj_player4)){
+    arrow_collision_check(4);
+}
+
+arrow_wall_collision();
 </string>
           </argument>
         </arguments>

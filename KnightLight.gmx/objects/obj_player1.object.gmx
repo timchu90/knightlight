@@ -458,44 +458,6 @@ if(playerhp[1] &lt;= 0 &amp;&amp; deathbool == false){
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_arrow4">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (alarm[11] == -1) { // invincibility
-    playerhp[1] = playerhp[1] - other.speed * arrowdmgmod;
-    gamepad_set_vibration(0,0.5,0.5);
-    obj_player1.alarm[0] = room_speed/2;
-    
-    // knockback
-    Knockback(self, other, false);
-    
-    // audio
-    PlayBowHit();
-}
-
-// destroy arrow
-with(other){
-    instance_destroy();
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="4" ename="obj_sword4">
       <action>
         <libid>1</libid>
@@ -606,44 +568,6 @@ with(other){
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_arrow3">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (alarm[11] == -1) { // invincibility
-    playerhp[1] = playerhp[1] - other.speed * arrowdmgmod;
-    gamepad_set_vibration(0,0.5,0.5);
-    obj_player1.alarm[0] = room_speed/2;
-    
-    // knockback
-    Knockback(self, other, false);
-    
-    // audio
-    PlayBowHit();
-}
-
-// destroy arrow
-with(other){
-    instance_destroy();
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="4" ename="obj_sword3">
       <action>
         <libid>1</libid>
@@ -746,44 +670,6 @@ with(other){
     
     // audio
     PlaySwordHit();
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_arrow2">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (alarm[11] == -1) { // invincibility
-    playerhp[1] = playerhp[1] - other.speed * arrowdmgmod;
-    gamepad_set_vibration(0,0.5,0.5);
-    obj_player1.alarm[0] = room_speed/2;
-    
-    // Apply knockback
-    Knockback(self, other, false);
-    
-    // audio
-    PlayBowHit();
-}
-
-// destroy arrow
-with(other){
-    instance_destroy();
 }
 </string>
           </argument>

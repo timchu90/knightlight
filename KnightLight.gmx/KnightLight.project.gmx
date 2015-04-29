@@ -132,6 +132,8 @@
     <script>scripts\ThrustLance.gml</script>
     <script>scripts\Bomb.gml</script>
     <script>scripts\ProximityDamage.gml</script>
+    <script>scripts\arrow_wall_collision.gml</script>
+    <script>scripts\arrow_collision_check.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_healthbars</object>
