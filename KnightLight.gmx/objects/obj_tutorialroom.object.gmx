@@ -218,13 +218,7 @@ HIT THE ORB TO PROCEED");
         }
     }
 }
-draw_text(100,100,obj_player1.hspeed);
-draw_text(100,200,obj_player1.vspeed);
-draw_text(100,300,sqrt(
-    sqr(gamepad_axis_value(0, gp_axislh)) 
-    + sqr(gamepad_axis_value(0, gp_axislv))
-    )
-    );
+
 </string>
           </argument>
         </arguments>

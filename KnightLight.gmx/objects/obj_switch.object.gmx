@@ -232,7 +232,7 @@ ready = false;
             <string>if(alarm[1] == -1){
     instance_create(x,y,obj_littlespark);
     Sleep(50);
-    if (other.speed &gt; 40){
+    if (other.speed &gt; 30){
         hit_succeed = true;
         instance_create(x,y,obj_spark);
     }
@@ -267,7 +267,7 @@ ready = false;
             <kind>1</kind>
             <string>if(alarm[1] == -1){
     instance_create(x,y,obj_littlespark);
-    if (other.speed &gt; 15){
+    if (other.speed &gt; 10){
         hit_succeed = true;
         instance_create(x,y,obj_spark);
     }
