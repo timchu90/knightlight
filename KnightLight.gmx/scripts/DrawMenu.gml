@@ -113,4 +113,3 @@ if (menuconfirm[player] == false && menustart[player] == true)
     }
     draw_text(x-80,510,"PRESS <A> TO CONFIRM");
 }
-

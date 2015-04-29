@@ -101,7 +101,12 @@ if((gamepad_button_check_pressed(controller,gp_shoulderr)
         thrustDirectionArray[controller] = point_direction(0,0, 
             gamepad_axis_value(controller, gp_axisrh), 
             gamepad_axis_value(controller, gp_axisrv));
-        move_towards_point(obj_reticle2.x, obj_reticle2.y, 20);//
+            
+        if (collision_circle(x + (9 * gamepad_axis_value(controller, gp_axisrh)),
+            y + (9 * gamepad_axis_value(controller, gp_axisrh)), 16, obj_wall, 1, 1))
+            move_towards_point(obj_reticle2.x, obj_reticle2.y, 8);//
+        else
+            move_towards_point(obj_reticle2.x, obj_reticle2.y, 20);//
     }
     else if (gamepad_axis_value(controller, gp_axisrh) == 0
         &amp;&amp; gamepad_axis_value(controller, gp_axisrv) == 0)
@@ -109,16 +114,28 @@ if((gamepad_button_check_pressed(controller,gp_shoulderr)
         thrustDirectionArray[controller] = point_direction(0, 0,
             lengthdir_x(1,obj_player2.image_angle-90),//
             lengthdir_y(1,obj_player2.image_angle-90));//
-        move_towards_point(obj_lance2.x + lengthdir_x(1,obj_player2.image_angle-90),//
-            obj_lance2.y + lengthdir_y(1,obj_player2.image_angle-90), 20);//
+            
+        if (collision_circle(x + (9 * lengthdir_x(1,obj_player2.image_angle-90)),//
+            y + (9 * lengthdir_y(1,obj_player2.image_angle-90)), 16, obj_wall, 1, 1))//
+            move_towards_point(obj_lance2.x + lengthdir_x(1,obj_player2.image_angle-90),//
+                obj_lance2.y + lengthdir_y(1,obj_player2.image_angle-90), 8);//
+        else
+            move_towards_point(obj_lance2.x + lengthdir_x(1,obj_player2.image_angle-90),//
+                obj_lance2.y + lengthdir_y(1,obj_player2.image_angle-90), 20);//
     }
     else
     {
         thrustDirectionArray[controller] = point_direction(0,0, 
             gamepad_axis_value(controller, gp_axislh), 
             gamepad_axis_value(controller, gp_axislv));
-        move_towards_point(obj_lance2.x + lengthdir_x(1,obj_player2.image_angle-90),//
-            obj_lance2.y + lengthdir_y(1,obj_player2.image_angle-90), 20);//
+            
+        if (collision_circle(x + (9 * gamepad_axis_value(controller, gp_axislh)),
+            y + (9 * gamepad_axis_value(controller, gp_axislh)), 16, obj_wall, 1, 1))
+            move_towards_point(obj_lance2.x + lengthdir_x(1,obj_player2.image_angle-90),//
+                obj_lance2.y + lengthdir_y(1,obj_player2.image_angle-90), 8);//
+        else
+            move_towards_point(obj_lance2.x + lengthdir_x(1,obj_player2.image_angle-90),//
+                obj_lance2.y + lengthdir_y(1,obj_player2.image_angle-90), 20);//
     }
 }
 //this passes the speed to ThrustLance and changes to
