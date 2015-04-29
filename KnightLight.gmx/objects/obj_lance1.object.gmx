@@ -103,7 +103,11 @@ if((gamepad_button_check_pressed(controller,gp_shoulderr)
         thrustDirectionArray[controller] = point_direction(0,0, 
             gamepad_axis_value(controller, gp_axisrh), 
             gamepad_axis_value(controller, gp_axisrv));
-        move_towards_point(obj_reticle1.x, obj_reticle1.y, 20);//
+        if (collision_circle(x + (9 * gamepad_axis_value(controller, gp_axisrh)),
+            y + (9 * gamepad_axis_value(controller, gp_axisrh)), 16, obj_wall, 1, 1))
+            move_towards_point(obj_reticle1.x, obj_reticle1.y, 8);//
+        else
+            move_towards_point(obj_reticle1.x, obj_reticle1.y, 20);//
     }
     else if (gamepad_axis_value(controller, gp_axisrh) == 0
         &amp;&amp; gamepad_axis_value(controller, gp_axisrv) == 0)
