@@ -4,63 +4,29 @@ reticle = argument1;
 controller = player-1;
 
 gamepad_set_axis_deadzone(controller,.15);
-if((gamepad_axis_value(controller,gp_axislh) < 0.5 
-    and gamepad_axis_value(controller,gp_axislv) < 0.5) 
-    and (gamepad_axis_value(controller,gp_axislh) > -0.5 
-    and gamepad_axis_value(controller,gp_axislv) > -0.5)){
-    //DO NOTHING
-}
-else{
-    direction = point_direction(0,0, 
+direction = point_direction(0,0, 
     gamepad_axis_value(controller, gp_axislh), 
     gamepad_axis_value(controller, gp_axislv));
-}
 
 // If player is using a bow...
 if(menuselect[player] == 3){
     if(ischarging[player]) {
         // move slower while charging
-        if(abs(hspeed) <= abs(chargemove * gamepad_axis_value(controller, gp_axislh)))
-            hspeed += gamepad_axis_value(controller, gp_axislh)*0.5;
-        else{
-            hspeed = chargemove * gamepad_axis_value(controller, gp_axislh);
-        }
-        if(abs(vspeed) <= abs(chargemove * gamepad_axis_value(controller, gp_axislv))){
-            vspeed += gamepad_axis_value(controller, gp_axislv)*0.5;
-        }
-        else{
-            vspeed = chargemove * gamepad_axis_value(controller, gp_axislv);
-        }
+        hspeed = gamepad_axis_value(controller, gp_axislh) * chargemove;
+        vspeed = gamepad_axis_value(controller, gp_axislv) * chargemove;
     }
     else {
         // faster than other weapons otherwise
-        if(abs(hspeed) <= abs(archermove * gamepad_axis_value(controller, gp_axislh)))
-            hspeed += gamepad_axis_value(controller, gp_axislh)*0.5;
-        else{
-            hspeed = archermove * gamepad_axis_value(controller, gp_axislh);
-        }
-        if(abs(vspeed) <= abs(archermove * gamepad_axis_value(controller, gp_axislv))){
-            vspeed += gamepad_axis_value(controller, gp_axislv)*0.5;
-        }
-        else{
-            vspeed = archermove * gamepad_axis_value(controller, gp_axislv);
-        }
+        hspeed = gamepad_axis_value(controller, gp_axislh) * archermove;
+        vspeed = gamepad_axis_value(controller, gp_axislv) * archermove;
     }
 }
-else {  
-        if(abs(hspeed) <= abs(basemove * gamepad_axis_value(controller, gp_axislh)))
-            hspeed += gamepad_axis_value(controller, gp_axislh)*0.5;
-        else{
-            hspeed = basemove * gamepad_axis_value(controller, gp_axislh);
-        }
-        if(abs(vspeed) <= abs(basemove * gamepad_axis_value(controller, gp_axislv))){
-            vspeed += gamepad_axis_value(controller, gp_axislv)*0.5;
-        }
-        else{
-            vspeed = basemove * gamepad_axis_value(controller, gp_axislv);
-        }
-    
+else {
+    // other weapon users move at base speed
+    hspeed = gamepad_axis_value(controller, gp_axislh) * basemove;
+    vspeed = gamepad_axis_value(controller, gp_axislv) * basemove;
 }
+
 if((gamepad_axis_value(controller,gp_axislh) < 0.5 
     and gamepad_axis_value(controller,gp_axislv) < 0.5) 
     and (gamepad_axis_value(controller,gp_axislh) > -0.5 
