@@ -20,23 +20,7 @@ if (collision_circle(x, y + vspeed_, 16, obj_wall, 1, 1))
     ;//vspeed = 0;
     //show_message(vspeed_arg);
 }
-if (collision_circle(x + hspeed_, y + vspeed_, 16, obj_wall, 1, 1))
-    //|| collision_circle(x - hspeed_, y - vspeed_, 16, obj_wall, 1, 1)
-    //|| collision_circle(x + hspeed_, y - vspeed_, 16, obj_wall, 1, 1)
-    //|| collision_circle(x - hspeed_, y + vspeed_, 16, obj_wall, 1, 1))
-{//this doesn't work
-    //show_message("");
-    if (hspeed > vspeed)
-    {
-        vCollide = true;
-        ;//vspeed = 0;
-    }
-    else
-    {
-        hCollide = true;
-        ;//hspeed = 0;
-    }
-}
+//diagonal hit detection is needed
 //sets the speed if there is no collision
 if (!hCollide)
 {
