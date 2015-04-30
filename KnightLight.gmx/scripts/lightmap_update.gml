@@ -106,6 +106,18 @@ with(obj_lava){
 with(obj_switch){
     light_update(true);
 }
+with(obj_arrow_charge1){
+    light_update(true);
+}
+with(obj_arrow_charge2){
+    light_update(true);
+}
+with(obj_arrow_charge3){
+    light_update(true);
+}
+with(obj_arrow_charge4){
+    light_update(true);
+}
 //set the surface target
 surface_set_target(lightmap);
 
@@ -186,6 +198,18 @@ with(obj_lava){
     light_draw();
 }
 with(obj_switch){
+    light_draw();
+}
+with(obj_arrow_charge1){
+    light_draw();
+}
+with(obj_arrow_charge2){
+    light_draw();
+}
+with(obj_arrow_charge3){
+    light_draw();
+}
+with(obj_arrow_charge4){
     light_draw();
 }
 //reset blend mode
