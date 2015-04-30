@@ -74,8 +74,8 @@ image_index = 0;
           <argument>
             <kind>1</kind>
             <string>controller = 2;
-x = obj_player3.x+lengthdir_x(25,obj_player3.image_angle-90);
-y = obj_player3.y+lengthdir_y(25,obj_player3.image_angle-90);
+x = obj_player3.x+lengthdir_x(0,obj_player3.image_angle-90);
+y = obj_player3.y+lengthdir_y(0,obj_player3.image_angle-90);
 gamepad_set_axis_deadzone(controller,.15);
 
 if((gamepad_axis_value(controller,gp_axisrh) &lt; 0.5 

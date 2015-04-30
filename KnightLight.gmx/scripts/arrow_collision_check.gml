@@ -21,7 +21,7 @@ y + lengthdir_y(speed,direction),
 player,
 false,
 false) && stuck == false){
-    offset_len = point_distance(x,y,player.x,player.y);
+    offset_len = point_distance(player.x,player.y,x,y,);
     offset_angle = image_angle-player.image_angle
     stuck = true;
     stuck_player = playernum;
@@ -34,7 +34,8 @@ false) && stuck == false){
         }
         
         // knockback
-        Knockback(other, self, false);
+        Knockback(player, self, false);
+
         
         // audio
         PlayBowHit();
@@ -42,6 +43,7 @@ false) && stuck == false){
 }
 if (stuck_player == playernum && (playerhp[playernum] > 0))
 {
+    direction = player.image_angle + offset_angle;
     image_angle = player.image_angle + offset_angle;
     x = player.x-lengthdir_x(offset_len,image_angle);
     y = player.y-lengthdir_y(offset_len,image_angle);
