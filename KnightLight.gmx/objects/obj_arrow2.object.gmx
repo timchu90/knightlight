@@ -36,6 +36,8 @@ offset_len = 0;
 offset_angle = 0;
 stuck = false;
 stuck_player = 0;
+
+light = true;
 </string>
           </argument>
         </arguments>
@@ -81,7 +83,9 @@ stuck_player = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy();
+            <string>//instance_destroy();
+light = false;
+
 </string>
           </argument>
         </arguments>

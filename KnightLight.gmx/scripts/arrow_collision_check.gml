@@ -46,7 +46,7 @@ if (stuck_player == playernum && (playerhp[playernum] > 0))
     x = player.x-lengthdir_x(offset_len,image_angle);
     y = player.y-lengthdir_y(offset_len,image_angle);
 }
-else if(stuck && playerhp[playernum] <=0){
+else if(stuck_player == playernum && playerhp[playernum] <=0){
     instance_destroy();
 }
 

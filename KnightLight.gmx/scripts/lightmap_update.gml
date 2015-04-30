@@ -31,7 +31,7 @@ with(obj_light){
     light_update(true);
 }
 with(obj_arrow1){
-    if(alarm[3] == -1){
+    if(light){
         light_update(true);
     }
     else{
@@ -39,7 +39,7 @@ with(obj_arrow1){
     }
 }
 with(obj_arrow2){
-    if(alarm[3] == -1){
+    if(light){
         light_update(true);
     }
     else{
@@ -47,7 +47,7 @@ with(obj_arrow2){
     }
 }
 with(obj_arrow3){
-    if(alarm[3] == -1){
+    if(light){
         light_update(true);
     }
     else{
@@ -55,7 +55,7 @@ with(obj_arrow3){
     }
 }
 with(obj_arrow4){
-    if(alarm[3] == -1){
+    if(light){
         light_update(true);
     }
     else{
