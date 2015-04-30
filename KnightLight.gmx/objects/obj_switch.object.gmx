@@ -201,6 +201,7 @@ ready = false;
     if (other.speed &gt; 15){
         hit_succeed = true;
         instance_create(x,y,obj_spark);
+        instance_create(x,y,eff_screenshake);
     }
     alarm[1] = room_speed * 0.5;
     
@@ -235,6 +236,7 @@ ready = false;
     if (other.speed &gt; 30){
         hit_succeed = true;
         instance_create(x,y,obj_spark);
+        instance_create(x,y,eff_screenshake);
     }
     alarm[1] = room_speed * 0.5;
         
@@ -270,6 +272,7 @@ ready = false;
     if (other.speed &gt; 10){
         hit_succeed = true;
         instance_create(x,y,obj_spark);
+        instance_create(x,y,eff_screenshake);
     }
     Sleep(50);
     alarm[1] = room_speed * 0.5;
@@ -305,6 +308,7 @@ ready = false;
     if (other.speed &gt; 20){
         hit_succeed = true;
         instance_create(x,y,obj_spark);
+        instance_create(x,y,eff_screenshake);
     }
     alarm[1] = room_speed * 0.5;
     PlayFlailHit();

@@ -25,5 +25,6 @@ victim.alarm[11] = room_speed * 0.4; // invincibility
 
 
 instance_create(victim.x,victim.y,obj_littlespark);
+instance_create(x,y,eff_screenshake_small);
 Sleep(50);
 victim.image_index = 1;
