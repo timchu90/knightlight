@@ -24,11 +24,11 @@ false) && stuck == false){
     offset_len = point_distance(x,y,player.x,player.y);
     offset_angle = image_angle-player.image_angle
     stuck = true;
-    
+    stuck_player = playernum;
     if (player.alarm[11] == -1) { // invincibility
         playerhp[playernum] = playerhp[playernum] - speed * arrowdmgmod;
         gamepad_set_vibration(playernum-1,0.5,0.5);
-        player.alarm[1] = room_speed/2;
+        player.alarm[playernum-1] = room_speed/2;
         if(alarm[2] == -1){
             alarm[2] = room_speed*1;
         }
@@ -40,7 +40,7 @@ false) && stuck == false){
         PlayBowHit();
     }
 }
-if (stuck && playerhp[playernum] > 0)
+if (stuck_player == playernum && (playerhp[playernum] > 0))
 {
     image_angle = player.image_angle + offset_angle;
     x = player.x-lengthdir_x(offset_len,image_angle);
@@ -49,3 +49,4 @@ if (stuck && playerhp[playernum] > 0)
 else if(stuck && playerhp[playernum] <=0){
     instance_destroy();
 }
+

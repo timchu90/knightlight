@@ -35,6 +35,7 @@ audio_play_sound(Bow_Shot, 10, false);
 offset_len = 0;
 offset_angle = 0;
 stuck = false;
+stuck_player = 0;
 </string>
           </argument>
         </arguments>

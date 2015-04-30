@@ -256,10 +256,10 @@ menuconfirm[2] = true;
 menuconfirm[3] = true;
 menuconfirm[4] = true;
 
-menuselect[1] = 4;
-menuselect[2] = 4;
-menuselect[3] = 4;
-menuselect[4] = 4;
+menuselect[1] = 3;
+menuselect[2] = 3;
+menuselect[3] = 3;
+menuselect[4] = 3;
 
 allconfirm = true;
 </string>

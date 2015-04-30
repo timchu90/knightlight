@@ -73,8 +73,8 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>view_xview = random_range(-4,4);
-view_yview = random_range(-4,4);
+            <string>view_xview = random_range(-20,20);
+view_yview = random_range(-20,20);
 </string>
           </argument>
         </arguments>
