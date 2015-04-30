@@ -238,7 +238,9 @@ friction = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>gamepad_set_vibration(0,0,0);
+            <string>/// End Vibration
+
+gamepad_set_vibration(1,0,0);
 </string>
           </argument>
         </arguments>
@@ -379,7 +381,7 @@ if(playerhp[2] &lt;= 0 &amp;&amp; deathbool == false){
             <string>if (alarm[11] == -1) { // invincibility
     playerhp[2] -= ProximityDamage();
     gamepad_set_vibration(1,0.5,0.5);
-    obj_player2.alarm[1] = room_speed/2;
+    alarm[0] = room_speed/2;
     
     // knockback
     Knockback(self, other, false);
@@ -415,9 +417,9 @@ if(playerhp[2] &lt;= 0 &amp;&amp; deathbool == false){
     else
         playerhp[2] = playerhp[2] - other.speed * lanceDmgMod;//
     gamepad_set_vibration(3,0.5,0.5);
-    alarm[3] = room_speed/4;
+    obj_player4.alarm[0] = room_speed/4;
     gamepad_set_vibration(1,0.5,0.5);
-    alarm[1] = room_speed/2;
+    alarm[0] = room_speed/2;
     
     // knockback
     Knockback(self, other, basekb, other.speed);
@@ -450,9 +452,9 @@ if(playerhp[2] &lt;= 0 &amp;&amp; deathbool == false){
             <string>if (alarm[11] == -1) { // invincibility
     playerhp[2] = playerhp[2] - other.speed * sworddmgmod;
     gamepad_set_vibration(3,0.5,0.5);
-    alarm[3] = room_speed/4;
+    obj_player4.alarm[0] = room_speed/4;
     gamepad_set_vibration(1,0.5,0.5);
-    alarm[1] = room_speed/2;
+    alarm[0] = room_speed/2;
     
     // knockback
     Knockback(self, other, true);
@@ -486,10 +488,10 @@ if(playerhp[2] &lt;= 0 &amp;&amp; deathbool == false){
     playerhp[2] = playerhp[2] - other.speed * flaildmgmod;
     //vibrate self
     gamepad_set_vibration(1,0.5,0.5);
-    alarm[1] = room_speed/4;
+    obj_player4.alarm[0] = room_speed/4;
     //vibrate enemy
     gamepad_set_vibration(3,0.5,0.5);
-    alarm[3] = room_speed/2;
+    alarm[0] = room_speed/2;
     
     // knockback
     Knockback(self, other, true);
@@ -525,9 +527,9 @@ if(playerhp[2] &lt;= 0 &amp;&amp; deathbool == false){
     else
         playerhp[2] = playerhp[2] - other.speed * lanceDmgMod;//
     gamepad_set_vibration(2,0.5,0.5);
-    alarm[2] = room_speed/4;
+    obj_player3.alarm[0] = room_speed/4;
     gamepad_set_vibration(1,0.5,0.5);
-    alarm[1] = room_speed/2;
+    alarm[0] = room_speed/2;
     
     // knockback
     Knockback(self, other, basekb, other.speed);
@@ -560,9 +562,9 @@ if(playerhp[2] &lt;= 0 &amp;&amp; deathbool == false){
             <string>if (alarm[11] == -1) { // invincibility
     playerhp[2] = playerhp[2] - other.speed * sworddmgmod;
     gamepad_set_vibration(1,0.5,0.5);
-    alarm[1] = room_speed/2;
+    alarm[0] = room_speed/2;
     gamepad_set_vibration(2,0.5,0.5);
-    alarm[2] = room_speed/4;
+    obj_player3.alarm[0] = room_speed/4;
     
     
     // knockback
@@ -597,8 +599,8 @@ if(playerhp[2] &lt;= 0 &amp;&amp; deathbool == false){
     playerhp[2] = playerhp[2] - other.speed * flaildmgmod;
     gamepad_set_vibration(2,0.5,0.5);
     gamepad_set_vibration(1,0.5,0.5);
-    alarm[1] = room_speed/2;
-    alarm[2] = room_speed/4;
+    alarm[0] = room_speed/2;
+    obj_player3.alarm[0] = room_speed/4;
     
     // knockback
     Knockback(self, other, true);
@@ -666,9 +668,9 @@ if (alarm[11] == -1) { // invincibility
     else
         playerhp[2] = playerhp[2] - other.speed * lanceDmgMod;//
     gamepad_set_vibration(0,0.5,0.5);
-    alarm[0] = room_speed/4;
+    obj_player1.alarm[0] = room_speed/4;
     gamepad_set_vibration(1,0.5,0.5);
-    alarm[1] = room_speed/2;
+    alarm[0] = room_speed/2;
     
     // knockback
     Knockback(self, other, basekb, other.speed);
@@ -701,9 +703,9 @@ if (alarm[11] == -1) { // invincibility
             <string>if (alarm[11] == -1) { // invincibility
     playerhp[2] = playerhp[2] - other.speed * sworddmgmod;
     gamepad_set_vibration(1,0.5,0.5);
-    alarm[0] = room_speed/4;
+    obj_player1.alarm[0] = room_speed/4;
     gamepad_set_vibration(0,0.5,0.5);
-    alarm[1] = room_speed/2;
+    alarm[0] = room_speed/2;
     
     // knockback
     Knockback(self, other, true);
@@ -736,9 +738,9 @@ if (alarm[11] == -1) { // invincibility
             <string>if (alarm[11] == -1) { // invincibility
     playerhp[2] = playerhp[2] - other.speed * flaildmgmod;
     gamepad_set_vibration(1,0.5,0.5);
-    alarm[0] = room_speed/4;
+    obj_player1.alarm[0] = room_speed/4;
     gamepad_set_vibration(0,0.5,0.5);
-    alarm[1] = room_speed/2;
+    alarm[0] = room_speed/2;
     
     // audio
     PlayFlailHit();
