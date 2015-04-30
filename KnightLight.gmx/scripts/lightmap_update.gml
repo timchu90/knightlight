@@ -65,6 +65,9 @@ with(obj_arrow4){
 with(obj_spark){
     light_update(true);
 }
+with(obj_littlespark){
+    light_update(true);
+}
 
 with(obj_ghost1){
     light_update(true);
@@ -210,6 +213,9 @@ with(obj_arrow_charge3){
     light_draw();
 }
 with(obj_arrow_charge4){
+    light_draw();
+}
+with(obj_littlespark){
     light_draw();
 }
 //reset blend mode
