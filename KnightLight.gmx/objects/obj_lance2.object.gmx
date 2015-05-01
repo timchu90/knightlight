@@ -147,6 +147,7 @@ if (obj_lance2.alarm[0] &gt; room_speed * 0.4)
     with(instance_create(x,y,obj_smoke)){
         image_angle = thrustDirectionArray[1]-90;
     }
+    }
 }
 else if (obj_lance2.alarm[0] &gt; room_speed * 0.25)
 {

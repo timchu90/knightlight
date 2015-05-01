@@ -51,4 +51,3 @@ if (stuck_player == playernum && (playerhp[playernum] > 0))
 else if(stuck_player == playernum && playerhp[playernum] <=0){
     instance_destroy();
 }
-
