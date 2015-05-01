@@ -142,6 +142,10 @@ if((gamepad_button_check_pressed(controller,gp_shoulderr)
 if (obj_lance4.alarm[0] &gt; room_speed * 0.4)
 {
     ThrustLance(9, 9, 3, obj_player4);
+    if(alarm[0] % 2 == 0){
+    with(instance_create(x,y,obj_smoke)){
+        image_angle = thrustDirectionArray[3]-90;
+    }
 }
 else if (obj_lance4.alarm[0] &gt; room_speed * 0.25)
 {

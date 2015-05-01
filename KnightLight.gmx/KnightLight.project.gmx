@@ -73,6 +73,7 @@
     <sprite>sprites\sp_littlespark</sprite>
     <sprite>sprites\sp_arrowcharge</sprite>
     <sprite>sprites\sp_death</sprite>
+    <sprite>sprites\sp_smoke</sprite>
     <sprite>sprites\sp_explode</sprite>
     <sprite>sprites\sp_redmenu</sprite>
     <sprite>sprites\sp_bluemenu</sprite>
@@ -235,6 +236,7 @@
     <object>objects\obj_arrow_charge2</object>
     <object>objects\obj_arrow_charge3</object>
     <object>objects\obj_arrow_charge4</object>
+    <object>objects\obj_smoke</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>

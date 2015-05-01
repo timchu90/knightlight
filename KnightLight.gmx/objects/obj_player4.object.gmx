@@ -305,6 +305,11 @@ friction = 0;
 if(playerhp[4] &gt; 0){
     if (alarm[4] == -1) MovePlayer(4,obj_reticle4);
 }
+if(alarm[4]!= -1&amp;&amp; alarm[4]%2 == 0){
+    with(instance_create(x,y,obj_smoke)){
+        image_angle = obj_player4.direction-90;
+    }
+}
 CollisionCheck();
 
 if(playerhp[4] &lt;= 0 &amp;&amp; deathbool == false){
