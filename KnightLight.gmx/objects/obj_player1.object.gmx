@@ -448,7 +448,7 @@ if(playerhp[1] &lt;= 0 &amp;&amp; deathbool == false){
     alarm[0] = room_speed/2;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlaySwordHit();
@@ -558,7 +558,7 @@ if(playerhp[1] &lt;= 0 &amp;&amp; deathbool == false){
     alarm[0] = room_speed/2;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlaySwordHit();
@@ -666,7 +666,7 @@ if(playerhp[1] &lt;= 0 &amp;&amp; deathbool == false){
     alarm[0] = room_speed/2;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlaySwordHit();

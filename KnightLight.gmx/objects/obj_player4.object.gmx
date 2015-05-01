@@ -451,7 +451,7 @@ if (alarm[11] == -1) { // invincibility
     alarm[3] = room_speed/2;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlaySwordHit();
@@ -559,7 +559,7 @@ if (alarm[11] == -1) { // invincibility
     alarm[3] = room_speed/2;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlaySwordHit();
@@ -667,7 +667,7 @@ if (alarm[11] == -1) { // invincibility
     alarm[3] = room_speed/2;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlaySwordHit();

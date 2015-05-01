@@ -13,6 +13,8 @@ if (using_speed){
         kb_mod = source.speed * speed_mod;
         instance_create(x,y,eff_screenshake);
         instance_create(victim.x,victim.y,obj_spark);
+        audio_play_sound(Big_Hit,10,false);
+        Sleep(100);
     }
     // else kb_mod remains 1 - meaning basekb is used
 }
@@ -23,8 +25,7 @@ victim.friction = 0.5;
 victim.alarm[4] = room_speed/6; // knockback immobility 
 victim.alarm[11] = room_speed * 0.4; // invincibility
 
-
 instance_create(victim.x,victim.y,obj_littlespark);
 instance_create(x,y,eff_screenshake_small);
-Sleep(50);
 victim.image_index = 1;
+Sleep(50);

@@ -2,10 +2,10 @@
 <sound>
   <kind>0</kind>
   <extension>.wav</extension>
-  <origname>sound\audio\Sword_Hit2.wav</origname>
+  <origname>sound\audio\Big_Hit.wav</origname>
   <effects>0</effects>
   <volume>
-    <volume>0.5</volume>
+    <volume>1</volume>
   </volume>
   <pan>0</pan>
   <bitRates>
@@ -21,7 +21,7 @@
     <bitDepth>16</bitDepth>
   </bitDepths>
   <preload>-1</preload>
-  <data>Sword_Hit2.wav</data>
+  <data>Big_Hit.wav</data>
   <compressed>0</compressed>
   <streamed>0</streamed>
   <uncompressOnLoad>0</uncompressOnLoad>

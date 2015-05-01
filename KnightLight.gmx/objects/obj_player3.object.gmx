@@ -418,7 +418,7 @@ if(playerhp[3] &lt;= 0 &amp;&amp; deathbool == false){
     alarm[2] = room_speed/2;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlaySwordHit();
@@ -560,7 +560,7 @@ if (alarm[11] == -1) { // invincibility
     alarm[2] = room_speed/2;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlaySwordHit();
@@ -669,7 +669,7 @@ if (alarm[11] == -1) { // invincibility
     alarm[2] = room_speed/2;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlaySwordHit();
