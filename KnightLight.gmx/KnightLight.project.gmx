@@ -45,6 +45,7 @@
     <sound>sound\Thunder</sound>
     <sound>sound\LavaExplosion</sound>
     <sound>sound\Big_Hit</sound>
+    <sound>sound\sound26</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sp_redknight</sprite>
@@ -242,12 +243,12 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
-    <room>rooms\rm_tutorial</room>
     <room>rooms\rm_dungeon</room>
     <room>rooms\rm_temple</room>
     <room>rooms\rm_disco</room>
     <room>rooms\rm_lava</room>
     <room>rooms\rm_win_screen</room>
+    <room>rooms\rm_tutorial</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

@@ -36,6 +36,8 @@ globalvar canshoot, ischarging, charge, maxcharge, flashon;
 globalvar playerhp;
 globalvar deathcount;
 globalvar numberofplayers;
+globalvar particles;
+particles = part_system_create();
 
 globalvar discoPlayer;
 //holds players' initial thrust direction
