@@ -307,6 +307,11 @@ gamepad_set_vibration(1,0,0);
 if(playerhp[2] &gt; 0){
     if (alarm[4] == -1) MovePlayer(2,obj_reticle2); 
 }
+if(alarm[4]!= -1&amp;&amp; alarm[4]%2 == 0){
+    with(instance_create(x,y,obj_smoke)){
+        image_angle = obj_player2.direction-90;
+    }
+}
 CollisionCheck();
 
 if(playerhp[2] &lt;= 0 &amp;&amp; deathbool == false){
@@ -422,7 +427,7 @@ if(playerhp[2] &lt;= 0 &amp;&amp; deathbool == false){
     alarm[0] = room_speed/2;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlaySwordHit();
@@ -532,7 +537,7 @@ if(playerhp[2] &lt;= 0 &amp;&amp; deathbool == false){
     alarm[0] = room_speed/2;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlaySwordHit();
@@ -673,7 +678,7 @@ if (alarm[11] == -1) { // invincibility
     alarm[0] = room_speed/2;
     
     // knockback
-    Knockback(self, other, basekb, other.speed);
+    Knockback(self, other, true);
     
     // audio
     PlaySwordHit();
