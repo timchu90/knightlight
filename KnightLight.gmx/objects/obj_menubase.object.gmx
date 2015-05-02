@@ -218,7 +218,7 @@ if (confirmed &amp;&amp; started)
     }
     else
     {
-        draw_set_color(c_black);
+        draw_set_color(c_white);
     }
     draw_text(325,535,"PRESS &lt;START&gt; WHEN ALL PLAYERS ARE READY");
 }

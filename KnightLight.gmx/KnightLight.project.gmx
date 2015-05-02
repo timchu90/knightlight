@@ -70,6 +70,7 @@
     <sprite>sprites\sp_blueghost</sprite>
     <sprite>sprites\sp_greenghost</sprite>
     <sprite>sprites\sp_yellowghost</sprite>
+    <sprite>sprites\sp_deathghost</sprite>
     <sprite>sprites\sp_spark</sprite>
     <sprite>sprites\sp_littlespark</sprite>
     <sprite>sprites\sp_arrowcharge</sprite>
@@ -103,6 +104,7 @@
     <background>background\bg_dungeon_tile</background>
     <background>background\bg_temple_tile</background>
     <background>background\bg_lava_tile</background>
+    <background>background\bg_menu</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
