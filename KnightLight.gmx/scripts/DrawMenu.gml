@@ -23,7 +23,6 @@ else{
         draw_sprite_stretched(sp_flail,-1,x-100,y+220,80,80);
         draw_sprite(sp_flailcontrols,-1,x,y+500);
     }
-
     
     if(menuselect[player] == 2){
         draw_sprite_ext(sp_sword,-1,x-60,y+275,1.5,1.5,-90,c_white,1);
@@ -36,7 +35,7 @@ else{
         }
         draw_sprite(sp_bowcontrols,-1,x,y+500);
     }
-
+    
     if(menuselect[player] == 4){
         draw_sprite_ext(sp_lance,-1,x-60,y+306,1,1,0,c_white,1);//draw lance sprite
         draw_sprite(sp_lancecontrols,-1,x,y+500);

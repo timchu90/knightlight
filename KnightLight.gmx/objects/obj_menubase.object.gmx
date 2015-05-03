@@ -29,8 +29,14 @@
 globalvar menuselect;
 globalvar menuconfirm;
 globalvar numberOfRounds;
+globalvar arrayOfRooms;
 
-numberOfRounds = 0;
+arrayOfRooms[0] = rm_dungeon;//never goes to the first room
+arrayOfRooms[1] = rm_temple;
+arrayOfRooms[2] = rm_disco;
+arrayOfRooms[3] = rm_lava;
+if (room_get_name(room) != "rm_weapon_select")
+    numberOfRounds = 0;
 menustart[1] = false;
 menustart[2] = false;
 menustart[3] = false;
@@ -67,7 +73,10 @@ menuconfirm[4] = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto_next();
+            <string>if (numberOfRounds == 0)
+    room_goto_next();
+else
+    room_goto(arrayOfRooms[numberOfRounds]);
 </string>
           </argument>
         </arguments>

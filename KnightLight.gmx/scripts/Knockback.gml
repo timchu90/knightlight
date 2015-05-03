@@ -18,7 +18,7 @@ if (using_speed){
         flash = instance_create(victim.x,victim.y,obj_damage_flash).id;
         flash.image_angle = victim.direction-90;
         audio_play_sound(Big_Hit,10,false);
-        Sleep(125);
+        Sleep(25);//previously 125
     }
     // else kb_mod remains 1 - meaning basekb is used
 }

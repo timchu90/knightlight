@@ -33,4 +33,3 @@ if (!vCollide)
 //sets the player's direction to the direction that was stored
 //at the start of the thrust
 player.direction = thrustDirectionArray[controller];
-
