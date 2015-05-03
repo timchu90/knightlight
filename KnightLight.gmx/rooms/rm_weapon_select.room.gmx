@@ -10,7 +10,9 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>// BGM
+  <code>//this is a duplicate of the menu screen
+//eventually this might look different than the main menu screen
+// BGM
 instance_create(0,0,obj_transition);
 audio_stop_all();
 audio_play_sound(Loop_1,10,true);</code>

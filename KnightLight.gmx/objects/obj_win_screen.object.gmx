@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>i = 1;
+            <string>//finds the winner, i, and sets continue on by default
+i = 1;
 for (var j = 0; i &lt;= 4; i++)
 {
     if (menustart[i] == true &amp;&amp; playerhp[i] &gt; 0)
@@ -54,7 +55,8 @@ isContinueSelected = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>;
+            <string>//alarm to prevent multiple presses of moving up with the analog stick
+;
 </string>
           </argument>
         </arguments>
@@ -77,7 +79,8 @@ isContinueSelected = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>;
+            <string>//alarm to prevent multiple presses of moving down with the analog stick
+;
 </string>
           </argument>
         </arguments>
@@ -100,7 +103,10 @@ isContinueSelected = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var controller = i-1;
+            <string>//only the winner can control the menu
+//changes the highlighted text based on boolean isContinueSelected
+//possible to select continue as a result of mashing buttons in the previous screen
+var controller = i-1;
 var currentLAxisState = gamepad_axis_value(controller, gp_axislv);
 var currentRAxisState = gamepad_axis_value(controller, gp_axisrv);
 
@@ -125,7 +131,6 @@ else if (gamepad_button_check_pressed(controller,gp_face1)
         room_goto(arrayOfRooms[numberOfRounds]);
     else
         room_goto(rm_weapon_select);
-    //audio_play_sound(Confirm,10,false);
 }
 </string>
           </argument>
@@ -149,11 +154,13 @@ else if (gamepad_button_check_pressed(controller,gp_face1)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// BGM
-//var i = 1;
+            <string>//xPos is the X position of the red knight
+//xDelta is the space between sprites
 var xPos = 224
 var xDelta = 256;
-
+//draws the winner, i, and three ghosts
+//draws the ghosts of the players that aren't playing
+//draws continue and weapon select under the winner
 switch(i)
 {
     case 1:
@@ -161,6 +168,7 @@ switch(i)
         draw_sprite(sp_blueghost,0,xPos + xDelta,500);
         draw_sprite(sp_greenghost,0,xPos + (2*xDelta),500);
         draw_sprite(sp_yellowghost,0,xPos + (3*xDelta),500);
+        
         if (isContinueSelected)
         {
             draw_set_color(c_black);
@@ -181,6 +189,7 @@ switch(i)
         draw_sprite(sp_blueknight,0,xPos + xDelta,500);
         draw_sprite(sp_greenghost,0,xPos + (2*xDelta),500);
         draw_sprite(sp_yellowghost,0,xPos + (3*xDelta),500);
+        
         if (isContinueSelected)
         {
             draw_set_color(c_black);
@@ -201,6 +210,7 @@ switch(i)
         draw_sprite(sp_blueghost,0,xPos + xDelta,500);
         draw_sprite(sp_greenknight,0,xPos + (2*xDelta),500);
         draw_sprite(sp_yellowghost,0,xPos + (3*xDelta),500);
+        
         if (isContinueSelected)
         {
             draw_set_color(c_black);
@@ -221,6 +231,7 @@ switch(i)
         draw_sprite(sp_blueghost,0,xPos + xDelta,500);
         draw_sprite(sp_greenghost,0,xPos + (2*xDelta),500);
         draw_sprite(sp_yellowknight,0,xPos + (3*xDelta),500);
+        
         if (isContinueSelected)
         {
             draw_set_color(c_black);
@@ -236,6 +247,7 @@ switch(i)
             draw_text(xPos-70+(3*xDelta),580,"WEAPON SELECT");
         }
         break;
+    //this can be used to let the player walk around
     //instance_create(480,320,obj_player1);//105,105
     //instance_create(463,320,obj_reticle1);//280,105
     
