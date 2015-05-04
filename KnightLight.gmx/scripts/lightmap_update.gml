@@ -80,9 +80,6 @@ with(obj_ghost3){
 with(obj_ghost4){
     light_update(true);
 }
-with(obj_deathghost){
-    light_update(true);
-}
 with(obj_discoball){
     light_update_disco(true);
 }

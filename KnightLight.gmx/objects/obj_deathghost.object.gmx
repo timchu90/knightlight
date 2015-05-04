@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>light_init(150,c_white,1);
+light_update(true);
 ghosttarget = 0;
 </string>
           </argument>
@@ -50,6 +51,30 @@ ghosttarget = 0;
           <argument>
             <kind>1</kind>
             <string>surface_free(lightsurface);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Destroy Chubby
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -101,15 +126,20 @@ var playersWithMostHP;   // will hold indices
 var count = 0;          // keep a count of target players
 
 // If only 2 players remain, death ghost goes poof
-if (deathcount == (numberofplayers - 2)) {
-    instance_destroy();
-}
+
 
 // Check if currently paused
 if (alarm[0] &gt; 0) {
     speed = 0;
+    light_update(false);
 }
 else {
+    if (deathcount &gt;= (numberofplayers - 2)) {
+        alarm[1] = room_speed * 2;
+        alarm[0] = room_speed * 2;
+    }
+    light_update(true);
+    
     // Acquire target
     var maxhp = 0;
     for (var i = 1; i &lt;= 4; i++) {
@@ -125,8 +155,6 @@ else {
     if (playerhp[player] &gt; playerhp[ghosttarget] || ghosttarget == 0) {
         ghosttarget = player;
     }
-    
-    // Chase target
     if (ghosttarget == 1) {
         target = obj_player1;
     }
@@ -140,8 +168,9 @@ else {
         target = obj_player4;
     }
     
-    if (point_distance(x, y, target.x, target.y) &gt; 2)
-        move_towards_point(target.x, target.y, 2);
+    // Chase target
+    if (point_distance(x, y, target.x, target.y) &gt; 1.5)
+        move_towards_point(target.x, target.y, 1.5);
     else 
         speed = 0;
 

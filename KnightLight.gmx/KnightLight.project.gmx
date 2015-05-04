@@ -163,6 +163,7 @@
     <object>objects\obj_roomstate</object>
     <object>objects\obj_spark</object>
     <object>objects\obj_littlespark</object>
+    <object>objects\obj_deathghost</object>
     <objects name="player1">
       <object>objects\obj_menu1</object>
       <object>objects\obj_player1</object>
@@ -253,7 +254,6 @@
     <object>objects\obj_smoke</object>
     <object>objects\obj_damage_flash</object>
     <object>objects\obj_win_screen</object>
-    <object>objects\obj_deathghost</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
