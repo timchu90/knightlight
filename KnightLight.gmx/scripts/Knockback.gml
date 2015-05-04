@@ -34,7 +34,7 @@ instance_create(x,y,eff_screenshake_small);
 victim.image_index = 1;
 var hit = part_type_create();
 part_type_shape(hit,pt_shape_pixel);
-part_type_direction(hit,0,360,0,0);
+part_type_direction(hit,(victim.direction-30)-180,(victim.direction+30)-180,0,0);
 part_type_size(hit,.2*source.speed,.2*source.speed,-.1,.01);
 part_type_life(hit,room_speed*.25,room_speed*.3);
 part_type_speed(hit,5,5,0,0);
