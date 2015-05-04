@@ -170,7 +170,7 @@ else if (room_get_name(room) == "rm_temple")
           <argument>
             <kind>1</kind>
             <string>/// Chubby Ghost Spawn
-instance_create(480, 380, obj_deathghost);
+instance_create(480, 530, obj_deathghost);
 </string>
           </argument>
         </arguments>
