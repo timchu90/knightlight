@@ -68,7 +68,6 @@ with(obj_spark){
 with(obj_littlespark){
     light_update(true);
 }
-
 with(obj_ghost1){
     light_update(true);
 }
@@ -79,6 +78,9 @@ with(obj_ghost3){
     light_update(true);
 }
 with(obj_ghost4){
+    light_update(true);
+}
+with(obj_deathghost){
     light_update(true);
 }
 with(obj_discoball){
@@ -184,6 +186,9 @@ with(obj_ghost3){
 }
 with(obj_ghost4){
     light_draw();
+}
+with(obj_deathghost){
+    light_draw(true);
 }
 with(obj_discoball){
     light_draw();

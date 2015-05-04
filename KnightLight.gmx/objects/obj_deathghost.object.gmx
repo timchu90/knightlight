@@ -133,13 +133,13 @@ else {
         target = obj_player4;
     }
     
-    if (point_distance(x, y, target.x, target.y) &gt; 3)
-        move_towards_point(target.x, target.y, 3);
+    if (point_distance(x, y, target.x, target.y) &gt; 2)
+        move_towards_point(target.x, target.y, 2);
     else 
         speed = 0;
 
     // Random chance to pause
-    if (random(10) &lt; 0.01) {
+    if (irandom(1000) &lt; 1) {
         alarm[0] = room_speed * 3;
     }
 }
