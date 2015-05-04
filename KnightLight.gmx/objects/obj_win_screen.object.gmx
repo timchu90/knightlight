@@ -137,7 +137,7 @@ else if (gamepad_button_check_pressed(controller,gp_face1)
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="64">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -156,7 +156,7 @@ else if (gamepad_button_check_pressed(controller,gp_face1)
             <kind>1</kind>
             <string>//xPos is the X position of the red knight
 //xDelta is the space between sprites
-var xPos = 224
+var xPos = 128
 var xDelta = 256;
 //draws the winner, i, and three ghosts
 //draws the ghosts of the players that aren't playing
@@ -164,87 +164,91 @@ var xDelta = 256;
 switch(i)
 {
     case 1:
-        draw_sprite(sp_redknight,0,xPos,500);
-        draw_sprite(sp_blueghost,0,xPos + xDelta,500);
-        draw_sprite(sp_greenghost,0,xPos + (2*xDelta),500);
-        draw_sprite(sp_yellowghost,0,xPos + (3*xDelta),500);
+        draw_sprite(sp_redwins,0,512,200);
+        draw_sprite(sp_redwin,0,xPos,450);
+        draw_sprite(sp_bluelose,0,xPos + xDelta,450);
+        draw_sprite(sp_greenlose,0,xPos + (2*xDelta),450);
+        draw_sprite(sp_yellowlose,0,xPos + (3*xDelta),450);
         
         if (isContinueSelected)
         {
-            draw_set_color(c_black);
-            draw_text(xPos-40,550,"CONTINUE");
+            draw_set_color(c_white);
+            draw_text(xPos-40,650,"CONTINUE");
             draw_set_color(c_gray);
-            draw_text(xPos-70,580,"WEAPON SELECT");
+            draw_text(xPos-70,680,"WEAPON SELECT");
         }
         else
         {
             draw_set_color(c_gray);
-            draw_text(xPos-40,550,"CONTINUE");
-            draw_set_color(c_black);
-            draw_text(xPos-70,580,"WEAPON SELECT");
+            draw_text(xPos-40,650,"CONTINUE");
+            draw_set_color(c_white);
+            draw_text(xPos-70,680,"WEAPON SELECT");
         }
         break;
     case 2:
-        draw_sprite(sp_redghost,0,xPos,500);
-        draw_sprite(sp_blueknight,0,xPos + xDelta,500);
-        draw_sprite(sp_greenghost,0,xPos + (2*xDelta),500);
-        draw_sprite(sp_yellowghost,0,xPos + (3*xDelta),500);
+        draw_sprite(sp_bluewins,0,512,200);
+        draw_sprite(sp_redlose,0,xPos,450);
+        draw_sprite(sp_bluewin,0,xPos + xDelta,450);
+        draw_sprite(sp_greenlose,0,xPos + (2*xDelta),450);
+        draw_sprite(sp_yellowlose,0,xPos + (3*xDelta),450);
         
         if (isContinueSelected)
         {
-            draw_set_color(c_black);
-            draw_text(xPos-40+xDelta,550,"CONTINUE");
+            draw_set_color(c_white);
+            draw_text(xPos-40+xDelta,650,"CONTINUE");
             draw_set_color(c_gray);
-            draw_text(xPos-70+xDelta,580,"WEAPON SELECT");
+            draw_text(xPos-70+xDelta,680,"WEAPON SELECT");
         }
         else
         {
             draw_set_color(c_gray);
-            draw_text(xPos-40+xDelta,550,"CONTINUE");
-            draw_set_color(c_black);
-            draw_text(xPos-70+xDelta,580,"WEAPON SELECT");
+            draw_text(xPos-40+xDelta,650,"CONTINUE");
+            draw_set_color(c_white);
+            draw_text(xPos-70+xDelta,680,"WEAPON SELECT");
         }
         break;
     case 3:
-        draw_sprite(sp_redghost,0,xPos,500);
-        draw_sprite(sp_blueghost,0,xPos + xDelta,500);
-        draw_sprite(sp_greenknight,0,xPos + (2*xDelta),500);
-        draw_sprite(sp_yellowghost,0,xPos + (3*xDelta),500);
+        draw_sprite(sp_greenwins,0,512,200);
+        draw_sprite(sp_redlose,0,xPos,450);
+        draw_sprite(sp_bluelose,0,xPos + xDelta,450);
+        draw_sprite(sp_greenwin,0,xPos + (2*xDelta),450);
+        draw_sprite(sp_yellowlose,0,xPos + (3*xDelta),450);
         
         if (isContinueSelected)
         {
-            draw_set_color(c_black);
-            draw_text(xPos-40+(2*xDelta),550,"CONTINUE");
+            draw_set_color(c_white);
+            draw_text(xPos-40+(2*xDelta),650,"CONTINUE");
             draw_set_color(c_gray);
-            draw_text(xPos-70+(2*xDelta),580,"WEAPON SELECT");
+            draw_text(xPos-70+(2*xDelta),680,"WEAPON SELECT");
         }
         else
         {
             draw_set_color(c_gray);
-            draw_text(xPos-40+(2*xDelta),550,"CONTINUE");
-            draw_set_color(c_black);
-            draw_text(xPos-70+(2*xDelta),580,"WEAPON SELECT");
+            draw_text(xPos-40+(2*xDelta),650,"CONTINUE");
+            draw_set_color(c_white);
+            draw_text(xPos-70+(2*xDelta),680,"WEAPON SELECT");
         }
         break;
     case 4:
-        draw_sprite(sp_redghost,0,xPos,500);
-        draw_sprite(sp_blueghost,0,xPos + xDelta,500);
-        draw_sprite(sp_greenghost,0,xPos + (2*xDelta),500);
-        draw_sprite(sp_yellowknight,0,xPos + (3*xDelta),500);
+        draw_sprite(sp_yellowwins,0,512,200);
+        draw_sprite(sp_redlose,0,xPos,450);
+        draw_sprite(sp_bluelose,0,xPos + xDelta,450);
+        draw_sprite(sp_greenlose,0,xPos + (2*xDelta),450);
+        draw_sprite(sp_yellowwin,0,xPos + (3*xDelta),450);
         
         if (isContinueSelected)
         {
-            draw_set_color(c_black);
-            draw_text(xPos-40+(3*xDelta),550,"CONTINUE");
+            draw_set_color(c_white);
+            draw_text(xPos-40+(3*xDelta),650,"CONTINUE");
             draw_set_color(c_gray);
-            draw_text(xPos-70+(3*xDelta),580,"WEAPON SELECT");
+            draw_text(xPos-70+(3*xDelta),680,"WEAPON SELECT");
         }
         else
         {
             draw_set_color(c_gray);
-            draw_text(xPos-40+(3*xDelta),550,"CONTINUE");
-            draw_set_color(c_black);
-            draw_text(xPos-70+(3*xDelta),580,"WEAPON SELECT");
+            draw_text(xPos-40+(3*xDelta),650,"CONTINUE");
+            draw_set_color(c_white);
+            draw_text(xPos-70+(3*xDelta),680,"WEAPON SELECT");
         }
         break;
     //this can be used to let the player walk around

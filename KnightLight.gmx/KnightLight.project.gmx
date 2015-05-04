@@ -78,9 +78,17 @@
     <sprite>sprites\sp_smoke</sprite>
     <sprite>sprites\sp_explode</sprite>
     <sprite>sprites\sp_redmenu</sprite>
+    <sprite>sprites\sp_redlose</sprite>
+    <sprite>sprites\sp_redwin</sprite>
     <sprite>sprites\sp_bluemenu</sprite>
+    <sprite>sprites\sp_bluelose</sprite>
+    <sprite>sprites\sp_bluewin</sprite>
     <sprite>sprites\sp_greenmenu</sprite>
+    <sprite>sprites\sp_greenlose</sprite>
+    <sprite>sprites\sp_greenwin</sprite>
     <sprite>sprites\sp_yellowmenu</sprite>
+    <sprite>sprites\sp_yellowlose</sprite>
+    <sprite>sprites\sp_yellowwin</sprite>
     <sprite>sprites\sp_flailcontrols</sprite>
     <sprite>sprites\sp_bowcontrols</sprite>
     <sprite>sprites\sp_lancecontrols</sprite>
@@ -252,8 +260,8 @@
     <room>rooms\rm_temple</room>
     <room>rooms\rm_disco</room>
     <room>rooms\rm_lava</room>
-    <room>rooms\rm_win_screen</room>
     <room>rooms\rm_weapon_select</room>
+    <room>rooms\rm_win_screen</room>
     <room>rooms\rm_tutorial</room>
   </rooms>
   <help>
