@@ -116,6 +116,7 @@
     <script>scripts\CollisionCheck.gml</script>
     <script>scripts\CreatePendulum.gml</script>
     <script>scripts\DrawMenu.gml</script>
+    <script>scripts\NavigateMenu.gml</script>
     <script>scripts\Knockback.gml</script>
     <script>scripts\light_draw.gml</script>
     <script>scripts\light_init.gml</script>
@@ -129,7 +130,6 @@
     <script>scripts\MoveFlail.gml</script>
     <script>scripts\MovePendulum.gml</script>
     <script>scripts\MovePlayer.gml</script>
-    <script>scripts\NavigateMenu.gml</script>
     <script>scripts\PlayBowHit.gml</script>
     <script>scripts\PlayBowShot.gml</script>
     <script>scripts\PlayDeath.gml</script>

@@ -2,8 +2,8 @@
 player = argument0;
 controller = player-1;
 weapon_num = 5;
-currentLAxisState = gamepad_axis_value(controller, gp_axislv);
-currentRAxisState = gamepad_axis_value(controller, gp_axisrv);
+currentLAxisState = gamepad_axis_value(controller, gp_axislh);
+currentRAxisState = gamepad_axis_value(controller, gp_axisrh);
 
 if (menuconfirm[player] == false && menustart[player] == false)
 {
@@ -14,14 +14,14 @@ if (menuconfirm[player] == false && menustart[player] == false)
 else if(menuconfirm[player] == false && menustart[player] == true){
     if ((currentLAxisState > 0.5 && obj_menubase.alarm[1] < 1)
         || (currentRAxisState > 0.5 && obj_menubase.alarm[1] < 1)
-        || gamepad_button_check_pressed(controller,gp_padd)){
+        || gamepad_button_check_pressed(controller,gp_padr)){
         menuselect[player] = menuselect[player] + 1;
         obj_menubase.alarm[1] = room_speed / 3;
         audio_play_sound(Select,10,false);
     }
     else if ((currentLAxisState < -0.5 && obj_menubase.alarm[2] < 1)
         || (currentRAxisState < -0.5 && obj_menubase.alarm[2] < 1)
-        || gamepad_button_check_pressed(controller,gp_padu)){
+        || gamepad_button_check_pressed(controller,gp_padl)){
         menuselect[player] = menuselect[player] - 1;
         obj_menubase.alarm[2] = room_speed / 3;
         audio_play_sound(Select,10,false);

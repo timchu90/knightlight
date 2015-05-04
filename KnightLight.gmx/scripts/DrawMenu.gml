@@ -19,6 +19,7 @@ else{
         draw_sprite_ext(sp_yellowmenu,-1,x,y+280,0.8,0.8,0,c_white,1);
     }
     
+    
     if(menuselect[player] == 1){
         draw_sprite_stretched(sp_flail,-1,x-100,y+220,80,80);
         draw_sprite(sp_flailcontrols,-1,x,y+500);
@@ -56,10 +57,15 @@ if (menuconfirm[player] == false && menustart[player] == true)
     if (obj_menubase.alarm[0] > room_speed)
     {
         draw_set_color(c_red);
+        draw_sprite(sp_leftarrow,0,x-110,y+280)
+        draw_sprite(sp_rightarrow,0,x-10,y+280)
     }
     else
     {
         draw_set_color(c_white);
+        draw_sprite(sp_leftarrow,1,x-110,y+280)
+        draw_sprite(sp_rightarrow,1,x-10,y+280)
     }
     draw_text(x-80,550,"PRESS <A> TO CONFIRM");
+    
 }
