@@ -262,8 +262,8 @@
     <room>rooms\rm_disco</room>
     <room>rooms\rm_lava</room>
     <room>rooms\rm_weapon_select</room>
-    <room>rooms\rm_win_screen</room>
     <room>rooms\rm_tutorial</room>
+    <room>rooms\rm_win_screen</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

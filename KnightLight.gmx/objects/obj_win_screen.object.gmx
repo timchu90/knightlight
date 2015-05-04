@@ -26,12 +26,12 @@
           <argument>
             <kind>1</kind>
             <string>//finds the winner, i, and sets continue on by default
-i = 1;
-for (var j = 0; i &lt;= 4; i++)
+i = winner;
+/*for (var j = 0; i &lt;= 4; i++)
 {
     if (menustart[i] == true &amp;&amp; playerhp[i] &gt; 0)
         break;
-}
+}*/
 isContinueSelected = true;
 </string>
           </argument>

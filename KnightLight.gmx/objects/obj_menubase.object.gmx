@@ -30,7 +30,7 @@ globalvar menuselect;
 globalvar menuconfirm;
 globalvar numberOfRounds;
 globalvar arrayOfRooms;
-
+globalvar winner;
 arrayOfRooms[0] = rm_dungeon;//never goes to the first room
 arrayOfRooms[1] = rm_temple;
 arrayOfRooms[2] = rm_disco;

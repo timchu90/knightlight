@@ -361,7 +361,7 @@ if(deathcount == (numberofplayers - 1)){
             alarm[i] = room_speed * 2;
             numberOfRounds++;
             alarm[5] = room_speed * 2;
-            //winner = i;
+            winner = i;
             //Creates a file and saves the weapon of the winner.
             //The file is saved in C:/Users/(Your username)/AppData/Local/KnightLight
             file = file_text_open_append(working_directory + "listOfWinningWeapons.txt");
