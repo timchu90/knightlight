@@ -99,6 +99,8 @@
     <sprite>sprites\sp_thinwall</sprite>
     <sprite>sprites\sp_transition</sprite>
     <sprite>sprites\sp_damage_flash</sprite>
+    <sprite>sprites\sp_leftarrow</sprite>
+    <sprite>sprites\sp_rightarrow</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_dungeon_tile</background>

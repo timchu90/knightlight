@@ -220,9 +220,11 @@ audio_play_sound(LavaExplosion,10,false);
             <kind>1</kind>
             <string>if(alarm[0] &gt; 0 || alarm[5] &gt; 0){
     lava_on = true;
+    depth = 0;
 }
 else{
     lava_on = false;
+    depth = 2;
 }
 </string>
           </argument>
