@@ -253,6 +253,7 @@
     <object>objects\obj_smoke</object>
     <object>objects\obj_damage_flash</object>
     <object>objects\obj_win_screen</object>
+    <object>objects\obj_deathghost</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>

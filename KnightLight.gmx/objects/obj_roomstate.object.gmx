@@ -33,7 +33,7 @@ globalvar bombdmg, bombspd;
 globalvar flaildmgmod, sworddmgmod, arrowdmgmod;
 globalvar thrustDirectionArray, lanceDmgMod, lanceThrustDmgMod;
 globalvar canshoot, ischarging, charge, maxcharge, flashon;
-globalvar playerhp;
+globalvar playerhp, playerWithMostHP;
 globalvar deathcount;
 globalvar numberofplayers;
 globalvar particles;
@@ -63,6 +63,7 @@ playerhp[1] = 200;
 playerhp[2] = 200;
 playerhp[3] = 200;
 playerhp[4] = 200;
+playerWithMostHP = 0; // default
 
 deathcount = 0;
 
@@ -112,6 +113,9 @@ lanceThrustDmgMod = 3;
 //base knockback speed
 basekb = 10;
 
+// Invoke Death Ghost spawn
+alarm[6] = room_speed * 5;
+
 audio_stop_all();
 
 /*
@@ -143,6 +147,30 @@ else if (room_get_name(room) == "rm_temple")
         audio_stop_sound(bgm_dungeon);
 }
 */
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="6">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Chubby Ghost Spawn
+instance_create(480, 380, obj_deathghost);
 </string>
           </argument>
         </arguments>
