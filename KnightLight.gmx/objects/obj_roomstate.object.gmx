@@ -39,6 +39,7 @@ globalvar numberofplayers;
 globalvar particles;
 //globalvar winner;
 particles = part_system_create();
+part_system_depth(particles,1);
 
 globalvar discoPlayer;
 //holds players' initial thrust direction
