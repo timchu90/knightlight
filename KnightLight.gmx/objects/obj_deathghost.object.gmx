@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>light_init(150,c_white,1);
+ghosttarget = 0;
 </string>
           </argument>
         </arguments>
@@ -95,7 +96,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var target = self;
+            <string>var target;             // will refer to object
+var playersWithMostHP;   // will hold indices
+var count = 0;          // keep a count of target players
 
 // If only 2 players remain, death ghost goes poof
 if (deathcount == (numberofplayers - 2)) {
@@ -109,27 +112,31 @@ if (alarm[0] &gt; 0) {
 else {
     // Acquire target
     var maxhp = 0;
-    for (var i = 0; i &lt;= 4; i++) {
-        if (playerhp[i] &gt; maxhp) {
+    for (var i = 1; i &lt;= 4; i++) {
+        if (playerhp[i] &gt;= maxhp) {
             maxhp = playerhp[i];
-            playerWithMostHP = i;
-        }
-        else if (playerhp[i] == maxhp) {
-            playerWithMostHP = 0;
+            playersWithMostHP[count] = i;
+            count++;
         }
     }
     
+    // select a target from among ther top HP players.
+    var player = playersWithMostHP[irandom(count-1)];
+    if (playerhp[player] &gt; playerhp[ghosttarget] || ghosttarget == 0) {
+        ghosttarget = player;
+    }
+    
     // Chase target
-    if (playerWithMostHP == 1) {
+    if (ghosttarget == 1) {
         target = obj_player1;
     }
-    else if (playerWithMostHP == 2) {
+    else if (ghosttarget == 2) {
         target = obj_player2;
     }
-    else if (playerWithMostHP == 3) {
+    else if (ghosttarget == 3) {
         target = obj_player3;
     }
-    else if (playerWithMostHP == 4) {
+    else if (ghosttarget == 4) {
         target = obj_player4;
     }
     

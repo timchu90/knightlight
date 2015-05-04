@@ -33,9 +33,10 @@ globalvar bombdmg, bombspd;
 globalvar flaildmgmod, sworddmgmod, arrowdmgmod;
 globalvar thrustDirectionArray, lanceDmgMod, lanceThrustDmgMod;
 globalvar canshoot, ischarging, charge, maxcharge, flashon;
-globalvar playerhp, playerWithMostHP;
+globalvar playerhp;
 globalvar deathcount;
 globalvar numberofplayers;
+globalvar ghosttarget;
 globalvar particles;
 //globalvar winner;
 particles = part_system_create();
@@ -63,7 +64,6 @@ playerhp[1] = 200;
 playerhp[2] = 200;
 playerhp[3] = 200;
 playerhp[4] = 200;
-playerWithMostHP = 0; // default
 
 deathcount = 0;
 
@@ -114,7 +114,7 @@ lanceThrustDmgMod = 3;
 basekb = 10;
 
 // Invoke Death Ghost spawn
-alarm[6] = room_speed * 5;
+alarm[6] = room_speed * 15;
 
 audio_stop_all();
 
