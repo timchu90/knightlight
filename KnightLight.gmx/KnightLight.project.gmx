@@ -157,6 +157,9 @@
     <script>scripts\Trail_Step.gml</script>
     <script>scripts\Trail_Death.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_basic</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_healthbars</object>
     <object>objects\obj_lightmap</object>
@@ -262,12 +265,12 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
+    <room>rooms\rm_tutorial</room>
     <room>rooms\rm_dungeon</room>
     <room>rooms\rm_temple</room>
     <room>rooms\rm_disco</room>
     <room>rooms\rm_lava</room>
     <room>rooms\rm_weapon_select</room>
-    <room>rooms\rm_tutorial</room>
     <room>rooms\rm_win_screen</room>
   </rooms>
   <help>

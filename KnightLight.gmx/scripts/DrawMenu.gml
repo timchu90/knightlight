@@ -1,9 +1,9 @@
 ///DrawMenu(int player)
 player = argument0;
-
+draw_set_font(fnt_basic);
 if(menustart[player] == false){
     draw_set_color(c_white);
-    draw_text(x-100,550,"PRESS <START> TO JOIN");
+    draw_text(x-100,530,"PRESS <START> TO JOIN");
 }
 else{
     if(player == 1){
@@ -66,6 +66,6 @@ if (menuconfirm[player] == false && menustart[player] == true)
         draw_sprite(sp_leftarrow,1,x-110,y+280)
         draw_sprite(sp_rightarrow,1,x-10,y+280)
     }
-    draw_text(x-80,550,"PRESS <A> TO CONFIRM");
+    draw_text(x-80,530,"PRESS <A> TO CONFIRM");
     
 }

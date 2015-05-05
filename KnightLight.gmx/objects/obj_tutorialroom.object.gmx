@@ -148,6 +148,7 @@ if (numberofplayers == switch_on &amp;&amp; allcomplete == false){
           <argument>
             <kind>1</kind>
             <string>//never used this event before *gulp*
+draw_set_font(fnt_basic);
 for (var i = 1; i &lt;= 4; i++)
 {
     if(menustart[i])
@@ -156,13 +157,13 @@ for (var i = 1; i &lt;= 4; i++)
         {
             draw_set_color(c_white);
             draw_text(10 + (270 * (i-1)),400,
-            "USE &lt;LB&gt; TO 
+            "    USE &lt;LB&gt; TO 
 TURN ON/OFF LIGHT");
         }
         else{
             draw_set_color(c_red);
             if(menuselect[i] == 1){
-                draw_text(10 + (270 * (i-1)),400,
+                draw_text(10 + (250 * (i-1)),400,
                 
 "ROTATE &lt;RIGHT ANALOG&gt; 
 TO SWING FLAIL FASTER 
@@ -171,7 +172,7 @@ HIT THE ORB TO PROCEED");
 
             }
             else if(menuselect[i] == 2){
-                draw_text(10 + (270 * (i-1)),400,
+                draw_text(10 + (250 * (i-1)),400,
                 
 "ROTATE &lt;RIGHT ANALOG&gt;
 TO SWING SWORD FASTER 
@@ -180,7 +181,7 @@ HIT THE ORB TO PROCEED");
 
             }
             else if(menuselect[i] == 3){
-                draw_text(10 + (270 * (i-1)),400,
+                draw_text(10 + (250 * (i-1)),400,
                 
 "AIM WITH &lt;RIGHT ANALOG&gt;
 HOLD &lt;RB&gt; TO *CHARGE* 
@@ -192,7 +193,7 @@ TO PROCEED");
 
             }
             else if(menuselect[i] == 4){
-                draw_text(10 + (270 * (i-1)),400,
+                draw_text(10 + (250 * (i-1)),400,
                 
 " ROTATE &lt;RIGHT ANALOG&gt; 
 TO AIM LANCE 
@@ -204,7 +205,7 @@ THRUST TO PROCEED");
 
             }
             else if(menuselect[i] == 5){
-                draw_text(10 + (270 * (i-1)),400,
+                draw_text(10 + (250 * (i-1)),400,
                 
 "ROTATE &lt;RIGHT ANALOG&gt; 
 TO AIM BOMB

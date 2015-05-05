@@ -210,6 +210,7 @@ for(var i = 1; i&lt;=4; i++){
           <argument>
             <kind>1</kind>
             <string>draw_sprite(sp_logo,-1,x,y);
+draw_set_font(fnt_basic);
 var confirmed = true;
 var started = false;
 for(i=0;i&lt;4;i++){
@@ -234,7 +235,7 @@ if (confirmed &amp;&amp; started)
     {
         draw_set_color(c_white);
     }
-    draw_text(325,535,"PRESS &lt;START&gt; WHEN ALL PLAYERS ARE READY");
+    draw_text(325,300,"PRESS &lt;START&gt; WHEN ALL PLAYERS ARE READY");
 }
 
 
