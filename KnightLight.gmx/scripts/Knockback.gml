@@ -33,12 +33,15 @@ instance_create(victim.x,victim.y,obj_littlespark);
 instance_create(x,y,eff_screenshake_small);
 victim.image_index = 1;
 var hit = part_type_create();
-part_type_shape(hit,pt_shape_pixel);
+part_type_shape(hit,pt_shape_square);
+part_type_orientation(hit,0,90,1,5,true);
 part_type_direction(hit,(victim.direction-30),(victim.direction+30),0,0);
-part_type_size(hit,.2*source.speed,.2*source.speed,-.1,.01);
-part_type_life(hit,room_speed*.1,room_speed*.15);
+part_type_size(hit,.01*source.speed,.01*source.speed,-.01,.01);
+part_type_life(hit,room_speed*.2,room_speed*.25);
 part_type_speed(hit,victim.speed+2,victim.speed+2,0,0);
-var emit = part_emitter_create(particles);
+if (!part_emitter_exists(particles,emit)) {
+emit = part_emitter_create(particles);
+}
 part_emitter_region(particles,emit,victim.x-5,victim.x+5,victim.y-5,victim.y+5,ps_shape_ellipse,ps_distr_gaussian);
 part_emitter_burst(particles,emit,hit,50);
 Sleep(50);
