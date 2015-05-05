@@ -36,12 +36,12 @@ var hit = part_type_create();
 part_type_shape(hit,pt_shape_square);
 part_type_orientation(hit,0,90,1,5,true);
 part_type_direction(hit,(victim.direction-30),(victim.direction+30),0,0);
-part_type_size(hit,.015*source.speed,.015*source.speed,-.01,.01);
-part_type_life(hit,room_speed*.2,room_speed*.25);
-part_type_speed(hit,victim.speed+2,victim.speed+2,0,0);
+part_type_size(hit,.02*source.speed,.02*source.speed,-.01,.01);
+part_type_life(hit,room_speed*1,room_speed*1.2);
+part_type_speed(hit,victim.speed/3.5,victim.speed/3.5,-0.1,0);
 if (!part_emitter_exists(particles,emit)) {
 emit = part_emitter_create(particles);
 }
 part_emitter_region(particles,emit,victim.x-5,victim.x+5,victim.y-5,victim.y+5,ps_shape_ellipse,ps_distr_gaussian);
-part_emitter_burst(particles,emit,hit,15);
+part_emitter_burst(particles,emit,hit,10);
 Sleep(50);
