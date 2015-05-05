@@ -108,6 +108,7 @@
     <sprite>sprites\sp_leftarrow</sprite>
     <sprite>sprites\sp_rightarrow</sprite>
     <sprite>sprites\sp_greenmenu</sprite>
+    <sprite>sprites\sp_bluewin</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_dungeon_tile</background>
