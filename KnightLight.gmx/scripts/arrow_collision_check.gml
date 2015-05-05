@@ -21,6 +21,7 @@ y + lengthdir_y(speed,direction),
 player,
 false,
 false) && stuck == false){
+    part_emitter_destroy(particles,emit);
     offset_len = point_distance(player.x,player.y,x,y,);
     offset_angle = image_angle-player.image_angle
     stuck = true;
