@@ -107,6 +107,7 @@
     <sprite>sprites\sp_damage_flash</sprite>
     <sprite>sprites\sp_leftarrow</sprite>
     <sprite>sprites\sp_rightarrow</sprite>
+    <sprite>sprites\sp_menutorch</sprite>
     <sprite>sprites\sp_greenmenu</sprite>
     <sprite>sprites\sp_bluewin</sprite>
   </sprites>
@@ -257,6 +258,7 @@
     <object>objects\obj_smoke</object>
     <object>objects\obj_damage_flash</object>
     <object>objects\obj_win_screen</object>
+    <object>objects\obj_menutorch</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
