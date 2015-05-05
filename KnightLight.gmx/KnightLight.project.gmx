@@ -152,6 +152,8 @@
     <script>scripts\arrow_wall_collision.gml</script>
     <script>scripts\arrow_collision_check.gml</script>
     <script>scripts\eff_arrow_charge.gml</script>
+    <script>scripts\Trail_Create.gml</script>
+    <script>scripts\Trail_Step.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_healthbars</object>

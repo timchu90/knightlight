@@ -43,16 +43,47 @@ else if (menuselect[1] == 5){
 image_speed = 0;
 image_index = 0;
 deathbool = false;
-sparkle = part_type_create();
-part_type_shape(sparkle,pt_shape_pixel);
-part_type_direction(sparkle,0,360,0,0);
-//part_type_colour1(sparkle,c_red);
-part_type_life(sparkle,room_speed*.05,room_speed*.1);
-part_type_speed(sparkle,0,0,0,0);
-part_type_alpha1(sparkle,.1);
-emit = part_emitter_create(particles);
-part_emitter_stream(particles,emit,sparkle,100);
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>Trail_Create</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -298,8 +329,6 @@ gamepad_set_vibration(0,0,0);
 //if (menustart[1] &amp;&amp; menuconfirm[1] &amp;&amp; room_get_name(room) != "rm_menu_tutorial"
     //&amp;&amp; room_get_name(room) != "rm_win_screen"){//not done
     
-part_emitter_region(particles,emit,x-12,x+12,y-12,y+12,ps_shape_ellipse,ps_distr_gaussian);
-part_type_size(sparkle,speed/1.5,speed/1.5,-.1,.1);
 if(playerhp[1] &gt; 0){
     if (alarm[4] == -1) MovePlayer(1,obj_reticle1);
 }
@@ -389,6 +418,46 @@ if(playerhp[1] &lt;= 0 &amp;&amp; deathbool == false){
           <argument>
             <kind>0</kind>
             <string>obj_bomb1</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>Trail_Step</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
           <argument>
             <kind>0</kind>
