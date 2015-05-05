@@ -82,8 +82,6 @@
     <sprite>sprites\sp_redwin</sprite>
     <sprite>sprites\sp_bluemenu</sprite>
     <sprite>sprites\sp_bluelose</sprite>
-    <sprite>sprites\sp_bluewin</sprite>
-    <sprite>sprites\sp_greenmenu</sprite>
     <sprite>sprites\sp_greenlose</sprite>
     <sprite>sprites\sp_greenwin</sprite>
     <sprite>sprites\sp_yellowmenu</sprite>
@@ -110,6 +108,8 @@
     <sprite>sprites\sp_leftarrow</sprite>
     <sprite>sprites\sp_rightarrow</sprite>
     <sprite>sprites\sp_menutorch</sprite>
+    <sprite>sprites\sp_greenmenu</sprite>
+    <sprite>sprites\sp_bluewin</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_dungeon_tile</background>
@@ -155,6 +155,7 @@
     <script>scripts\eff_arrow_charge.gml</script>
     <script>scripts\Trail_Create.gml</script>
     <script>scripts\Trail_Step.gml</script>
+    <script>scripts\Trail_Death.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_healthbars</object>
