@@ -197,11 +197,7 @@ audio_play_sound(bgm_lava,11,true);</code>
     <instance objName="obj_shadowcaster" x="288" y="480" name="inst_0ED88CF4" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_shadowcaster" x="672" y="480" name="inst_0D90D8CD" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_shadowcaster" x="672" y="224" name="inst_511807C9" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="1024" y="0" name="inst_B1432A0E" locked="0" code="" scaleX="1" scaleY="26" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="0" y="-32" name="inst_69FF884E" locked="0" code="" scaleX="33" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="-32" y="-32" name="inst_0D0E2625" locked="0" code="" scaleX="1" scaleY="27" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="0" y="768" name="inst_B846F190" locked="0" code="" scaleX="32" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_healthbars" x="1152" y="512" name="inst_740D3817" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="&lt;undefined&gt;" x="0" y="768" w="64" h="64" xo="0" yo="0" id="10005229" name="inst_353779F4" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
