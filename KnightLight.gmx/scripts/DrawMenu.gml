@@ -66,6 +66,6 @@ if (menuconfirm[player] == false && menustart[player] == true)
         draw_sprite(sp_leftarrow,1,x-110,y+280)
         draw_sprite(sp_rightarrow,1,x-10,y+280)
     }
-    draw_text(x-80,530,"PRESS <A> TO CONFIRM");
+    draw_text(x-100,530,"PRESS <A> TO CONFIRM");
     
 }
