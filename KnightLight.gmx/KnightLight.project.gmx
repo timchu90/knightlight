@@ -45,7 +45,7 @@
     <sound>sound\Thunder</sound>
     <sound>sound\LavaExplosion</sound>
     <sound>sound\Big_Hit</sound>
-    <sound>sound\sound26</sound>
+    <sound>sound\Fanfare</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sp_redknight</sprite>
