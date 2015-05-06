@@ -38,7 +38,7 @@ part_type_orientation(hit,0,90,1,5,true);
 part_type_direction(hit,(victim.direction-30),(victim.direction+30),0,0);
 part_type_size(hit,.02*source.speed,.02*source.speed,-.01,.01);
 part_type_life(hit,room_speed*1,room_speed*1.2);
-part_type_speed(hit,victim.speed*1.5,victim.speed*1.5,-.8,0);
+part_type_speed(hit,victim.speed*1.5,victim.speed*1.5,-victim.speed/12,0);
 emit = part_emitter_create(particles);
 part_emitter_region(particles,emit,victim.x-5,victim.x+5,victim.y-5,victim.y+5,ps_shape_ellipse,ps_distr_gaussian);
 part_emitter_burst(particles,emit,hit,10);
