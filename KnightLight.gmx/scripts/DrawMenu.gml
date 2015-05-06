@@ -43,7 +43,7 @@ else{
     }
     
     if(menuselect[player] == 5){
-        draw_sprite_ext(sp_potion,-1,x-60,y+240,2,2,0,c_white,1);//draw magic sprite
+        draw_sprite_ext(sp_potion,-1,x-58,y+240,2,2,270,c_white,1);//draw magic sprite
         draw_sprite(sp_magiccontrols,-1,x,y+500);
     }
 }
