@@ -313,7 +313,9 @@ if(alarm[4]!= -1&amp;&amp; alarm[4]%2 == 0){
     }
 }
 CollisionCheck();
-
+if(flashon[3] == true &amp;&amp; playerhp[3] &lt; 200){
+    playerhp[3] += 0.25;
+}
 if(playerhp[3] &lt;= 0 &amp;&amp; deathbool == false){
     deathbool = true;
     deathcount++;

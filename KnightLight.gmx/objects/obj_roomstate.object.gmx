@@ -89,9 +89,9 @@ bowfric = 0.1;
 bowmass = 0.5;
 
 //base movement speed and move speed during relaod
-basemove = 5;
-archermove = 6;
-chargemove = 3;
+basemove = 4;
+archermove = 5;
+chargemove = 2;
 
 //bow related variables
 arrowdmg = 40;
