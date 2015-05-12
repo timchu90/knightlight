@@ -43,6 +43,7 @@ else if (menuselect[2] == 5){
 image_speed = 0;
 image_index = 0;
 deathbool = false;
+healing = false;
 </string>
           </argument>
         </arguments>
@@ -312,7 +313,21 @@ if(alarm[4]!= -1&amp;&amp; alarm[4]%2 == 0){
     }
 }
 CollisionCheck();
+if(flashon[2] == false || playerhp[2] == 200){
+    if(healing == true){
+        healing = false;
+        with(healID){
+            instance_destroy();
+        }
+    }
+}
 if(flashon[2] == true &amp;&amp; playerhp[2] &lt; 200){
+    if(healing == false){
+        healing = true;
+        healID = instance_create(x,y,obj_heal);
+    }
+    healID.x = x;
+    healID.y = y;
     playerhp[2] += 0.25;
 }
 if(playerhp[2] &lt;= 0 &amp;&amp; deathbool == false){

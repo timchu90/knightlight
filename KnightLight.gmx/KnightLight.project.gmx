@@ -110,6 +110,7 @@
     <sprite>sprites\sp_menutorch</sprite>
     <sprite>sprites\sp_greenmenu</sprite>
     <sprite>sprites\sp_bluewin</sprite>
+    <sprite>sprites\sp_heal</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_dungeon_tile</background>
@@ -263,6 +264,7 @@
     <object>objects\obj_win_screen</object>
     <object>objects\obj_menutorch</object>
     <object>objects\obj_DeathSpawn</object>
+    <object>objects\obj_heal</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
