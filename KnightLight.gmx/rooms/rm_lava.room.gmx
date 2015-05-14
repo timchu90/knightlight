@@ -198,6 +198,10 @@ audio_play_sound(bgm_lava,11,true);</code>
     <instance objName="obj_shadowcaster" x="672" y="480" name="inst_0D90D8CD" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_shadowcaster" x="672" y="224" name="inst_511807C9" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="0" y="768" name="inst_B846F190" locked="0" code="" scaleX="32" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="-32" y="0" name="inst_A56C1BAE" locked="0" code="" scaleX="1" scaleY="25" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="-32" y="-32" name="inst_31EE1B75" locked="0" code="" scaleX="34" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="1024" y="0" name="inst_99905F95" locked="0" code="" scaleX="1" scaleY="24" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="1024" y="736" name="inst_B4B44763" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="&lt;undefined&gt;" x="0" y="768" w="64" h="64" xo="0" yo="0" id="10005229" name="inst_353779F4" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

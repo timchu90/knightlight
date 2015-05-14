@@ -304,7 +304,7 @@ gamepad_set_vibration(3,0,0);
           <argument>
             <kind>1</kind>
             <string>//contains code for moving player and turning on/off light
-if(playerhp[4] &gt; 0){
+if(deathbool == false){
     if (alarm[4] == -1) MovePlayer(4,obj_reticle4);
 }
 if(alarm[4]!= -1&amp;&amp; alarm[4]%2 == 0){
@@ -313,7 +313,7 @@ if(alarm[4]!= -1&amp;&amp; alarm[4]%2 == 0){
     }
 }
 CollisionCheck();
-if(flashon[4] == false || playerhp[4] == 200){
+if(flashon[4] == false || playerhp[4] &gt;= 200 || deathbool == true){
     if(healing == true){
         healing = false;
         with(healID){
@@ -328,7 +328,7 @@ if(flashon[4] == true &amp;&amp; playerhp[4] &lt; 200){
     }
     healID.x = x;
     healID.y = y;
-    playerhp[4] += 0.25;
+    playerhp[4] += healrate;
 }
 if(playerhp[4] &lt;= 0 &amp;&amp; deathbool == false){
     deathbool = true;

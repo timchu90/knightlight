@@ -263,7 +263,7 @@ gamepad_set_vibration(1,0,0);
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>ThrowBomb</script>
+            <script>-1</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -304,7 +304,7 @@ gamepad_set_vibration(1,0,0);
           <argument>
             <kind>1</kind>
             <string>//contains code for moving player and turning on/off light
-if(playerhp[2] &gt; 0){
+if(deathbool == false){
     if (alarm[4] == -1) MovePlayer(2,obj_reticle2); 
 }
 if(alarm[4]!= -1&amp;&amp; alarm[4]%2 == 0){
@@ -313,7 +313,7 @@ if(alarm[4]!= -1&amp;&amp; alarm[4]%2 == 0){
     }
 }
 CollisionCheck();
-if(flashon[2] == false || playerhp[2] == 200){
+if(flashon[2] == false || playerhp[2] &gt;= 200 || deathbool == true){
     if(healing == true){
         healing = false;
         with(healID){
@@ -328,7 +328,7 @@ if(flashon[2] == true &amp;&amp; playerhp[2] &lt; 200){
     }
     healID.x = x;
     healID.y = y;
-    playerhp[2] += 0.25;
+    playerhp[2] += healrate;
 }
 if(playerhp[2] &lt;= 0 &amp;&amp; deathbool == false){
     deathbool = true;

@@ -290,7 +290,7 @@ gamepad_set_vibration(0,0,0);
 //if (menustart[1] &amp;&amp; menuconfirm[1] &amp;&amp; room_get_name(room) != "rm_menu_tutorial"
     //&amp;&amp; room_get_name(room) != "rm_win_screen"){//not done
     
-if(playerhp[1] &gt; 0){
+if(deathbool == false){
     if (alarm[4] == -1) MovePlayer(1,obj_reticle1);
 }
 if(alarm[4]!= -1 &amp;&amp; alarm[4]%2 == 0){
@@ -299,7 +299,7 @@ if(alarm[4]!= -1 &amp;&amp; alarm[4]%2 == 0){
     }
 }
 CollisionCheck();
-if(flashon[1] == false || playerhp[1] == 200){
+if(flashon[1] == false || playerhp[1] &gt;= 200 || deathbool == true){
     if(healing == true){
         healing = false;
         with(healID){
@@ -314,7 +314,7 @@ if(flashon[1] == true &amp;&amp; playerhp[1] &lt; 200){
     }
     healID.x = x;
     healID.y = y;
-    playerhp[1] += 0.25;
+    playerhp[1] += healrate;
 }
 if(playerhp[1] &lt;= 0 &amp;&amp; deathbool == false){
     deathbool = true;

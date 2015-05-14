@@ -38,6 +38,7 @@ globalvar deathcount;
 globalvar numberofplayers;
 globalvar ghosttarget;
 globalvar particles;
+globalvar healrate;
 //globalvar winner;
 particles = part_system_create();
 part_system_depth(particles,1);
@@ -89,9 +90,12 @@ bowfric = 0.1;
 bowmass = 0.5;
 
 //base movement speed and move speed during relaod
-basemove = 4;
-archermove = 5;
-chargemove = 2;
+basemove = 5;
+archermove = 6;
+chargemove = 3;
+
+//healing rate per frame
+healrate = 0.15;
 
 //bow related variables
 arrowdmg = 40;
