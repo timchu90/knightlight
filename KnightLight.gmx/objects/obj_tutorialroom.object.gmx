@@ -58,7 +58,7 @@ for (var i = 1; i &lt;= 4; i++)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto_next();
+            <string>room_goto(arrayOfRooms[numberOfRounds]);
 </string>
           </argument>
         </arguments>

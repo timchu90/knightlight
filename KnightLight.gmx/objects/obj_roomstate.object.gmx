@@ -301,15 +301,9 @@ gamepad_set_vibration(1,0,0);
 gamepad_set_vibration(2,0,0);
 gamepad_set_vibration(3,0,0);
             
-            //audio_stop_all();
-            //sound_stop_all();
-if (numberOfRounds == 4){
-     room_goto(room_first);
-     audio_stop_all();
-}
-else{
-    room_goto(rm_win_screen);
-}
+audio_stop_all();
+room_goto(rm_win_screen);
+
 //don't delete this tim!
 </string>
           </argument>
@@ -339,6 +333,9 @@ if(deathcount == (numberofplayers - 1)){
         if(menustart[i] == true &amp;&amp; playerhp[i] &gt; 0 &amp;&amp; alarm[5] = -1){
             alarm[i] = room_speed * 2;
             numberOfRounds++;
+            if(numberOfRounds == 4){
+                numberOfRounds = 0;
+            }
             alarm[5] = room_speed * 2;
             winner = i;
             //Creates a file and saves the weapon of the winner.

@@ -31,14 +31,14 @@ globalvar menuconfirm;
 globalvar numberOfRounds;
 globalvar arrayOfRooms;
 globalvar winner;
-arrayOfRooms[0] = rm_dungeon;//never goes to the first room
+arrayOfRooms[0] = rm_lava;
 arrayOfRooms[1] = rm_temple;
 arrayOfRooms[2] = rm_disco;
-arrayOfRooms[3] = rm_lava;
-//menubase is reset when going back to the menu
-//this, however, prevents the number of rounds getting reset
+arrayOfRooms[3] = rm_dungeon;
+
 if (room_get_name(room) != "rm_weapon_select")
     numberOfRounds = 0;
+
 menustart[1] = false;
 menustart[2] = false;
 menustart[3] = false;
@@ -78,10 +78,8 @@ menuconfirm[4] = false;
             <string>//because players can go back to weapon select,
 //this will continue from the last round if there
 //are still rounds left in a set
-if (numberOfRounds == 0)
-    room_goto_next();
-else
-    room_goto(arrayOfRooms[numberOfRounds]);
+room_goto(rm_tutorial);
+
 </string>
           </argument>
         </arguments>
