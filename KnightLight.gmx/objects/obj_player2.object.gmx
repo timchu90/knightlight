@@ -321,7 +321,7 @@ if(flashon[2] == false || playerhp[2] &gt;= 200 || deathbool == true){
         }
     }
 }
-if(flashon[2] == true &amp;&amp; playerhp[2] &lt; 200){
+if(flashon[2] == true &amp;&amp; playerhp[2] &lt; 200 &amp;&amp; deathbool == false){
     if(healing == false){
         healing = true;
         healID = instance_create(x,y,obj_heal);
