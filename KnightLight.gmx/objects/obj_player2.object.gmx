@@ -263,7 +263,7 @@ gamepad_set_vibration(1,0,0);
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>-1</script>
+            <script>ThrowBomb</script>
           </argument>
           <argument>
             <kind>0</kind>
