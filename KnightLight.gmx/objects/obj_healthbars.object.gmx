@@ -52,23 +52,23 @@
 var max_hp = 200;
 if(instance_exists(obj_player1)){
     p1 = (playerhp[1] / max_hp) * 100;
-    draw_healthbar(obj_player1.x-17, obj_player1.y-21, obj_player1.x+16,obj_player1.y-17, p1, c_black, c_red, c_red, 0, true, false);
-    //draw_sprite(sp_healthbar,-1,28,775);
+    draw_healthbar(obj_player1.x-17, obj_player1.y-21, obj_player1.x+16,obj_player1.y-17, p1, c_white, c_red, c_red, 0, true, false);
+    draw_sprite(sp_healthbar,-1,obj_player1.x-17, obj_player1.y-21);
 }
 if(instance_exists(obj_player2)){
     p2 = (playerhp[2] / max_hp) * 100;
     draw_healthbar(obj_player2.x-17, obj_player2.y-21, obj_player2.x+16,obj_player2.y-17, p2, c_black, c_blue, c_blue, 0, true, false);
-    //draw_sprite(sp_healthbar,-1,284,775);
+    draw_sprite(sp_healthbar,-1,obj_player2.x-17, obj_player2.y-21);
 }
 if(instance_exists(obj_player3)){
     p3 = (playerhp[3] / max_hp) * 100;
     draw_healthbar(obj_player3.x-17, obj_player3.y-21, obj_player3.x+16,obj_player3.y-17, p3, c_black, c_green, c_green, 0, true, false);
-    //draw_sprite(sp_healthbar,-1,540,775);
+    draw_sprite(sp_healthbar,-1,obj_player3.x-17, obj_player3.y-21);
 }
 if(instance_exists(obj_player4)){
     p4 = (playerhp[4] / max_hp) * 100;
     draw_healthbar(obj_player4.x-17, obj_player4.y-21, obj_player4.x+16,obj_player4.y-17, p4, c_black, c_yellow, c_yellow, 0, true, false);
-    //draw_sprite(sp_healthbar,-1,796,775);
+    draw_sprite(sp_healthbar,-1,obj_player4.x-17, obj_player4.y-21);
 }
 
 </string>
