@@ -167,7 +167,7 @@ ready = false;
             <kind>1</kind>
             <string>if (hit_succeed)
 {
-    hit_succeed = false;
+    //hit_succeed = false;
     ready = true;
     surface_free(lightsurface);
     light_init(75,c_green,1);
@@ -195,7 +195,7 @@ ready = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(alarm[1] == -1){
+            <string>if(alarm[1] == -1&amp;&amp; hit_succeed == false){
     instance_create(x,y,obj_littlespark);
     Sleep(50);
     if (other.speed &gt; 15){
@@ -230,7 +230,7 @@ ready = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(alarm[1] == -1){
+            <string>if(alarm[1] == -1&amp;&amp; hit_succeed == false){
     instance_create(x,y,obj_littlespark);
     Sleep(50);
     if (other.speed &gt; 30){
@@ -267,7 +267,7 @@ ready = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(alarm[1] == -1){
+            <string>if(alarm[1] == -1&amp;&amp; hit_succeed == false){
     instance_create(x,y,obj_littlespark);
     if (other.speed &gt; 10){
         hit_succeed = true;
@@ -302,7 +302,7 @@ ready = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(alarm[1] == -1){
+            <string>if(alarm[1] == -1 &amp;&amp; hit_succeed == false){
     instance_create(x,y,obj_littlespark);
     Sleep(50);
     if (other.speed &gt; 20){

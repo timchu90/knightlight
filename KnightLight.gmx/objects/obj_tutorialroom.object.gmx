@@ -158,7 +158,8 @@ for (var i = 1; i &lt;= 4; i++)
             draw_set_color(c_white);
             draw_text(10 + (270 * (i-1)),400,
             "    USE &lt;LB&gt; TO 
-TURN ON/OFF LIGHT");
+TURN ON/OFF LIGHT
+     AND HEAL");
         }
         else{
             draw_set_color(c_red);
