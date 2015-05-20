@@ -17,7 +17,7 @@ else if(player == 4){
     eff_charge = obj_arrow_charge4;
 }
 
-if (canshoot[player] = true) {
+if (canshoot[player] = true && playerhp[player] >= 0) {
     // Charge arrow while trigger button is held down
 
         

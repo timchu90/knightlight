@@ -14,6 +14,9 @@ if(playernum == 4){
     player = obj_player4;
 }
 
+if(alarm[2] == -1){
+    alarm[2] = room_speed*1;
+}
 
 if(collision_line(x,y,
 x + lengthdir_x(speed,direction), 
@@ -30,9 +33,6 @@ false) && stuck == false){
         playerhp[playernum] = playerhp[playernum] - speed * arrowdmgmod;
         gamepad_set_vibration(playernum-1,0.5,0.5);
         player.alarm[playernum-1] = room_speed/2;
-        if(alarm[2] == -1){
-            alarm[2] = room_speed*1;
-        }
         
         // knockback
         Knockback(player, self, false);
