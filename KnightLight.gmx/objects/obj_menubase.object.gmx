@@ -31,10 +31,10 @@ globalvar menuconfirm;
 globalvar numberOfRounds;
 globalvar arrayOfRooms;
 globalvar winner;
-arrayOfRooms[0] = rm_temple;
+arrayOfRooms[0] = rm_dungeon;
 arrayOfRooms[1] = rm_lava;
 arrayOfRooms[2] = rm_disco;
-arrayOfRooms[3] = rm_dungeon;
+arrayOfRooms[3] = rm_temple;
 
 if (room_get_name(room) != "rm_weapon_select")
     numberOfRounds = 0;

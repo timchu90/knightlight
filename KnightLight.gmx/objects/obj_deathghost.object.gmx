@@ -164,10 +164,12 @@ if (alarm[0] &gt; 0) {
 }
 else {
     // If only 2 players remain, death ghost goes poof
+    /*
     if (deathcount &gt;= (numberofplayers - 2)) {
         alarm[1] = room_speed * 2;
         alarm[0] = room_speed * 2;
     }
+    */
     light_update(true);
     
     // Acquire target
