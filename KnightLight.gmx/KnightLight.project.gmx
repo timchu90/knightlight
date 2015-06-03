@@ -97,6 +97,7 @@
     <sprite>sprites\sp_bluewins</sprite>
     <sprite>sprites\sp_greenwins</sprite>
     <sprite>sprites\sp_yellowwins</sprite>
+    <sprite>sprites\sp_suddendeath</sprite>
     <sprite>sprites\sp_potion</sprite>
     <sprite>sprites\sp_lava</sprite>
     <sprite>sprites\sp_healthbar</sprite>
@@ -266,6 +267,7 @@
     <object>objects\obj_menutorch</object>
     <object>objects\obj_DeathSpawn</object>
     <object>objects\obj_heal</object>
+    <object>objects\obj_suddendeath</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>

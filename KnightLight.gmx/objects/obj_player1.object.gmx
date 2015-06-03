@@ -299,7 +299,7 @@ if(alarm[4]!= -1 &amp;&amp; alarm[4]%2 == 0){
     }
 }
 CollisionCheck();
-if(flashon[1] == false || playerhp[1] &gt;= 200 || deathbool == true){
+if(flashon[1] == false || playerhp[1] &gt;= 200 || deathbool == true||healrate ==0){
     if(healing == true){
         healing = false;
         with(healID){
@@ -307,7 +307,7 @@ if(flashon[1] == false || playerhp[1] &gt;= 200 || deathbool == true){
         }
     }
 }
-if(flashon[1] == true &amp;&amp; playerhp[1] &lt; 200 &amp;&amp; deathbool == false){
+if(flashon[1] == true &amp;&amp; playerhp[1] &lt; 200 &amp;&amp; deathbool == false &amp;&amp; healrate&gt;0){
     if(healing == false){
         healing = true;
         healID = instance_create(x,y,obj_heal);

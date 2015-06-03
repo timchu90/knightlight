@@ -4,11 +4,11 @@
 proximity = distance_to_point(other.x, other.y);
 
 if (proximity <= 20){
-    return 80;
+    return bombdmg*2;
 }
 else if (proximity <= 70) {
-    return 60;
+    return bombdmg*1.5;
 }
 else {
-    return 40;
+    return bombdmg;
 }

@@ -29,6 +29,9 @@ false) && stuck == false){
     offset_angle = image_angle-player.image_angle
     stuck = true;
     stuck_player = playernum;
+    if(alarm[0] == -1){
+        alarm[0] = room_speed*5;
+    }
     if (player.alarm[11] == -1) { // invincibility
         playerhp[playernum] = playerhp[playernum] - speed * arrowdmgmod;
         gamepad_set_vibration(playernum-1,0.5,0.5);

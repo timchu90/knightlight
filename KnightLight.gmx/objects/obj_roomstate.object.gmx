@@ -103,7 +103,7 @@ arrowspd = 15;
 maxcharge = room_speed * 2;
 
 //bomb vars
-bombdmg = 60;
+bombdmg = 40;
 bombspd = 5;
 maxbombcharge = room_speed *1.4;
 
@@ -117,7 +117,9 @@ lanceThrustDmgMod = 3;
 //base knockback speed
 basekb = 10;
 
-
+if(!room_get_name(room) == rm_tutorial){
+    alarm[6] = room_speed*10//room_speed*180;
+}
 
 audio_stop_all();
 
@@ -150,6 +152,36 @@ else if (room_get_name(room) == "rm_temple")
         audio_stop_sound(bgm_dungeon);
 }
 */
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="6">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_create(512,400,obj_suddendeath);
+arrowdmgmod = arrowdmgmod*2;
+bombdmg = bombdmg*2;
+flaildmgmod = flaildmgmod*2;
+sworddmgmod = sworddmgmod*2;
+lanceDmgMod=lanceDmgMod*2;
+lanceThrustDmgMod=lanceThrustDmgMod*2;
+healrate=0;
 </string>
           </argument>
         </arguments>
