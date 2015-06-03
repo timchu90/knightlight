@@ -118,7 +118,7 @@ lanceThrustDmgMod = 3;
 basekb = 10;
 
 if(!room_get_name(room) == rm_tutorial){
-    alarm[6] = room_speed*10//room_speed*180;
+    alarm[6] = room_speed*180;
 }
 
 audio_stop_all();
