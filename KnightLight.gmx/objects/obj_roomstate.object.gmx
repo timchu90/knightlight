@@ -103,22 +103,22 @@ arrowspd = 15;
 maxcharge = room_speed * 2;
 
 //bomb vars
-bombdmg = 40;
+bombdmg = 80;//40;
 bombspd = 5;
 maxbombcharge = room_speed *1.4;
 
 //melee weapon damage modifiers
-flaildmgmod = 1.8;
-sworddmgmod = 3;
-arrowdmgmod = 2;
-lanceDmgMod = 3;
-lanceThrustDmgMod = 3;
+flaildmgmod = 3.6;//1.8;
+sworddmgmod = 6;//3;
+arrowdmgmod = 4//2;
+lanceDmgMod = 6//3;
+lanceThrustDmgMod = 6//3;
 
 //base knockback speed
 basekb = 10;
 
 if(!room_get_name(room) == rm_tutorial){
-    alarm[6] = room_speed*180;
+    alarm[6] = room_speed*60;
 }
 
 audio_stop_all();
