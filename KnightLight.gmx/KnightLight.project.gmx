@@ -158,7 +158,6 @@
     <script>scripts\Trail_Create.gml</script>
     <script>scripts\Trail_Step.gml</script>
     <script>scripts\Trail_Death.gml</script>
-    <script>scripts\Ghosty.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_basic</font>
